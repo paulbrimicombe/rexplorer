@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
   import type Rating from "./Rating";
-  import ScoreSummary from "../components/ScoreSummary.svelte";
+  import Modal from "svelte-simple-modal";
 
   export function preload() {
     return this.fetch(`data/scores.json`)
@@ -11,7 +11,8 @@
   }
 </script>
 
-<script lang="ts">
+<script lang="ts">import Monarchs from "../components/Monarchs.svelte";
+
   export let scores: Rating[];
 </script>
 
@@ -36,10 +37,7 @@
   <title>Rexplorer</title>
 </svelte:head>
 
-<h1>Welcome to the Rexplorer!</h1>
-
-<monarchs>
-  {#each scores as monarch}
-    <ScoreSummary rating={monarch} />
-  {/each}
-</monarchs>
+<Modal>
+  <h1>Welcome to the Rexplorer!</h1>
+  <Monarchs scores={scores} />
+</Modal>

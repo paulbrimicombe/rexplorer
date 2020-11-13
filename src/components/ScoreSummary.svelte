@@ -1,25 +1,37 @@
 <script lang="ts">
   import type Rating from "../routes/Rating";
+  import { afterUpdate, createEventDispatcher } from "svelte";
+
+  const dispatch = createEventDispatcher();
+
   export let rating: Rating;
 
-  let displayRating: Rating = {
-    ...rating,
-    battleyness: 0,
-    scandal: 0,
-    subjectivity: 0,
-    longevity: 0,
-    dynasty: 0,
-  };
+  let showBars = false;
 
-  setTimeout(() => (displayRating = rating), 100);
+  afterUpdate(() => {
+    if (!showBars) {
+      setTimeout(() => {
+        showBars = true;
+      }, 100);
+    }
+  });
 </script>
 
 <style>
-  summary {
+  button {
     display: flex;
     align-items: center;
     justify-items: center;
-    margin: 0.7em 0 0.7em 0;
+    padding: 0.7em;
+    border: none;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0.2em;
+  }
+
+  button:hover {
+    background: rgba(0, 0, 0, 0.05);
   }
 
   total {
@@ -68,8 +80,8 @@
   }
 
   bar {
-    border-top-right-radius: 20%;
-    border-bottom-right-radius: 20%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
     display: inline-block;
     height: 3px;
     min-width: 1px;
@@ -93,7 +105,7 @@
   }
 </style>
 
-<summary>
+<button on:click={() => dispatch('select', rating)}>
   <total>{rating.total}</total>
   <name>
     {#if rating.rexFactor}
@@ -104,24 +116,28 @@
   <breakdown>
     <breakdown-row>
       <bar
-        style={`width: ${(100 * displayRating.battleyness) / 20}%`}
+        style={`width: ${showBars ? (100 * rating.battleyness) / 20 : 0}%`}
         class="battleyness" />
     </breakdown-row>
     <breakdown-row>
-      <bar style={`width: ${(100 * displayRating.scandal) / 20}%`} class="scandal" />
+      <bar
+        style={`width: ${showBars ? (100 * rating.scandal) / 20 : 0}%`}
+        class="scandal" />
     </breakdown-row>
     <breakdown-row>
       <bar
-        style={`width: ${(100 * displayRating.subjectivity) / 20}%`}
+        style={`width: ${showBars ? (100 * rating.subjectivity) / 20 : 0}%`}
         class="subjectivity" />
     </breakdown-row>
     <breakdown-row>
       <bar
-        style={`width: ${(100 * displayRating.longevity) / 20}%`}
+        style={`width: ${showBars ? (100 * rating.longevity) / 20 : 0}%`}
         class="longevity" />
     </breakdown-row>
     <breakdown-row>
-      <bar style={`width: ${(100 * displayRating.dynasty) / 20}%`} class="dynasty" />
+      <bar
+        style={`width: ${showBars ? (100 * rating.dynasty) / 20 : 0}%`}
+        class="dynasty" />
     </breakdown-row>
   </breakdown>
-</summary>
+</button>
