@@ -1,0 +1,14 @@
+{
+  "name": "rexplorer",
+  "version": "1.0.0",
+  "description": "An explorer for Rex Factor scores",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo ''"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "js-yaml": "^3.14.0"
+  }
+}

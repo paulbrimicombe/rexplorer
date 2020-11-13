@@ -1,0 +1,844 @@
+{
+  "monarchs": [
+    {
+      "monarch": "Alfred the Great",
+      "battleyness": 11,
+      "scandal": 4,
+      "subjectivity": 17,
+      "longevity": 15,
+      "dynasty": 8.35,
+      "total": 55.35,
+      "rexFactor": true,
+      "consorts": [
+        {
+          "consort": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "monarch": "Edward the Elder",
+      "battleyness": 13.5,
+      "scandal": 2,
+      "subjectivity": 6,
+      "longevity": 14.5,
+      "dynasty": 20.04,
+      "total": 56.04,
+      "rexFactor": false,
+      "consorts": [
+        {
+          "consort": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        },
+        {
+          "consort": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "monarch": "Athelstan",
+      "battleyness": 17,
+      "scandal": 8,
+      "subjectivity": 12.5,
+      "longevity": 9.5,
+      "dynasty": 0,
+      "total": 47,
+      "rexFactor": true,
+      "consorts": []
+    },
+    {
+      "monarch": "Edmund I",
+      "battleyness": 10.5,
+      "scandal": 2,
+      "subjectivity": 10.5,
+      "longevity": 5,
+      "dynasty": 5.01,
+      "total": 33.01,
+      "rexFactor": false,
+      "consorts": [
+        {
+          "consort": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        },
+        {
+          "consort": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "monarch": "Eadred",
+      "battleyness": 8.5,
+      "scandal": 7,
+      "subjectivity": 4,
+      "longevity": 6.5,
+      "dynasty": 0,
+      "total": 26,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Eadwig",
+      "battleyness": 1,
+      "scandal": 10.5,
+      "subjectivity": 3,
+      "longevity": 3,
+      "dynasty": 0,
+      "total": 17.5,
+      "rexFactor": false,
+      "consorts": [
+        {
+          "consort": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "monarch": "Edgar the Peaceable",
+      "battleyness": 11,
+      "scandal": 17,
+      "subjectivity": 14,
+      "longevity": 10,
+      "dynasty": 5.01,
+      "total": 57.01,
+      "rexFactor": false,
+      "consorts": [
+        {
+          "consort": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        },
+        {
+          "consort": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        },
+        {
+          "consort": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "monarch": "Edward the Martyr",
+      "battleyness": 0,
+      "scandal": 1,
+      "subjectivity": 0,
+      "longevity": 2,
+      "dynasty": 0,
+      "total": 3,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Aethelred the Unready",
+      "battleyness": 0,
+      "scandal": 11,
+      "subjectivity": 1.5,
+      "longevity": 16.5,
+      "dynasty": 15.03,
+      "total": 44.03,
+      "rexFactor": false,
+      "consorts": [
+        {
+          "consort": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        },
+        {
+          "consort": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "monarch": "Sweyn Forkbeard",
+      "battleyness": 16,
+      "scandal": 6,
+      "subjectivity": 0,
+      "longevity": 0.5,
+      "dynasty": 5.01,
+      "total": 27.51,
+      "rexFactor": false,
+      "consorts": [
+        {
+          "consort": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "monarch": "Edmund Ironside",
+      "battleyness": 13.5,
+      "scandal": 0,
+      "subjectivity": 7,
+      "longevity": 0.5,
+      "dynasty": 3.34,
+      "total": 24.34,
+      "rexFactor": false,
+      "consorts": [
+        {
+          "consort": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "monarch": "Cnut",
+      "battleyness": 13.5,
+      "scandal": 8,
+      "subjectivity": 14,
+      "longevity": 11.5,
+      "dynasty": 6.68,
+      "total": 53.68,
+      "rexFactor": true,
+      "consorts": [
+        {
+          "consort": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        },
+        {
+          "consort": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "monarch": "Harold I",
+      "battleyness": 0,
+      "scandal": 3.5,
+      "subjectivity": 3,
+      "longevity": 3.5,
+      "dynasty": 0,
+      "total": 10,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Harthacnut",
+      "battleyness": 4,
+      "scandal": 5.5,
+      "subjectivity": 2,
+      "longevity": 2,
+      "dynasty": 0,
+      "total": 13.5,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Edward the Confessor",
+      "battleyness": 4,
+      "scandal": 1,
+      "subjectivity": 8,
+      "longevity": 13.5,
+      "dynasty": 0,
+      "total": 26.5,
+      "rexFactor": false,
+      "consorts": [
+        {
+          "consort": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "monarch": "Harold II",
+      "battleyness": 17,
+      "scandal": 2,
+      "subjectivity": 7,
+      "longevity": 0.5,
+      "dynasty": 11.69,
+      "total": 38.19,
+      "rexFactor": false,
+      "consorts": [
+        {
+          "consort": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "monarch": "William the Conqueror",
+      "battleyness": 18.5,
+      "scandal": 10,
+      "subjectivity": 4,
+      "longevity": 12,
+      "dynasty": 10.02,
+      "total": 54.52,
+      "rexFactor": true,
+      "consorts": [
+        {
+          "consort": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "monarch": "William Rufus",
+      "battleyness": 10,
+      "scandal": 14,
+      "subjectivity": 7.5,
+      "longevity": 8,
+      "dynasty": 0,
+      "total": 39.5,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Henry I",
+      "battleyness": 12,
+      "scandal": 15.5,
+      "subjectivity": 14.5,
+      "longevity": 16,
+      "dynasty": 1.67,
+      "total": 59.67,
+      "rexFactor": true,
+      "consorts": [
+        {
+          "consort": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        },
+        {
+          "consort": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "monarch": "Stephen",
+      "battleyness": 6,
+      "scandal": 2,
+      "subjectivity": 5,
+      "longevity": 11.5,
+      "dynasty": 3.34,
+      "total": 27.84,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Henry II",
+      "battleyness": 17,
+      "scandal": 17.5,
+      "subjectivity": 17,
+      "longevity": 16,
+      "dynasty": 6.68,
+      "total": 74.18,
+      "rexFactor": true,
+      "consorts": []
+    },
+    {
+      "monarch": "Richard the Lionheart",
+      "battleyness": 18,
+      "scandal": 16,
+      "subjectivity": 7,
+      "longevity": 6.5,
+      "dynasty": 0,
+      "total": 47.5,
+      "rexFactor": true,
+      "consorts": []
+    },
+    {
+      "monarch": "John",
+      "battleyness": 8,
+      "scandal": 18,
+      "subjectivity": 4,
+      "longevity": 10.5,
+      "dynasty": 8.35,
+      "total": 48.85,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Henry III",
+      "battleyness": 6,
+      "scandal": 5,
+      "subjectivity": 6,
+      "longevity": 18.5,
+      "dynasty": 6.68,
+      "total": 42.18,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Edward I",
+      "battleyness": 17,
+      "scandal": 14,
+      "subjectivity": 14,
+      "longevity": 16,
+      "dynasty": 11.69,
+      "total": 72.69,
+      "rexFactor": true,
+      "consorts": []
+    },
+    {
+      "monarch": "Edward II",
+      "battleyness": 4,
+      "scandal": 17.5,
+      "subjectivity": 0,
+      "longevity": 11.5,
+      "dynasty": 6.68,
+      "total": 39.68,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Edward III",
+      "battleyness": 17.5,
+      "scandal": 3.5,
+      "subjectivity": 12,
+      "longevity": 18,
+      "dynasty": 6.68,
+      "total": 57.68,
+      "rexFactor": true,
+      "consorts": []
+    },
+    {
+      "monarch": "Richard II",
+      "battleyness": 7,
+      "scandal": 9,
+      "subjectivity": 9,
+      "longevity": 13,
+      "dynasty": 0,
+      "total": 38,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Henry IV",
+      "battleyness": 12.5,
+      "scandal": 17,
+      "subjectivity": 8.5,
+      "longevity": 8.5,
+      "dynasty": 8.35,
+      "total": 54.85,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Henry V",
+      "battleyness": 20,
+      "scandal": 3.5,
+      "subjectivity": 15.5,
+      "longevity": 6.5,
+      "dynasty": 1.67,
+      "total": 47.17,
+      "rexFactor": true,
+      "consorts": []
+    },
+    {
+      "monarch": "Henry VI",
+      "battleyness": 0,
+      "scandal": 0,
+      "subjectivity": 0,
+      "longevity": 16.5,
+      "dynasty": 0,
+      "total": 16.5,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Edward IV",
+      "battleyness": 15.5,
+      "scandal": 16,
+      "subjectivity": 13.5,
+      "longevity": 12.5,
+      "dynasty": 11.69,
+      "total": 69.19,
+      "rexFactor": true,
+      "consorts": []
+    },
+    {
+      "monarch": "Edward V",
+      "battleyness": 0,
+      "scandal": 0,
+      "subjectivity": 0,
+      "longevity": 0.5,
+      "dynasty": 0,
+      "total": 0.5,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Richard III",
+      "battleyness": 12,
+      "scandal": 20,
+      "subjectivity": 11.5,
+      "longevity": 1.5,
+      "dynasty": 0,
+      "total": 45,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Henry VII",
+      "battleyness": 11,
+      "scandal": 6,
+      "subjectivity": 16,
+      "longevity": 13.5,
+      "dynasty": 5.01,
+      "total": 51.51,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Henry VIII",
+      "battleyness": 8,
+      "scandal": 20,
+      "subjectivity": 7.5,
+      "longevity": 16.5,
+      "dynasty": 5.01,
+      "total": 57.01,
+      "rexFactor": true,
+      "consorts": []
+    },
+    {
+      "monarch": "Edward VI",
+      "battleyness": 4,
+      "scandal": 0,
+      "subjectivity": 5,
+      "longevity": 4.5,
+      "dynasty": 0,
+      "total": 13.5,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Mary I",
+      "battleyness": 10,
+      "scandal": 11,
+      "subjectivity": 2.5,
+      "longevity": 4,
+      "dynasty": 0,
+      "total": 27.5,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Elizabeth I",
+      "battleyness": 13,
+      "scandal": 5.5,
+      "subjectivity": 11,
+      "longevity": 17,
+      "dynasty": 0,
+      "total": 46.5,
+      "rexFactor": true,
+      "consorts": []
+    },
+    {
+      "monarch": "James I",
+      "battleyness": 0,
+      "scandal": 14,
+      "subjectivity": 13,
+      "longevity": 13,
+      "dynasty": 3.34,
+      "total": 43.34,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Charles I",
+      "battleyness": 0,
+      "scandal": 2,
+      "subjectivity": 2,
+      "longevity": 14,
+      "dynasty": 10.02,
+      "total": 28.02,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Oliver Cromwell",
+      "battleyness": 19.5,
+      "scandal": 20,
+      "subjectivity": 5,
+      "longevity": 3.5,
+      "dynasty": 8.35,
+      "total": 56.35,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Charles II",
+      "battleyness": 1,
+      "scandal": 16,
+      "subjectivity": 13,
+      "longevity": 14.5,
+      "dynasty": 0,
+      "total": 44.5,
+      "rexFactor": true,
+      "consorts": []
+    },
+    {
+      "monarch": "James II",
+      "battleyness": 2.5,
+      "scandal": 16,
+      "subjectivity": 0,
+      "longevity": 3,
+      "dynasty": 6.68,
+      "total": 28.18,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "William III & Mary II",
+      "battleyness": 16,
+      "scandal": 4,
+      "subjectivity": 17,
+      "longevity": 8.5,
+      "dynasty": 0,
+      "total": 45.5,
+      "rexFactor": true,
+      "consorts": []
+    },
+    {
+      "monarch": "Anne",
+      "battleyness": 14,
+      "scandal": 0,
+      "subjectivity": 15,
+      "longevity": 8,
+      "dynasty": 0,
+      "total": 37,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "George I",
+      "battleyness": 6,
+      "scandal": 11,
+      "subjectivity": 9,
+      "longevity": 8,
+      "dynasty": 3.34,
+      "total": 37.34,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "George II",
+      "battleyness": 17.5,
+      "scandal": 3,
+      "subjectivity": 10,
+      "longevity": 15.5,
+      "dynasty": 5.01,
+      "total": 51.01,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "George III",
+      "battleyness": 15,
+      "scandal": 0,
+      "subjectivity": 15,
+      "longevity": 19,
+      "dynasty": 18.37,
+      "total": 67.37,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "George IV",
+      "battleyness": 7,
+      "scandal": 15,
+      "subjectivity": 10,
+      "longevity": 7,
+      "dynasty": 0,
+      "total": 39,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "William IV",
+      "battleyness": 8,
+      "scandal": 10,
+      "subjectivity": 16,
+      "longevity": 5,
+      "dynasty": 0,
+      "total": 39,
+      "rexFactor": true,
+      "consorts": []
+    },
+    {
+      "monarch": "Victoria",
+      "battleyness": 15.5,
+      "scandal": 7,
+      "subjectivity": 16,
+      "longevity": 19.5,
+      "dynasty": 10.02,
+      "total": 68.02,
+      "rexFactor": true,
+      "consorts": []
+    },
+    {
+      "monarch": "Edward VII",
+      "battleyness": 6,
+      "scandal": 16,
+      "subjectivity": 14,
+      "longevity": 6,
+      "dynasty": 6.68,
+      "total": 48.68,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "George V",
+      "battleyness": 13.5,
+      "scandal": 2,
+      "subjectivity": 14,
+      "longevity": 15,
+      "dynasty": 8.35,
+      "total": 52.85,
+      "rexFactor": true,
+      "consorts": []
+    },
+    {
+      "monarch": "Edward VIII",
+      "battleyness": 2,
+      "scandal": 18.5,
+      "subjectivity": 4,
+      "longevity": 1,
+      "dynasty": 0,
+      "total": 25.5,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "George VI",
+      "battleyness": 15,
+      "scandal": 0.5,
+      "subjectivity": 17.5,
+      "longevity": 9.5,
+      "dynasty": 3.34,
+      "total": 45.84,
+      "rexFactor": false,
+      "consorts": []
+    },
+    {
+      "monarch": "Elizabeth II",
+      "battleyness": 10,
+      "scandal": 0,
+      "subjectivity": 15,
+      "longevity": 20,
+      "dynasty": 6.68,
+      "total": 51.68,
+      "rexFactor": false,
+      "consorts": []
+    }
+  ]
+}
