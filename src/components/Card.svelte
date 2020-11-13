@@ -117,7 +117,7 @@
     </span>
   </name>
   <scores>
-    <portrait style="background-image: url('/portraits/{rating.name}.jpg')" />
+    <portrait style="background-image: url('/portraits/{rating.name}.webp')" />
     <score>
       <score-label>Battleyness {rating.battleyness}</score-label>
       <bar
