@@ -49,6 +49,15 @@ const extractFields = (lines) => {
       if (field === "RF?") {
         return "rexFactor";
       }
+
+      if (field === 'Monarch') {
+        return 'name'
+      }
+
+      if (field === 'Consort') {
+        return 'name'
+      }
+
       const firstCharacter = field.charAt(0);
       const rest = field.substring(1);
       return `${firstCharacter.toLocaleLowerCase()}${rest}`;
@@ -107,11 +116,11 @@ monarchLines.forEach((line) => {
     monarchEntry[key] = parseValue(value);
   });
 
-  monarchEntry.rexFactor = REX_FACTOR_WINNERS.includes(monarchEntry.monarch);
-  monarchEntry.consorts = (CONSORT_MAPPING[monarchEntry.monarch] || []).flatMap(
+  monarchEntry.rexFactor = REX_FACTOR_WINNERS.includes(monarchEntry.name);
+  monarchEntry.consorts = (CONSORT_MAPPING[monarchEntry.name] || []).flatMap(
     (name) =>
       consortData.consorts.find((consort) => {
-        return consort.consort === name || [];
+        return consort.name === name || [];
       })
   );
 });

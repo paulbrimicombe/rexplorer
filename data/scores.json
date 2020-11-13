@@ -1,7 +1,7 @@
 {
   "monarchs": [
     {
-      "monarch": "Alfred the Great",
+      "name": "Alfred the Great",
       "battleyness": 11,
       "scandal": 4,
       "subjectivity": 17,
@@ -11,7 +11,7 @@
       "rexFactor": true,
       "consorts": [
         {
-          "consort": "Ealhswith",
+          "name": "Ealhswith",
           "battleyness": 3,
           "scandal": 0,
           "subjectivity": 7,
@@ -23,7 +23,7 @@
       ]
     },
     {
-      "monarch": "Edward the Elder",
+      "name": "Edward the Elder",
       "battleyness": 13.5,
       "scandal": 2,
       "subjectivity": 6,
@@ -33,7 +33,7 @@
       "rexFactor": false,
       "consorts": [
         {
-          "consort": "Ealhswith",
+          "name": "Ealhswith",
           "battleyness": 3,
           "scandal": 0,
           "subjectivity": 7,
@@ -43,7 +43,7 @@
           "rexFactor": false
         },
         {
-          "consort": "Ealhswith",
+          "name": "Ealhswith",
           "battleyness": 3,
           "scandal": 0,
           "subjectivity": 7,
@@ -55,7 +55,7 @@
       ]
     },
     {
-      "monarch": "Athelstan",
+      "name": "Athelstan",
       "battleyness": 17,
       "scandal": 8,
       "subjectivity": 12.5,
@@ -66,7 +66,7 @@
       "consorts": []
     },
     {
-      "monarch": "Edmund I",
+      "name": "Edmund I",
       "battleyness": 10.5,
       "scandal": 2,
       "subjectivity": 10.5,
@@ -76,7 +76,7 @@
       "rexFactor": false,
       "consorts": [
         {
-          "consort": "Ealhswith",
+          "name": "Ealhswith",
           "battleyness": 3,
           "scandal": 0,
           "subjectivity": 7,
@@ -86,7 +86,7 @@
           "rexFactor": false
         },
         {
-          "consort": "Ealhswith",
+          "name": "Ealhswith",
           "battleyness": 3,
           "scandal": 0,
           "subjectivity": 7,
@@ -98,7 +98,7 @@
       ]
     },
     {
-      "monarch": "Eadred",
+      "name": "Eadred",
       "battleyness": 8.5,
       "scandal": 7,
       "subjectivity": 4,
@@ -109,7 +109,7 @@
       "consorts": []
     },
     {
-      "monarch": "Eadwig",
+      "name": "Eadwig",
       "battleyness": 1,
       "scandal": 10.5,
       "subjectivity": 3,
@@ -119,7 +119,7 @@
       "rexFactor": false,
       "consorts": [
         {
-          "consort": "Ealhswith",
+          "name": "Ealhswith",
           "battleyness": 3,
           "scandal": 0,
           "subjectivity": 7,
@@ -131,7 +131,7 @@
       ]
     },
     {
-      "monarch": "Edgar the Peaceable",
+      "name": "Edgar the Peaceable",
       "battleyness": 11,
       "scandal": 17,
       "subjectivity": 14,
@@ -141,7 +141,7 @@
       "rexFactor": false,
       "consorts": [
         {
-          "consort": "Ealhswith",
+          "name": "Ealhswith",
           "battleyness": 3,
           "scandal": 0,
           "subjectivity": 7,
@@ -151,7 +151,7 @@
           "rexFactor": false
         },
         {
-          "consort": "Ealhswith",
+          "name": "Ealhswith",
           "battleyness": 3,
           "scandal": 0,
           "subjectivity": 7,
@@ -161,7 +161,7 @@
           "rexFactor": false
         },
         {
-          "consort": "Ealhswith",
+          "name": "Ealhswith",
           "battleyness": 3,
           "scandal": 0,
           "subjectivity": 7,
@@ -173,7 +173,7 @@
       ]
     },
     {
-      "monarch": "Edward the Martyr",
+      "name": "Edward the Martyr",
       "battleyness": 0,
       "scandal": 1,
       "subjectivity": 0,
@@ -184,7 +184,7 @@
       "consorts": []
     },
     {
-      "monarch": "Aethelred the Unready",
+      "name": "Aethelred the Unready",
       "battleyness": 0,
       "scandal": 11,
       "subjectivity": 1.5,
@@ -194,7 +194,7 @@
       "rexFactor": false,
       "consorts": [
         {
-          "consort": "Ealhswith",
+          "name": "Ealhswith",
           "battleyness": 3,
           "scandal": 0,
           "subjectivity": 7,
@@ -204,7 +204,7 @@
           "rexFactor": false
         },
         {
-          "consort": "Ealhswith",
+          "name": "Ealhswith",
           "battleyness": 3,
           "scandal": 0,
           "subjectivity": 7,
@@ -216,7 +216,7 @@
       ]
     },
     {
-      "monarch": "Sweyn Forkbeard",
+      "name": "Sweyn Forkbeard",
       "battleyness": 16,
       "scandal": 6,
       "subjectivity": 0,
@@ -226,7 +226,7 @@
       "rexFactor": false,
       "consorts": [
         {
-          "consort": "Ealhswith",
+          "name": "Ealhswith",
           "battleyness": 3,
           "scandal": 0,
           "subjectivity": 7,
@@ -238,7 +238,7 @@
       ]
     },
     {
-      "monarch": "Edmund Ironside",
+      "name": "Edmund Ironside",
       "battleyness": 13.5,
       "scandal": 0,
       "subjectivity": 7,
@@ -248,7 +248,7 @@
       "rexFactor": false,
       "consorts": [
         {
-          "consort": "Ealhswith",
+          "name": "Ealhswith",
           "battleyness": 3,
           "scandal": 0,
           "subjectivity": 7,
@@ -260,7 +260,7 @@
       ]
     },
     {
-      "monarch": "Cnut",
+      "name": "Cnut",
       "battleyness": 13.5,
       "scandal": 8,
       "subjectivity": 14,
@@ -270,7 +270,7 @@
       "rexFactor": true,
       "consorts": [
         {
-          "consort": "Ealhswith",
+          "name": "Ealhswith",
           "battleyness": 3,
           "scandal": 0,
           "subjectivity": 7,
@@ -280,7 +280,7 @@
           "rexFactor": false
         },
         {
-          "consort": "Ealhswith",
+          "name": "Ealhswith",
           "battleyness": 3,
           "scandal": 0,
           "subjectivity": 7,
@@ -292,7 +292,7 @@
       ]
     },
     {
-      "monarch": "Harold I",
+      "name": "Harold I",
       "battleyness": 0,
       "scandal": 3.5,
       "subjectivity": 3,
@@ -303,7 +303,7 @@
       "consorts": []
     },
     {
-      "monarch": "Harthacnut",
+      "name": "Harthacnut",
       "battleyness": 4,
       "scandal": 5.5,
       "subjectivity": 2,
@@ -314,7 +314,7 @@
       "consorts": []
     },
     {
-      "monarch": "Edward the Confessor",
+      "name": "Edward the Confessor",
       "battleyness": 4,
       "scandal": 1,
       "subjectivity": 8,
@@ -324,7 +324,7 @@
       "rexFactor": false,
       "consorts": [
         {
-          "consort": "Ealhswith",
+          "name": "Ealhswith",
           "battleyness": 3,
           "scandal": 0,
           "subjectivity": 7,
@@ -336,7 +336,7 @@
       ]
     },
     {
-      "monarch": "Harold II",
+      "name": "Harold II",
       "battleyness": 17,
       "scandal": 2,
       "subjectivity": 7,
@@ -346,7 +346,7 @@
       "rexFactor": false,
       "consorts": [
         {
-          "consort": "Ealhswith",
+          "name": "Ealhswith",
           "battleyness": 3,
           "scandal": 0,
           "subjectivity": 7,
@@ -358,7 +358,7 @@
       ]
     },
     {
-      "monarch": "William the Conqueror",
+      "name": "William the Conqueror",
       "battleyness": 18.5,
       "scandal": 10,
       "subjectivity": 4,
@@ -368,7 +368,7 @@
       "rexFactor": true,
       "consorts": [
         {
-          "consort": "Ealhswith",
+          "name": "Ealhswith",
           "battleyness": 3,
           "scandal": 0,
           "subjectivity": 7,
@@ -380,7 +380,7 @@
       ]
     },
     {
-      "monarch": "William Rufus",
+      "name": "William Rufus",
       "battleyness": 10,
       "scandal": 14,
       "subjectivity": 7.5,
@@ -391,7 +391,7 @@
       "consorts": []
     },
     {
-      "monarch": "Henry I",
+      "name": "Henry I",
       "battleyness": 12,
       "scandal": 15.5,
       "subjectivity": 14.5,
@@ -401,7 +401,7 @@
       "rexFactor": true,
       "consorts": [
         {
-          "consort": "Ealhswith",
+          "name": "Ealhswith",
           "battleyness": 3,
           "scandal": 0,
           "subjectivity": 7,
@@ -411,7 +411,7 @@
           "rexFactor": false
         },
         {
-          "consort": "Ealhswith",
+          "name": "Ealhswith",
           "battleyness": 3,
           "scandal": 0,
           "subjectivity": 7,
@@ -423,7 +423,7 @@
       ]
     },
     {
-      "monarch": "Stephen",
+      "name": "Stephen",
       "battleyness": 6,
       "scandal": 2,
       "subjectivity": 5,
@@ -434,7 +434,7 @@
       "consorts": []
     },
     {
-      "monarch": "Henry II",
+      "name": "Henry II",
       "battleyness": 17,
       "scandal": 17.5,
       "subjectivity": 17,
@@ -445,7 +445,7 @@
       "consorts": []
     },
     {
-      "monarch": "Richard the Lionheart",
+      "name": "Richard the Lionheart",
       "battleyness": 18,
       "scandal": 16,
       "subjectivity": 7,
@@ -456,7 +456,7 @@
       "consorts": []
     },
     {
-      "monarch": "John",
+      "name": "John",
       "battleyness": 8,
       "scandal": 18,
       "subjectivity": 4,
@@ -467,7 +467,7 @@
       "consorts": []
     },
     {
-      "monarch": "Henry III",
+      "name": "Henry III",
       "battleyness": 6,
       "scandal": 5,
       "subjectivity": 6,
@@ -478,7 +478,7 @@
       "consorts": []
     },
     {
-      "monarch": "Edward I",
+      "name": "Edward I",
       "battleyness": 17,
       "scandal": 14,
       "subjectivity": 14,
@@ -489,7 +489,7 @@
       "consorts": []
     },
     {
-      "monarch": "Edward II",
+      "name": "Edward II",
       "battleyness": 4,
       "scandal": 17.5,
       "subjectivity": 0,
@@ -500,7 +500,7 @@
       "consorts": []
     },
     {
-      "monarch": "Edward III",
+      "name": "Edward III",
       "battleyness": 17.5,
       "scandal": 3.5,
       "subjectivity": 12,
@@ -511,7 +511,7 @@
       "consorts": []
     },
     {
-      "monarch": "Richard II",
+      "name": "Richard II",
       "battleyness": 7,
       "scandal": 9,
       "subjectivity": 9,
@@ -522,7 +522,7 @@
       "consorts": []
     },
     {
-      "monarch": "Henry IV",
+      "name": "Henry IV",
       "battleyness": 12.5,
       "scandal": 17,
       "subjectivity": 8.5,
@@ -533,7 +533,7 @@
       "consorts": []
     },
     {
-      "monarch": "Henry V",
+      "name": "Henry V",
       "battleyness": 20,
       "scandal": 3.5,
       "subjectivity": 15.5,
@@ -544,7 +544,7 @@
       "consorts": []
     },
     {
-      "monarch": "Henry VI",
+      "name": "Henry VI",
       "battleyness": 0,
       "scandal": 0,
       "subjectivity": 0,
@@ -555,7 +555,7 @@
       "consorts": []
     },
     {
-      "monarch": "Edward IV",
+      "name": "Edward IV",
       "battleyness": 15.5,
       "scandal": 16,
       "subjectivity": 13.5,
@@ -566,7 +566,7 @@
       "consorts": []
     },
     {
-      "monarch": "Edward V",
+      "name": "Edward V",
       "battleyness": 0,
       "scandal": 0,
       "subjectivity": 0,
@@ -577,7 +577,7 @@
       "consorts": []
     },
     {
-      "monarch": "Richard III",
+      "name": "Richard III",
       "battleyness": 12,
       "scandal": 20,
       "subjectivity": 11.5,
@@ -588,7 +588,7 @@
       "consorts": []
     },
     {
-      "monarch": "Henry VII",
+      "name": "Henry VII",
       "battleyness": 11,
       "scandal": 6,
       "subjectivity": 16,
@@ -599,7 +599,7 @@
       "consorts": []
     },
     {
-      "monarch": "Henry VIII",
+      "name": "Henry VIII",
       "battleyness": 8,
       "scandal": 20,
       "subjectivity": 7.5,
@@ -610,7 +610,7 @@
       "consorts": []
     },
     {
-      "monarch": "Edward VI",
+      "name": "Edward VI",
       "battleyness": 4,
       "scandal": 0,
       "subjectivity": 5,
@@ -621,7 +621,7 @@
       "consorts": []
     },
     {
-      "monarch": "Mary I",
+      "name": "Mary I",
       "battleyness": 10,
       "scandal": 11,
       "subjectivity": 2.5,
@@ -632,7 +632,7 @@
       "consorts": []
     },
     {
-      "monarch": "Elizabeth I",
+      "name": "Elizabeth I",
       "battleyness": 13,
       "scandal": 5.5,
       "subjectivity": 11,
@@ -643,7 +643,7 @@
       "consorts": []
     },
     {
-      "monarch": "James I",
+      "name": "James I",
       "battleyness": 0,
       "scandal": 14,
       "subjectivity": 13,
@@ -654,7 +654,7 @@
       "consorts": []
     },
     {
-      "monarch": "Charles I",
+      "name": "Charles I",
       "battleyness": 0,
       "scandal": 2,
       "subjectivity": 2,
@@ -665,7 +665,7 @@
       "consorts": []
     },
     {
-      "monarch": "Oliver Cromwell",
+      "name": "Oliver Cromwell",
       "battleyness": 19.5,
       "scandal": 20,
       "subjectivity": 5,
@@ -676,7 +676,7 @@
       "consorts": []
     },
     {
-      "monarch": "Charles II",
+      "name": "Charles II",
       "battleyness": 1,
       "scandal": 16,
       "subjectivity": 13,
@@ -687,7 +687,7 @@
       "consorts": []
     },
     {
-      "monarch": "James II",
+      "name": "James II",
       "battleyness": 2.5,
       "scandal": 16,
       "subjectivity": 0,
@@ -698,7 +698,7 @@
       "consorts": []
     },
     {
-      "monarch": "William III & Mary II",
+      "name": "William III & Mary II",
       "battleyness": 16,
       "scandal": 4,
       "subjectivity": 17,
@@ -709,7 +709,7 @@
       "consorts": []
     },
     {
-      "monarch": "Anne",
+      "name": "Anne",
       "battleyness": 14,
       "scandal": 0,
       "subjectivity": 15,
@@ -720,7 +720,7 @@
       "consorts": []
     },
     {
-      "monarch": "George I",
+      "name": "George I",
       "battleyness": 6,
       "scandal": 11,
       "subjectivity": 9,
@@ -731,7 +731,7 @@
       "consorts": []
     },
     {
-      "monarch": "George II",
+      "name": "George II",
       "battleyness": 17.5,
       "scandal": 3,
       "subjectivity": 10,
@@ -742,7 +742,7 @@
       "consorts": []
     },
     {
-      "monarch": "George III",
+      "name": "George III",
       "battleyness": 15,
       "scandal": 0,
       "subjectivity": 15,
@@ -753,7 +753,7 @@
       "consorts": []
     },
     {
-      "monarch": "George IV",
+      "name": "George IV",
       "battleyness": 7,
       "scandal": 15,
       "subjectivity": 10,
@@ -764,7 +764,7 @@
       "consorts": []
     },
     {
-      "monarch": "William IV",
+      "name": "William IV",
       "battleyness": 8,
       "scandal": 10,
       "subjectivity": 16,
@@ -775,7 +775,7 @@
       "consorts": []
     },
     {
-      "monarch": "Victoria",
+      "name": "Victoria",
       "battleyness": 15.5,
       "scandal": 7,
       "subjectivity": 16,
@@ -786,7 +786,7 @@
       "consorts": []
     },
     {
-      "monarch": "Edward VII",
+      "name": "Edward VII",
       "battleyness": 6,
       "scandal": 16,
       "subjectivity": 14,
@@ -797,7 +797,7 @@
       "consorts": []
     },
     {
-      "monarch": "George V",
+      "name": "George V",
       "battleyness": 13.5,
       "scandal": 2,
       "subjectivity": 14,
@@ -808,7 +808,7 @@
       "consorts": []
     },
     {
-      "monarch": "Edward VIII",
+      "name": "Edward VIII",
       "battleyness": 2,
       "scandal": 18.5,
       "subjectivity": 4,
@@ -819,7 +819,7 @@
       "consorts": []
     },
     {
-      "monarch": "George VI",
+      "name": "George VI",
       "battleyness": 15,
       "scandal": 0.5,
       "subjectivity": 17.5,
@@ -830,7 +830,7 @@
       "consorts": []
     },
     {
-      "monarch": "Elizabeth II",
+      "name": "Elizabeth II",
       "battleyness": 10,
       "scandal": 0,
       "subjectivity": 15,

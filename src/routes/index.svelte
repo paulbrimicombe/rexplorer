@@ -1,43 +1,28 @@
 <script context="module" lang="ts">
+  import type Rating from "./Rating";
+  import ScoreSummary from "../components/ScoreSummary.svelte";
+
   export function preload() {
     return this.fetch(`data/scores.json`)
       .then((response: { json: () => any }) => response.json())
       .then((scores) => ({
-        scores: scores.monarchs,
+        scores: scores.monarchs as Rating[],
       }));
   }
 </script>
 
 <script lang="ts">
-  type Scores = Readonly<{
-    battleyness: number;
-    scandal: number;
-    subjectivity: number;
-    longevity: number;
-    dynasty: number;
-    total: number;
-    rexFactor: number;
-  }>;
-
-  export let scores: ({ monarch: string } & Scores)[];
+  export let scores: Rating[];
 </script>
 
 <style>
-  h1,
-  p {
+  h1 {
     text-align: center;
     margin: 0 auto;
-  }
-
-  h1 {
     font-size: 2.8em;
     text-transform: uppercase;
     font-weight: 700;
     margin: 0 0 0.5em 0;
-  }
-
-  p {
-    margin: 1em auto;
   }
 
   @media (min-width: 480px) {
@@ -53,13 +38,8 @@
 
 <h1>Welcome to the Rexplorer!</h1>
 
-<ul>
+<monarchs>
   {#each scores as monarch}
-    <li>{monarch.monarch}</li>
+    <ScoreSummary rating={monarch} />
   {/each}
-</ul>
-
-<p>
-  <strong>Try editing this file (src/routes/index.svelte) to test live
-    reloading.</strong>
-</p>
+</monarchs>
