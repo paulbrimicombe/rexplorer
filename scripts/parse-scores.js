@@ -1,5 +1,5 @@
 #! /usr/bin/env node
-'use strict'
+"use strict";
 
 const fs = require("fs");
 
@@ -50,12 +50,12 @@ const extractFields = (lines) => {
         return "rexFactor";
       }
 
-      if (field === 'Monarch') {
-        return 'name'
+      if (field === "Monarch") {
+        return "name";
       }
 
-      if (field === 'Consort') {
-        return 'name'
+      if (field === "Consort") {
+        return "name";
       }
 
       const firstCharacter = field.charAt(0);
@@ -107,7 +107,7 @@ const result = {
   monarchs: [],
 };
 
-monarchLines.forEach((line) => {
+monarchLines.forEach((line, index) => {
   const entries = line.split("\t");
   const monarchEntry = {};
   result.monarchs.push(monarchEntry);
@@ -116,6 +116,7 @@ monarchLines.forEach((line) => {
     monarchEntry[key] = parseValue(value);
   });
 
+  monarchEntry.index = index;
   monarchEntry.rexFactor = REX_FACTOR_WINNERS.includes(monarchEntry.name);
   monarchEntry.consorts = (CONSORT_MAPPING[monarchEntry.name] || []).flatMap(
     (name) =>

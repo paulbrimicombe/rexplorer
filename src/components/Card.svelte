@@ -10,7 +10,7 @@
     flex-direction: row;
     border-radius: 1rem;
     width: 15em;
-    height: 20em;
+    height: 22em;
     background: white;
     background-size: cover;
   }
@@ -23,7 +23,6 @@
   }
 
   name {
-    height: inherit;
     margin: 0;
     padding: 0;
     border-top-left-radius: 1rem;
@@ -68,13 +67,15 @@
 
   portrait {
     width: 95%;
-    height: 60%;
+    flex: 1;
     background-size: cover;
+    background-position: center;
     box-shadow: 0 0 0.5em 0.5em white inset;
   }
 
   score {
     margin: 0.1em;
+    font-size: 0.9em;
   }
 
   score-label {
@@ -117,7 +118,8 @@
     </span>
   </name>
   <scores>
-    <portrait style="background-image: url('/portraits/{rating.name}.webp')" />
+    <portrait style="background-image: url('/portraits/{rating.name}.jpg')" />
+    <total>{rating.total}</total>
     <score>
       <score-label>Battleyness {rating.battleyness}</score-label>
       <bar
@@ -152,6 +154,5 @@
         &nbsp;
       </bar>
     </score>
-    <total>{rating.total}</total>
   </scores>
 </card>

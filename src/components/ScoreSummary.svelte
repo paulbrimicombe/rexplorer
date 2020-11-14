@@ -1,10 +1,17 @@
 <script lang="ts">
   import type Rating from "../routes/Rating";
-  import { afterUpdate, createEventDispatcher } from "svelte";
+  import { afterUpdate, beforeUpdate, createEventDispatcher } from "svelte";
+  import { scale } from "svelte/transition";
 
   const dispatch = createEventDispatcher();
 
   export let rating: Rating;
+  export let scoreHighlight: string;
+
+  let highlightMax;
+  beforeUpdate(() => {
+    highlightMax = scoreHighlight === "total" ? 100 : 20;
+  });
 
   let showBars = false;
 
@@ -35,14 +42,19 @@
   }
 
   total {
-    border-radius: 10%;
+    border-radius: 50%;
     width: 3em;
     height: 3em;
-    display: inline-flex;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
-    margin-right: 1em;
+    background: #d4af37;
+    background: linear-gradient(to bottom, #d4af37 0%, #c5a028 100%);
+    border: 1px solid #b69119;
+    box-shadow: inset 0 1px 0 #e3be46;
+    margin-right: 0.5em;
   }
 
   img {
@@ -51,9 +63,11 @@
   }
 
   name {
-    position: relative;
     font-size: 1.5em;
     margin: 0 0.5em;
+    text-align: left;
+    flex: 1;
+    position: relative;
   }
 
   badge {
@@ -63,9 +77,16 @@
     z-index: 10;
   }
 
+  detail {
+    flex: 2;
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+
   breakdown {
     width: 5em;
-    height: 2em;
+    height: 2.2em;
     display: inline-flex;
     flex-direction: column;
     border-bottom: 1px solid darkslategray;
@@ -79,13 +100,29 @@
     align-items: center;
   }
 
+  highlight-bar {
+    margin-left: 0.8em;
+    width: 5em;
+    text-align: left;
+    border-left: solid 1px darkslategray;
+    border-bottom: solid 1px darkslategray;
+    display: flex;
+    align-items: center;
+    height: 2.2em;
+  }
+
+  highlight-bar > bar {
+    font-size: 1.1em;
+    line-height: 1.4em;
+  }
+
   bar {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     display: inline-block;
-    height: 3px;
     min-width: 1px;
     transition: width 1s;
+    font-size: 3px;
   }
 
   .battleyness {
@@ -113,31 +150,42 @@
     {/if}
     {rating.name}
   </name>
-  <breakdown>
-    <breakdown-row>
-      <bar
-        style={`width: ${showBars ? (100 * rating.battleyness) / 20 : 0}%`}
-        class="battleyness" />
-    </breakdown-row>
-    <breakdown-row>
-      <bar
-        style={`width: ${showBars ? (100 * rating.scandal) / 20 : 0}%`}
-        class="scandal" />
-    </breakdown-row>
-    <breakdown-row>
-      <bar
-        style={`width: ${showBars ? (100 * rating.subjectivity) / 20 : 0}%`}
-        class="subjectivity" />
-    </breakdown-row>
-    <breakdown-row>
-      <bar
-        style={`width: ${showBars ? (100 * rating.longevity) / 20 : 0}%`}
-        class="longevity" />
-    </breakdown-row>
-    <breakdown-row>
-      <bar
-        style={`width: ${showBars ? (100 * rating.dynasty) / 20 : 0}%`}
-        class="dynasty" />
-    </breakdown-row>
-  </breakdown>
+  <detail>
+    <breakdown>
+      <breakdown-row>
+        <bar
+          style={`width: ${showBars ? (100 * rating.battleyness) / 20 : 0}%`}
+          class="battleyness" >&nbsp;</bar>
+      </breakdown-row>
+      <breakdown-row>
+        <bar
+          style={`width: ${showBars ? (100 * rating.scandal) / 20 : 0}%`}
+          class="scandal" >&nbsp;</bar>
+      </breakdown-row>
+      <breakdown-row>
+        <bar
+          style={`width: ${showBars ? (100 * rating.subjectivity) / 20 : 0}%`}
+          class="subjectivity" >&nbsp;</bar>
+      </breakdown-row>
+      <breakdown-row>
+        <bar
+          style={`width: ${showBars ? (100 * rating.longevity) / 20 : 0}%`}
+          class="longevity" >&nbsp;</bar>
+      </breakdown-row>
+      <breakdown-row>
+        <bar
+          style={`width: ${showBars ? (100 * rating.dynasty) / 20 : 0}%`}
+          class="dynasty" >&nbsp;</bar>
+      </breakdown-row>
+    </breakdown>
+    {#if scoreHighlight && scoreHighlight !== 'index' && scoreHighlight !== 'total'}
+      <highlight-bar transition:scale={{ duration: 1000 }}>
+        <bar
+          style={`width: ${showBars ? (100 * rating[scoreHighlight]) / highlightMax : 0}%;`}
+          class={scoreHighlight}>
+          &nbsp;{rating[scoreHighlight]}
+        </bar>
+      </highlight-bar>
+    {/if}
+  </detail>
 </button>

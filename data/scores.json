@@ -8,6 +8,7 @@
       "longevity": 15,
       "dynasty": 8.35,
       "total": 55.35,
+      "index": 0,
       "rexFactor": true,
       "consorts": [
         {
@@ -30,6 +31,7 @@
       "longevity": 14.5,
       "dynasty": 20.04,
       "total": 56.04,
+      "index": 1,
       "rexFactor": false,
       "consorts": [
         {
@@ -62,6 +64,7 @@
       "longevity": 9.5,
       "dynasty": 0,
       "total": 47,
+      "index": 2,
       "rexFactor": true,
       "consorts": []
     },
@@ -73,6 +76,7 @@
       "longevity": 5,
       "dynasty": 5.01,
       "total": 33.01,
+      "index": 3,
       "rexFactor": false,
       "consorts": [
         {
@@ -105,6 +109,7 @@
       "longevity": 6.5,
       "dynasty": 0,
       "total": 26,
+      "index": 4,
       "rexFactor": false,
       "consorts": []
     },
@@ -116,6 +121,7 @@
       "longevity": 3,
       "dynasty": 0,
       "total": 17.5,
+      "index": 5,
       "rexFactor": false,
       "consorts": [
         {
@@ -138,6 +144,7 @@
       "longevity": 10,
       "dynasty": 5.01,
       "total": 57.01,
+      "index": 6,
       "rexFactor": false,
       "consorts": [
         {
@@ -180,6 +187,7 @@
       "longevity": 2,
       "dynasty": 0,
       "total": 3,
+      "index": 7,
       "rexFactor": false,
       "consorts": []
     },
@@ -191,6 +199,7 @@
       "longevity": 16.5,
       "dynasty": 15.03,
       "total": 44.03,
+      "index": 8,
       "rexFactor": false,
       "consorts": [
         {
@@ -223,6 +232,7 @@
       "longevity": 0.5,
       "dynasty": 5.01,
       "total": 27.51,
+      "index": 9,
       "rexFactor": false,
       "consorts": [
         {
@@ -245,6 +255,7 @@
       "longevity": 0.5,
       "dynasty": 3.34,
       "total": 24.34,
+      "index": 10,
       "rexFactor": false,
       "consorts": [
         {
@@ -267,6 +278,7 @@
       "longevity": 11.5,
       "dynasty": 6.68,
       "total": 53.68,
+      "index": 11,
       "rexFactor": true,
       "consorts": [
         {
@@ -299,6 +311,7 @@
       "longevity": 3.5,
       "dynasty": 0,
       "total": 10,
+      "index": 12,
       "rexFactor": false,
       "consorts": []
     },
@@ -310,6 +323,7 @@
       "longevity": 2,
       "dynasty": 0,
       "total": 13.5,
+      "index": 13,
       "rexFactor": false,
       "consorts": []
     },
@@ -321,6 +335,7 @@
       "longevity": 13.5,
       "dynasty": 0,
       "total": 26.5,
+      "index": 14,
       "rexFactor": false,
       "consorts": [
         {
@@ -343,6 +358,7 @@
       "longevity": 0.5,
       "dynasty": 11.69,
       "total": 38.19,
+      "index": 15,
       "rexFactor": false,
       "consorts": [
         {
@@ -365,6 +381,7 @@
       "longevity": 12,
       "dynasty": 10.02,
       "total": 54.52,
+      "index": 16,
       "rexFactor": true,
       "consorts": [
         {
@@ -387,6 +404,7 @@
       "longevity": 8,
       "dynasty": 0,
       "total": 39.5,
+      "index": 17,
       "rexFactor": false,
       "consorts": []
     },
@@ -398,6 +416,7 @@
       "longevity": 16,
       "dynasty": 1.67,
       "total": 59.67,
+      "index": 18,
       "rexFactor": true,
       "consorts": [
         {
@@ -430,6 +449,7 @@
       "longevity": 11.5,
       "dynasty": 3.34,
       "total": 27.84,
+      "index": 19,
       "rexFactor": false,
       "consorts": []
     },
@@ -441,6 +461,7 @@
       "longevity": 16,
       "dynasty": 6.68,
       "total": 74.18,
+      "index": 20,
       "rexFactor": true,
       "consorts": []
     },
@@ -452,6 +473,7 @@
       "longevity": 6.5,
       "dynasty": 0,
       "total": 47.5,
+      "index": 21,
       "rexFactor": true,
       "consorts": []
     },
@@ -463,6 +485,7 @@
       "longevity": 10.5,
       "dynasty": 8.35,
       "total": 48.85,
+      "index": 22,
       "rexFactor": false,
       "consorts": []
     },
@@ -474,6 +497,7 @@
       "longevity": 18.5,
       "dynasty": 6.68,
       "total": 42.18,
+      "index": 23,
       "rexFactor": false,
       "consorts": []
     },
@@ -485,6 +509,7 @@
       "longevity": 16,
       "dynasty": 11.69,
       "total": 72.69,
+      "index": 24,
       "rexFactor": true,
       "consorts": []
     },
@@ -496,6 +521,7 @@
       "longevity": 11.5,
       "dynasty": 6.68,
       "total": 39.68,
+      "index": 25,
       "rexFactor": false,
       "consorts": []
     },
@@ -507,6 +533,7 @@
       "longevity": 18,
       "dynasty": 6.68,
       "total": 57.68,
+      "index": 26,
       "rexFactor": true,
       "consorts": []
     },
@@ -518,6 +545,7 @@
       "longevity": 13,
       "dynasty": 0,
       "total": 38,
+      "index": 27,
       "rexFactor": false,
       "consorts": []
     },
@@ -529,6 +557,7 @@
       "longevity": 8.5,
       "dynasty": 8.35,
       "total": 54.85,
+      "index": 28,
       "rexFactor": false,
       "consorts": []
     },
@@ -540,6 +569,7 @@
       "longevity": 6.5,
       "dynasty": 1.67,
       "total": 47.17,
+      "index": 29,
       "rexFactor": true,
       "consorts": []
     },
@@ -551,6 +581,7 @@
       "longevity": 16.5,
       "dynasty": 0,
       "total": 16.5,
+      "index": 30,
       "rexFactor": false,
       "consorts": []
     },
@@ -562,6 +593,7 @@
       "longevity": 12.5,
       "dynasty": 11.69,
       "total": 69.19,
+      "index": 31,
       "rexFactor": true,
       "consorts": []
     },
@@ -573,6 +605,7 @@
       "longevity": 0.5,
       "dynasty": 0,
       "total": 0.5,
+      "index": 32,
       "rexFactor": false,
       "consorts": []
     },
@@ -584,6 +617,7 @@
       "longevity": 1.5,
       "dynasty": 0,
       "total": 45,
+      "index": 33,
       "rexFactor": false,
       "consorts": []
     },
@@ -595,6 +629,7 @@
       "longevity": 13.5,
       "dynasty": 5.01,
       "total": 51.51,
+      "index": 34,
       "rexFactor": false,
       "consorts": []
     },
@@ -606,6 +641,7 @@
       "longevity": 16.5,
       "dynasty": 5.01,
       "total": 57.01,
+      "index": 35,
       "rexFactor": true,
       "consorts": []
     },
@@ -617,6 +653,7 @@
       "longevity": 4.5,
       "dynasty": 0,
       "total": 13.5,
+      "index": 36,
       "rexFactor": false,
       "consorts": []
     },
@@ -628,6 +665,7 @@
       "longevity": 4,
       "dynasty": 0,
       "total": 27.5,
+      "index": 37,
       "rexFactor": false,
       "consorts": []
     },
@@ -639,6 +677,7 @@
       "longevity": 17,
       "dynasty": 0,
       "total": 46.5,
+      "index": 38,
       "rexFactor": true,
       "consorts": []
     },
@@ -650,6 +689,7 @@
       "longevity": 13,
       "dynasty": 3.34,
       "total": 43.34,
+      "index": 39,
       "rexFactor": false,
       "consorts": []
     },
@@ -661,6 +701,7 @@
       "longevity": 14,
       "dynasty": 10.02,
       "total": 28.02,
+      "index": 40,
       "rexFactor": false,
       "consorts": []
     },
@@ -672,6 +713,7 @@
       "longevity": 3.5,
       "dynasty": 8.35,
       "total": 56.35,
+      "index": 41,
       "rexFactor": false,
       "consorts": []
     },
@@ -683,6 +725,7 @@
       "longevity": 14.5,
       "dynasty": 0,
       "total": 44.5,
+      "index": 42,
       "rexFactor": true,
       "consorts": []
     },
@@ -694,6 +737,7 @@
       "longevity": 3,
       "dynasty": 6.68,
       "total": 28.18,
+      "index": 43,
       "rexFactor": false,
       "consorts": []
     },
@@ -705,6 +749,7 @@
       "longevity": 8.5,
       "dynasty": 0,
       "total": 45.5,
+      "index": 44,
       "rexFactor": true,
       "consorts": []
     },
@@ -716,6 +761,7 @@
       "longevity": 8,
       "dynasty": 0,
       "total": 37,
+      "index": 45,
       "rexFactor": false,
       "consorts": []
     },
@@ -727,6 +773,7 @@
       "longevity": 8,
       "dynasty": 3.34,
       "total": 37.34,
+      "index": 46,
       "rexFactor": false,
       "consorts": []
     },
@@ -738,6 +785,7 @@
       "longevity": 15.5,
       "dynasty": 5.01,
       "total": 51.01,
+      "index": 47,
       "rexFactor": false,
       "consorts": []
     },
@@ -749,6 +797,7 @@
       "longevity": 19,
       "dynasty": 18.37,
       "total": 67.37,
+      "index": 48,
       "rexFactor": false,
       "consorts": []
     },
@@ -760,6 +809,7 @@
       "longevity": 7,
       "dynasty": 0,
       "total": 39,
+      "index": 49,
       "rexFactor": false,
       "consorts": []
     },
@@ -771,6 +821,7 @@
       "longevity": 5,
       "dynasty": 0,
       "total": 39,
+      "index": 50,
       "rexFactor": true,
       "consorts": []
     },
@@ -782,6 +833,7 @@
       "longevity": 19.5,
       "dynasty": 10.02,
       "total": 68.02,
+      "index": 51,
       "rexFactor": true,
       "consorts": []
     },
@@ -793,6 +845,7 @@
       "longevity": 6,
       "dynasty": 6.68,
       "total": 48.68,
+      "index": 52,
       "rexFactor": false,
       "consorts": []
     },
@@ -804,6 +857,7 @@
       "longevity": 15,
       "dynasty": 8.35,
       "total": 52.85,
+      "index": 53,
       "rexFactor": true,
       "consorts": []
     },
@@ -815,6 +869,7 @@
       "longevity": 1,
       "dynasty": 0,
       "total": 25.5,
+      "index": 54,
       "rexFactor": false,
       "consorts": []
     },
@@ -826,6 +881,7 @@
       "longevity": 9.5,
       "dynasty": 3.34,
       "total": 45.84,
+      "index": 55,
       "rexFactor": false,
       "consorts": []
     },
@@ -837,6 +893,7 @@
       "longevity": 20,
       "dynasty": 6.68,
       "total": 51.68,
+      "index": 56,
       "rexFactor": false,
       "consorts": []
     }
