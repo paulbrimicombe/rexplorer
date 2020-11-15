@@ -35,24 +35,24 @@
       "rexFactor": false,
       "consorts": [
         {
-          "name": "Ealhswith",
+          "name": "Ælfflæd",
           "battleyness": 3,
-          "scandal": 0,
+          "scandal": 4,
           "subjectivity": 7,
-          "longevity": 15.5,
-          "dynasty": 15,
-          "total": 40.5,
+          "longevity": 12.5,
+          "dynasty": 17,
+          "total": 43.5,
           "rexFactor": false
         },
         {
-          "name": "Ealhswith",
-          "battleyness": 3,
+          "name": "Eadgifu of Kent",
+          "battleyness": 12,
           "scandal": 0,
-          "subjectivity": 7,
-          "longevity": 15.5,
-          "dynasty": 15,
-          "total": 40.5,
-          "rexFactor": false
+          "subjectivity": 11.5,
+          "longevity": 10,
+          "dynasty": 13,
+          "total": 46.5,
+          "rexFactor": true
         }
       ]
     },
@@ -80,23 +80,23 @@
       "rexFactor": false,
       "consorts": [
         {
-          "name": "Ealhswith",
-          "battleyness": 3,
+          "name": "Ælfgifu of Shaftesbury",
+          "battleyness": 0,
           "scandal": 0,
-          "subjectivity": 7,
-          "longevity": 15.5,
-          "dynasty": 15,
-          "total": 40.5,
+          "subjectivity": 3.5,
+          "longevity": 5.5,
+          "dynasty": 10,
+          "total": 19,
           "rexFactor": false
         },
         {
-          "name": "Ealhswith",
-          "battleyness": 3,
+          "name": "Æthelflæd of Damerham",
+          "battleyness": 0.5,
           "scandal": 0,
-          "subjectivity": 7,
-          "longevity": 15.5,
-          "dynasty": 15,
-          "total": 40.5,
+          "subjectivity": 0,
+          "longevity": 3,
+          "dynasty": 0,
+          "total": 3.5,
           "rexFactor": false
         }
       ]
@@ -125,13 +125,13 @@
       "rexFactor": false,
       "consorts": [
         {
-          "name": "Ealhswith",
-          "battleyness": 3,
-          "scandal": 0,
-          "subjectivity": 7,
-          "longevity": 15.5,
-          "dynasty": 15,
-          "total": 40.5,
+          "name": "Ælfgifu",
+          "battleyness": 4,
+          "scandal": 17,
+          "subjectivity": 0,
+          "longevity": 4.5,
+          "dynasty": 0,
+          "total": 25.5,
           "rexFactor": false
         }
       ]
@@ -148,34 +148,34 @@
       "rexFactor": false,
       "consorts": [
         {
-          "name": "Ealhswith",
-          "battleyness": 3,
+          "name": "Æthelflæd Eneda",
+          "battleyness": 0,
           "scandal": 0,
-          "subjectivity": 7,
-          "longevity": 15.5,
-          "dynasty": 15,
-          "total": 40.5,
+          "subjectivity": 0,
+          "longevity": 1.5,
+          "dynasty": 7.5,
+          "total": 9,
           "rexFactor": false
         },
         {
-          "name": "Ealhswith",
-          "battleyness": 3,
-          "scandal": 0,
-          "subjectivity": 7,
-          "longevity": 15.5,
-          "dynasty": 15,
-          "total": 40.5,
+          "name": "Wulfthryth",
+          "battleyness": 7,
+          "scandal": 10,
+          "subjectivity": 4,
+          "longevity": 1.5,
+          "dynasty": 7.5,
+          "total": 30,
           "rexFactor": false
         },
         {
-          "name": "Ealhswith",
-          "battleyness": 3,
-          "scandal": 0,
-          "subjectivity": 7,
-          "longevity": 15.5,
-          "dynasty": 15,
-          "total": 40.5,
-          "rexFactor": false
+          "name": "Ælfthryth",
+          "battleyness": 17,
+          "scandal": 18,
+          "subjectivity": 16,
+          "longevity": 15,
+          "dynasty": 7.5,
+          "total": 73.5,
+          "rexFactor": true
         }
       ]
     },
@@ -203,24 +203,24 @@
       "rexFactor": false,
       "consorts": [
         {
-          "name": "Ealhswith",
-          "battleyness": 3,
+          "name": "Ælfgifu of York",
+          "battleyness": 0,
           "scandal": 0,
-          "subjectivity": 7,
-          "longevity": 15.5,
-          "dynasty": 15,
-          "total": 40.5,
+          "subjectivity": 0,
+          "longevity": 10.5,
+          "dynasty": 18.5,
+          "total": 29,
           "rexFactor": false
         },
         {
-          "name": "Ealhswith",
-          "battleyness": 3,
-          "scandal": 0,
-          "subjectivity": 7,
-          "longevity": 15.5,
+          "name": "Emma of Normandy",
+          "battleyness": 17.5,
+          "scandal": 4.5,
+          "subjectivity": 18,
+          "longevity": 16.5,
           "dynasty": 15,
-          "total": 40.5,
-          "rexFactor": false
+          "total": 71.5,
+          "rexFactor": true
         }
       ]
     },
@@ -236,13 +236,13 @@
       "rexFactor": false,
       "consorts": [
         {
-          "name": "Ealhswith",
-          "battleyness": 3,
-          "scandal": 0,
-          "subjectivity": 7,
-          "longevity": 15.5,
-          "dynasty": 15,
-          "total": 40.5,
+          "name": "Sigrid the Haughty",
+          "battleyness": 14,
+          "scandal": 17.5,
+          "subjectivity": 0,
+          "longevity": 0,
+          "dynasty": 11.5,
+          "total": 43,
           "rexFactor": false
         }
       ]
@@ -259,13 +259,13 @@
       "rexFactor": false,
       "consorts": [
         {
-          "name": "Ealhswith",
-          "battleyness": 3,
-          "scandal": 0,
-          "subjectivity": 7,
-          "longevity": 15.5,
-          "dynasty": 15,
-          "total": 40.5,
+          "name": "Ealdgyth",
+          "battleyness": 4,
+          "scandal": 3,
+          "subjectivity": 0,
+          "longevity": 1,
+          "dynasty": 10,
+          "total": 18,
           "rexFactor": false
         }
       ]
@@ -282,23 +282,23 @@
       "rexFactor": true,
       "consorts": [
         {
-          "name": "Ealhswith",
-          "battleyness": 3,
-          "scandal": 0,
-          "subjectivity": 7,
-          "longevity": 15.5,
+          "name": "Emma of Normandy",
+          "battleyness": 17.5,
+          "scandal": 4.5,
+          "subjectivity": 18,
+          "longevity": 16.5,
           "dynasty": 15,
-          "total": 40.5,
-          "rexFactor": false
+          "total": 71.5,
+          "rexFactor": true
         },
         {
-          "name": "Ealhswith",
-          "battleyness": 3,
-          "scandal": 0,
-          "subjectivity": 7,
-          "longevity": 15.5,
-          "dynasty": 15,
-          "total": 40.5,
+          "name": "Ælfgifu of Northampton",
+          "battleyness": 13,
+          "scandal": 9.5,
+          "subjectivity": 0,
+          "longevity": 13.5,
+          "dynasty": 10,
+          "total": 46,
           "rexFactor": false
         }
       ]
@@ -339,13 +339,13 @@
       "rexFactor": false,
       "consorts": [
         {
-          "name": "Ealhswith",
-          "battleyness": 3,
-          "scandal": 0,
-          "subjectivity": 7,
-          "longevity": 15.5,
-          "dynasty": 15,
-          "total": 40.5,
+          "name": "Edith of Wessex",
+          "battleyness": 7.5,
+          "scandal": 13.5,
+          "subjectivity": 11,
+          "longevity": 13.5,
+          "dynasty": 0,
+          "total": 45.5,
           "rexFactor": false
         }
       ]
@@ -362,13 +362,13 @@
       "rexFactor": false,
       "consorts": [
         {
-          "name": "Ealhswith",
-          "battleyness": 3,
+          "name": "Ealdgyth of Mercia",
+          "battleyness": 0,
           "scandal": 0,
-          "subjectivity": 7,
-          "longevity": 15.5,
-          "dynasty": 15,
-          "total": 40.5,
+          "subjectivity": 0,
+          "longevity": 1.5,
+          "dynasty": 7.5,
+          "total": 9,
           "rexFactor": false
         }
       ]
@@ -385,13 +385,13 @@
       "rexFactor": true,
       "consorts": [
         {
-          "name": "Ealhswith",
-          "battleyness": 3,
-          "scandal": 0,
-          "subjectivity": 7,
-          "longevity": 15.5,
-          "dynasty": 15,
-          "total": 40.5,
+          "name": "Matilda of Flanders",
+          "battleyness": 12.5,
+          "scandal": 13,
+          "subjectivity": 15,
+          "longevity": 10.5,
+          "dynasty": 17.5,
+          "total": 68.5,
           "rexFactor": false
         }
       ]
@@ -420,23 +420,23 @@
       "rexFactor": true,
       "consorts": [
         {
-          "name": "Ealhswith",
-          "battleyness": 3,
-          "scandal": 0,
-          "subjectivity": 7,
-          "longevity": 15.5,
-          "dynasty": 15,
-          "total": 40.5,
-          "rexFactor": false
+          "name": "Matilda of Scotland",
+          "battleyness": 10,
+          "scandal": 7.5,
+          "subjectivity": 18,
+          "longevity": 11,
+          "dynasty": 10,
+          "total": 56.5,
+          "rexFactor": true
         },
         {
-          "name": "Ealhswith",
-          "battleyness": 3,
+          "name": "Adeliza of Louvain",
+          "battleyness": 6.5,
           "scandal": 0,
-          "subjectivity": 7,
-          "longevity": 15.5,
-          "dynasty": 15,
-          "total": 40.5,
+          "subjectivity": 6.5,
+          "longevity": 9.5,
+          "dynasty": 0,
+          "total": 22.5,
           "rexFactor": false
         }
       ]

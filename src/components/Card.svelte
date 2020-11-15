@@ -9,17 +9,24 @@
     display: flex;
     flex-direction: row;
     border-radius: 1rem;
-    width: 15em;
-    height: 22em;
+    width: 20em;
+    height: 30em;
     background: white;
     background-size: cover;
   }
 
-  scores {
+  content {
     padding: 0.2em;
     display: flex;
     flex-direction: column;
     flex: 1;
+  }
+
+  scores {
+    border-left: solid 1px darkslategray;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
   }
 
   name {
@@ -34,7 +41,7 @@
   }
 
   name {
-    font-size: 1.2em;
+    font-size: 1.5em;
     writing-mode: vertical-rl;
   }
 
@@ -54,7 +61,7 @@
     border-radius: 50%;
     width: 3em;
     height: 3em;
-    font-size: 1em;
+    font-size: 1.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,26 +76,22 @@
     width: 95%;
     flex: 1;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     box-shadow: 0 0 0.5em 0.5em white inset;
   }
 
   score {
-    margin: 0.1em;
-    font-size: 0.9em;
-  }
-
-  score-label {
-    position: absolute;
-    margin-left: 0.4em;
+    margin: 0.1em 0;
+    font-size: 1.5em;
   }
 
   bar {
-    border-top-right-radius: 0.1em;
-    border-bottom-right-radius: 0.1em;
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
     display: inline-block;
     min-width: 1px;
     transition: width 1s;
+    white-space: nowrap;
   }
 
   .battleyness {
@@ -117,42 +120,41 @@
       {rating.name}
     </span>
   </name>
-  <scores>
-    <portrait style="background-image: url('/portraits/{rating.name}.jpg')" />
+  <content>
+    <portrait style="background-image: url('/portraits/{rating.name}.webp')" />
     <total>{rating.total}</total>
-    <score>
-      <score-label>Battleyness {rating.battleyness}</score-label>
-      <bar
-        style={`width: ${(100 * rating.battleyness) / 20}%`}
-        class="battleyness">
-        &nbsp;
-      </bar>
-    </score>
-    <score>
-      <score-label>Scandal {rating.scandal}</score-label>
-      <bar style={`width: ${(100 * rating.scandal) / 20}%`} class="scandal">
-        &nbsp;
-      </bar>
-    </score>
-    <score>
-      <score-label>Subjectivity {rating.subjectivity}</score-label>
-      <bar
-        style={`width: ${(100 * rating.subjectivity) / 20}%`}
-        class="subjectivity">
-        &nbsp;
-      </bar>
-    </score>
-    <score>
-      <score-label>Longevity {rating.longevity}</score-label>
-      <bar style={`width: ${(100 * rating.longevity) / 20}%`} class="longevity">
-        &nbsp;
-      </bar>
-    </score>
-    <score>
-      <score-label>Dynasty {rating.dynasty}</score-label>
-      <bar style={`width: ${(100 * rating.dynasty) / 20}%`} class="dynasty">
-        &nbsp;
-      </bar>
-    </score>
-  </scores>
+    <scores>
+      <score>
+        <bar
+          style={`width: ${(100 * rating.battleyness) / 20}%`}
+          class="battleyness">
+          &nbsp;Battleyness {rating.battleyness}
+        </bar>
+      </score>
+      <score>
+        <bar style={`width: ${(100 * rating.scandal) / 20}%`} class="scandal">
+          &nbsp;Scandal {rating.scandal}
+        </bar>
+      </score>
+      <score>
+        <bar
+          style={`width: ${(100 * rating.subjectivity) / 20}%`}
+          class="subjectivity">
+          &nbsp;Subjectivity {rating.subjectivity}
+        </bar>
+      </score>
+      <score>
+        <bar
+          style={`width: ${(100 * rating.longevity) / 20}%`}
+          class="longevity">
+          &nbsp;Longevity {rating.longevity}
+        </bar>
+      </score>
+      <score>
+        <bar style={`width: ${(100 * rating.dynasty) / 20}%`} class="dynasty">
+          &nbsp;Dynasty {rating.dynasty}
+        </bar>
+      </score>
+    </scores>
+  </content>
 </card>

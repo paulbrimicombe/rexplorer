@@ -6,7 +6,8 @@
   const dispatch = createEventDispatcher();
 
   export let rating: Rating;
-  export let scoreHighlight: string;
+  export let scoreHighlight: string | undefined = undefined;
+  export let style: string = "";
 
   let highlightMax;
   beforeUpdate(() => {
@@ -26,19 +27,19 @@
 
 <style>
   button {
+    border-radius: 1.5em;
     display: flex;
     align-items: center;
     justify-items: center;
     padding: 0.7em;
     border: none;
     background: none;
-    width: 100%;
     cursor: pointer;
     border-radius: 0.2em;
   }
 
   button:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.1);
   }
 
   total {
@@ -78,7 +79,7 @@
   }
 
   detail {
-    flex: 2;
+    flex: 1;
     text-align: left;
     display: flex;
     align-items: center;
@@ -117,12 +118,13 @@
   }
 
   bar {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
     display: inline-block;
     min-width: 1px;
     transition: width 1s;
     font-size: 3px;
+    white-space: nowrap;
   }
 
   .battleyness {
@@ -142,7 +144,7 @@
   }
 </style>
 
-<button on:click={() => dispatch('select', rating)}>
+<button tabindex="0" on:click|preventDefault|stopPropagation={() => dispatch('select', rating)} style={style}>
   <total>{rating.total}</total>
   <name>
     {#if rating.rexFactor}
@@ -155,27 +157,37 @@
       <breakdown-row>
         <bar
           style={`width: ${showBars ? (100 * rating.battleyness) / 20 : 0}%`}
-          class="battleyness" >&nbsp;</bar>
+          class="battleyness">
+          &nbsp;
+        </bar>
       </breakdown-row>
       <breakdown-row>
         <bar
           style={`width: ${showBars ? (100 * rating.scandal) / 20 : 0}%`}
-          class="scandal" >&nbsp;</bar>
+          class="scandal">
+          &nbsp;
+        </bar>
       </breakdown-row>
       <breakdown-row>
         <bar
           style={`width: ${showBars ? (100 * rating.subjectivity) / 20 : 0}%`}
-          class="subjectivity" >&nbsp;</bar>
+          class="subjectivity">
+          &nbsp;
+        </bar>
       </breakdown-row>
       <breakdown-row>
         <bar
           style={`width: ${showBars ? (100 * rating.longevity) / 20 : 0}%`}
-          class="longevity" >&nbsp;</bar>
+          class="longevity">
+          &nbsp;
+        </bar>
       </breakdown-row>
       <breakdown-row>
         <bar
           style={`width: ${showBars ? (100 * rating.dynasty) / 20 : 0}%`}
-          class="dynasty" >&nbsp;</bar>
+          class="dynasty">
+          &nbsp;
+        </bar>
       </breakdown-row>
     </breakdown>
     {#if scoreHighlight && scoreHighlight !== 'index' && scoreHighlight !== 'total'}
@@ -188,4 +200,5 @@
       </highlight-bar>
     {/if}
   </detail>
+  <slot></slot>
 </button>

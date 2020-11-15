@@ -119,10 +119,12 @@ monarchLines.forEach((line, index) => {
   monarchEntry.index = index;
   monarchEntry.rexFactor = REX_FACTOR_WINNERS.includes(monarchEntry.name);
   monarchEntry.consorts = (CONSORT_MAPPING[monarchEntry.name] || []).flatMap(
-    (name) =>
-      consortData.consorts.find((consort) => {
-        return consort.name === name || [];
+    (name) => {
+      const consort = consortData.consorts.find((consort) => {
+        return consort.name === name;
       })
+      return consort || []
+    }
   );
 });
 

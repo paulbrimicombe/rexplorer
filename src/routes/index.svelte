@@ -1,6 +1,8 @@
 <script context="module" lang="ts">
   import type Rating from "./Rating";
   import Modal from "svelte-simple-modal";
+  import Monarchs from "../components/Monarchs.svelte";
+  import type Monarch from "./Monarch";
 
   export function preload() {
     return this.fetch(`data/scores.json`)
@@ -11,9 +13,8 @@
   }
 </script>
 
-<script lang="ts">import Monarchs from "../components/Monarchs.svelte";
-
-  export let scores: Rating[];
+<script lang="ts">
+  export let scores: Monarch[];
 </script>
 
 <style>
@@ -39,5 +40,5 @@
 
 <Modal>
   <h1>Welcome to the Rexplorer!</h1>
-  <Monarchs scores={scores} />
+  <Monarchs {scores} />
 </Modal>
