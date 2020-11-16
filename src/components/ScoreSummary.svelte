@@ -125,22 +125,24 @@
     transition: width 1s;
     font-size: 3px;
     white-space: nowrap;
+    color: #fff;
+    font-weight: bold;
   }
 
   .battleyness {
-    background-color: crimson;
+    background-color: #FF785A;
   }
   .scandal {
-    background-color: cornflowerblue;
+    background-color: #AF4D98;
   }
   .subjectivity {
-    background-color: chocolate;
+    background-color: #5073A5;
   }
   .longevity {
-    background-color: mediumpurple;
+    background-color: #531320;
   }
   .dynasty {
-    background-color: cadetblue;
+    background-color: #08BDBD;
   }
 </style>
 

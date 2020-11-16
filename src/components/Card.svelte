@@ -23,10 +23,10 @@
   }
 
   scores {
-    border-left: solid 1px darkslategray;
     display: flex;
     flex-direction: column;
-    align-items: left;
+    padding: 0.2em 0;
+    margin: 0 0.4em;
   }
 
   name {
@@ -38,9 +38,6 @@
     background: linear-gradient(to bottom, #c0c0c0 0%, #b1b1b1 100%);
     border: 1px solid #a2a2a2;
     box-shadow: inset 0 1px 0 #cfcfcf;
-  }
-
-  name {
     font-size: 1.5em;
     writing-mode: vertical-rl;
   }
@@ -83,6 +80,7 @@
   score {
     margin: 0.1em 0;
     font-size: 1.5em;
+    background-color: rgba(0,0,0,0.3);
   }
 
   bar {
@@ -92,22 +90,23 @@
     min-width: 1px;
     transition: width 1s;
     white-space: nowrap;
+    color: white;
   }
 
   .battleyness {
-    background-color: crimson;
+    background-color: #FF785A;
   }
   .scandal {
-    background-color: cornflowerblue;
+    background-color: #AF4D98;
   }
   .subjectivity {
-    background-color: chocolate;
+    background-color: #5073A5;
   }
   .longevity {
-    background-color: mediumpurple;
+    background-color: #531320;
   }
   .dynasty {
-    background-color: cadetblue;
+    background-color: #08BDBD;
   }
 </style>
 
