@@ -26,20 +26,29 @@
 </script>
 
 <style>
-  button {
+  rating {
     border-radius: 1.5em;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-items: center;
-    padding: 0.7em;
-    border: none;
-    background: none;
-    cursor: pointer;
     border-radius: 0.2em;
+    height: 100%;
   }
 
   button:hover {
     background: rgba(0, 0, 0, 0.1);
+  }
+
+  button {
+    height: 100%;
+    padding: 0 0.7em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-items: center;
   }
 
   total {
@@ -112,9 +121,14 @@
     height: 2.2em;
   }
 
-  highlight-bar > bar {
+  highlight-bar > bar-background > bar {
     font-size: 1.1em;
     line-height: 1.4em;
+  }
+
+  bar-background {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
   }
 
   bar {
@@ -130,77 +144,82 @@
   }
 
   .battleyness {
-    background-color: #FF785A;
+    background-color: #ff785a;
   }
   .scandal {
-    background-color: #AF4D98;
+    background-color: #af4d98;
   }
   .subjectivity {
-    background-color: #5073A5;
+    background-color: #5073a5;
   }
   .longevity {
     background-color: #531320;
   }
   .dynasty {
-    background-color: #08BDBD;
+    background-color: #08bdbd;
   }
 </style>
 
-<button tabindex="0" on:click|preventDefault|stopPropagation={() => dispatch('select', rating)} style={style}>
-  <total>{rating.total}</total>
-  <name>
-    {#if rating.rexFactor}
-      <badge><img src="/crown.svg" alt="Rex Factor winner" /></badge>
-    {/if}
-    {rating.name}
-  </name>
-  <detail>
-    <breakdown>
-      <breakdown-row>
-        <bar
-          style={`width: ${showBars ? (100 * rating.battleyness) / 20 : 0}%`}
-          class="battleyness">
-          &nbsp;
-        </bar>
-      </breakdown-row>
-      <breakdown-row>
-        <bar
-          style={`width: ${showBars ? (100 * rating.scandal) / 20 : 0}%`}
-          class="scandal">
-          &nbsp;
-        </bar>
-      </breakdown-row>
-      <breakdown-row>
-        <bar
-          style={`width: ${showBars ? (100 * rating.subjectivity) / 20 : 0}%`}
-          class="subjectivity">
-          &nbsp;
-        </bar>
-      </breakdown-row>
-      <breakdown-row>
-        <bar
-          style={`width: ${showBars ? (100 * rating.longevity) / 20 : 0}%`}
-          class="longevity">
-          &nbsp;
-        </bar>
-      </breakdown-row>
-      <breakdown-row>
-        <bar
-          style={`width: ${showBars ? (100 * rating.dynasty) / 20 : 0}%`}
-          class="dynasty">
-          &nbsp;
-        </bar>
-      </breakdown-row>
-    </breakdown>
-    {#if scoreHighlight && scoreHighlight !== 'index' && scoreHighlight !== 'total'}
-      <highlight-bar transition:scale={{ duration: 1000 }}>
-        <bar
-          style={`width: ${showBars ? (100 * rating[scoreHighlight]) / highlightMax : 0}%;`}
-          class={scoreHighlight}>
-          &nbsp;{rating[scoreHighlight]}
-        </bar>
-      </highlight-bar>
-    {/if}
-  </detail>
-  <slot></slot>
-</button>
+<rating {style}>
+  <button
+    on:click|preventDefault|stopPropagation={() => dispatch('select', rating)}>
+    <total>{rating.total}</total>
+    <name>
+      {#if rating.rexFactor}
+        <badge><img src="/crown.svg" alt="Rex Factor winner" /></badge>
+      {/if}
+      {rating.name}
+    </name>
+    <detail>
+      <breakdown>
+        <breakdown-row>
+          <bar
+            style={`width: ${showBars ? (100 * rating.battleyness) / 20 : 0}%`}
+            class="battleyness">
+            &nbsp;
+          </bar>
+        </breakdown-row>
+        <breakdown-row>
+          <bar
+            style={`width: ${showBars ? (100 * rating.scandal) / 20 : 0}%`}
+            class="scandal">
+            &nbsp;
+          </bar>
+        </breakdown-row>
+        <breakdown-row>
+          <bar
+            style={`width: ${showBars ? (100 * rating.subjectivity) / 20 : 0}%`}
+            class="subjectivity">
+            &nbsp;
+          </bar>
+        </breakdown-row>
+        <breakdown-row>
+          <bar
+            style={`width: ${showBars ? (100 * rating.longevity) / 20 : 0}%`}
+            class="longevity">
+            &nbsp;
+          </bar>
+        </breakdown-row>
+        <breakdown-row>
+          <bar
+            style={`width: ${showBars ? (100 * rating.dynasty) / 20 : 0}%`}
+            class="dynasty">
+            &nbsp;
+          </bar>
+        </breakdown-row>
+      </breakdown>
+      {#if scoreHighlight && scoreHighlight !== 'index' && scoreHighlight !== 'total'}
+        <highlight-bar transition:scale={{ duration: 1000 }}>
+          <bar-background>
+            <bar
+              style={`width: ${showBars ? (100 * rating[scoreHighlight]) / highlightMax : 0}%;`}
+              class={scoreHighlight}>
+              &nbsp;{rating[scoreHighlight]}
+            </bar>
+          </bar-background>
+        </highlight-bar>
+      {/if}
+    </detail>
+  </button>
+  <slot />
+</rating>

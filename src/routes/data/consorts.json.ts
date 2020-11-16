@@ -1,8 +1,8 @@
 import type { ServerResponse } from 'http';
-import { monarchs } from "./_scores.json";
+import { scores } from "./_consorts.json";
 
 const contents = JSON.stringify(
-  { monarchs }
+  { scores }
 );
 
 export function get(_, res: ServerResponse) {

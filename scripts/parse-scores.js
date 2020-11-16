@@ -2,6 +2,7 @@
 "use strict";
 
 const fs = require("fs");
+const path = require("path");
 
 const REX_FACTOR_WINNERS = [
   "Alfred the Great",
@@ -38,7 +39,7 @@ const CONSORT_MAPPING = {
   "Harold II": ["Ealdgyth of Mercia"],
   "William the Conqueror": ["Matilda of Flanders"],
   "Henry I": ["Matilda of Scotland", "Adeliza of Louvain"],
-  "King Stephen": ["Matilda of Boulogne"],
+  "Stephen": ["Matilda of Boulogne"],
 };
 
 const extractFields = (lines) => {
@@ -77,55 +78,76 @@ const parseValue = (rawValue) => {
   }
 };
 
-const consortLines = fs
-  .readFileSync("data/consort-scores.tsv", "utf-8")
-  .trim()
-  .split("\n");
-const consortFields = extractFields(consortLines);
+const linesToJson = (fields, lines) => {
+  return lines.map((line, index) => {
+    const lineValues = line.split("\t");
+    const entry = { index };
+    lineValues.forEach((value, index) => {
+      const key = fields[index];
+      entry[key] = parseValue(value);
+    });
+
+    if (entry.rexFactor === undefined) {
+      entry.rexFactor = REX_FACTOR_WINNERS.includes(entry.name);
+    }
+
+    return entry;
+  });
+};
+
+const readTSV = (filePath) => {
+  const lines = fs.readFileSync(filePath, "utf-8").trim().split("\n");
+  const fields = extractFields(lines);
+  return linesToJson(fields, lines);
+};
 
 const consortData = {
-  consorts: [],
+  scores: readTSV("data/consort-scores.tsv"),
 };
 
-consortLines.forEach((line) => {
-  const entries = line.split("\t");
-  const consortEntry = {};
-  consortData.consorts.push(consortEntry);
-  entries.forEach((value, index) => {
-    const key = consortFields[index];
-    consortEntry[key] = parseValue(value);
-  });
-});
-
-const monarchLines = fs
-  .readFileSync("data/scores.tsv", "utf-8")
-  .trim()
-  .split("\n");
-const monarchFields = extractFields(monarchLines);
-
-const result = {
-  monarchs: [],
+const monarchData = {
+  scores: readTSV("data/scores.tsv"),
 };
 
-monarchLines.forEach((line, index) => {
-  const entries = line.split("\t");
-  const monarchEntry = {};
-  result.monarchs.push(monarchEntry);
-  entries.forEach((value, index) => {
-    const key = monarchFields[index];
-    monarchEntry[key] = parseValue(value);
-  });
-
-  monarchEntry.index = index;
-  monarchEntry.rexFactor = REX_FACTOR_WINNERS.includes(monarchEntry.name);
-  monarchEntry.consorts = (CONSORT_MAPPING[monarchEntry.name] || []).flatMap(
-    (name) => {
-      const consort = consortData.consorts.find((consort) => {
+const monarchResult = {
+  scores: monarchData.scores.map((monarch) => {
+    const consorts = (CONSORT_MAPPING[monarch.name] || []).flatMap((name) => {
+      const consort = consortData.scores.find((consort) => {
         return consort.name === name;
-      })
-      return consort || []
-    }
-  );
-});
+      });
+      return consort || [];
+    });
+    return {
+      ...monarch,
+      consorts,
+    };
+  }),
+};
 
-console.log(JSON.stringify(result, null, 2));
+fs.writeFileSync(
+  path.join("src/routes/data/_monarchs.json"),
+  JSON.stringify(monarchResult, null, 2)
+);
+
+const consortResult = {
+  scores: consortData.scores.map((consort) => {
+    const monarchNames = Object.entries(CONSORT_MAPPING)
+      .filter(([, value]) => value.includes(consort.name))
+      .map(([monarchName]) => monarchName);
+    const monarchs = monarchNames.flatMap((name) => {
+      const monarch = monarchData.scores.find((monarch) => {
+        return monarch.name === name;
+      });
+      return monarch || [];
+    });
+    return {
+      ...consort,
+      monarchs,
+    };
+  }),
+};
+
+fs.writeFileSync(
+  path.join("src/routes/data/_consorts.json"),
+  JSON.stringify(consortResult, null, 2)
+);

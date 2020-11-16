@@ -1,0 +1,507 @@
+{
+  "scores": [
+    {
+      "index": 0,
+      "name": "Ealhswith",
+      "battleyness": 3,
+      "scandal": 0,
+      "subjectivity": 7,
+      "longevity": 15.5,
+      "dynasty": 15,
+      "total": 40.5,
+      "rexFactor": false,
+      "monarchs": [
+        {
+          "index": 0,
+          "name": "Alfred the Great",
+          "battleyness": 11,
+          "scandal": 4,
+          "subjectivity": 17,
+          "longevity": 15,
+          "dynasty": 8.35,
+          "total": 55.35,
+          "rexFactor": true
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "name": "Æthelflæd, Lady of the Mercians",
+      "battleyness": 18,
+      "scandal": 0,
+      "subjectivity": 11,
+      "longevity": 16,
+      "dynasty": 7.5,
+      "total": 52.5,
+      "rexFactor": true,
+      "monarchs": []
+    },
+    {
+      "index": 2,
+      "name": "Ælfflæd",
+      "battleyness": 3,
+      "scandal": 4,
+      "subjectivity": 7,
+      "longevity": 12.5,
+      "dynasty": 17,
+      "total": 43.5,
+      "rexFactor": false,
+      "monarchs": [
+        {
+          "index": 1,
+          "name": "Edward the Elder",
+          "battleyness": 13.5,
+          "scandal": 2,
+          "subjectivity": 6,
+          "longevity": 14.5,
+          "dynasty": 20.04,
+          "total": 56.04,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "name": "Eadgifu of Kent",
+      "battleyness": 12,
+      "scandal": 0,
+      "subjectivity": 11.5,
+      "longevity": 10,
+      "dynasty": 13,
+      "total": 46.5,
+      "rexFactor": true,
+      "monarchs": [
+        {
+          "index": 1,
+          "name": "Edward the Elder",
+          "battleyness": 13.5,
+          "scandal": 2,
+          "subjectivity": 6,
+          "longevity": 14.5,
+          "dynasty": 20.04,
+          "total": 56.04,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "name": "Ælfgifu of Shaftesbury",
+      "battleyness": 0,
+      "scandal": 0,
+      "subjectivity": 3.5,
+      "longevity": 5.5,
+      "dynasty": 10,
+      "total": 19,
+      "rexFactor": false,
+      "monarchs": [
+        {
+          "index": 3,
+          "name": "Edmund I",
+          "battleyness": 10.5,
+          "scandal": 2,
+          "subjectivity": 10.5,
+          "longevity": 5,
+          "dynasty": 5.01,
+          "total": 33.01,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "name": "Æthelflæd of Damerham",
+      "battleyness": 0.5,
+      "scandal": 0,
+      "subjectivity": 0,
+      "longevity": 3,
+      "dynasty": 0,
+      "total": 3.5,
+      "rexFactor": false,
+      "monarchs": [
+        {
+          "index": 3,
+          "name": "Edmund I",
+          "battleyness": 10.5,
+          "scandal": 2,
+          "subjectivity": 10.5,
+          "longevity": 5,
+          "dynasty": 5.01,
+          "total": 33.01,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "name": "Ælfgifu",
+      "battleyness": 4,
+      "scandal": 17,
+      "subjectivity": 0,
+      "longevity": 4.5,
+      "dynasty": 0,
+      "total": 25.5,
+      "rexFactor": false,
+      "monarchs": [
+        {
+          "index": 5,
+          "name": "Eadwig",
+          "battleyness": 1,
+          "scandal": 10.5,
+          "subjectivity": 3,
+          "longevity": 3,
+          "dynasty": 0,
+          "total": 17.5,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "name": "Æthelflæd Eneda",
+      "battleyness": 0,
+      "scandal": 0,
+      "subjectivity": 0,
+      "longevity": 1.5,
+      "dynasty": 7.5,
+      "total": 9,
+      "rexFactor": false,
+      "monarchs": [
+        {
+          "index": 6,
+          "name": "Edgar the Peaceable",
+          "battleyness": 11,
+          "scandal": 17,
+          "subjectivity": 14,
+          "longevity": 10,
+          "dynasty": 5.01,
+          "total": 57.01,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "name": "Wulfthryth",
+      "battleyness": 7,
+      "scandal": 10,
+      "subjectivity": 4,
+      "longevity": 1.5,
+      "dynasty": 7.5,
+      "total": 30,
+      "rexFactor": false,
+      "monarchs": [
+        {
+          "index": 6,
+          "name": "Edgar the Peaceable",
+          "battleyness": 11,
+          "scandal": 17,
+          "subjectivity": 14,
+          "longevity": 10,
+          "dynasty": 5.01,
+          "total": 57.01,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "name": "Ælfthryth",
+      "battleyness": 17,
+      "scandal": 18,
+      "subjectivity": 16,
+      "longevity": 15,
+      "dynasty": 7.5,
+      "total": 73.5,
+      "rexFactor": true,
+      "monarchs": [
+        {
+          "index": 6,
+          "name": "Edgar the Peaceable",
+          "battleyness": 11,
+          "scandal": 17,
+          "subjectivity": 14,
+          "longevity": 10,
+          "dynasty": 5.01,
+          "total": 57.01,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "name": "Ælfgifu of York",
+      "battleyness": 0,
+      "scandal": 0,
+      "subjectivity": 0,
+      "longevity": 10.5,
+      "dynasty": 18.5,
+      "total": 29,
+      "rexFactor": false,
+      "monarchs": [
+        {
+          "index": 8,
+          "name": "Aethelred the Unready",
+          "battleyness": 0,
+          "scandal": 11,
+          "subjectivity": 1.5,
+          "longevity": 16.5,
+          "dynasty": 15.03,
+          "total": 44.03,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "name": "Sigrid the Haughty",
+      "battleyness": 14,
+      "scandal": 17.5,
+      "subjectivity": 0,
+      "longevity": 0,
+      "dynasty": 11.5,
+      "total": 43,
+      "rexFactor": false,
+      "monarchs": [
+        {
+          "index": 9,
+          "name": "Sweyn Forkbeard",
+          "battleyness": 16,
+          "scandal": 6,
+          "subjectivity": 0,
+          "longevity": 0.5,
+          "dynasty": 5.01,
+          "total": 27.51,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "name": "Ealdgyth",
+      "battleyness": 4,
+      "scandal": 3,
+      "subjectivity": 0,
+      "longevity": 1,
+      "dynasty": 10,
+      "total": 18,
+      "rexFactor": false,
+      "monarchs": [
+        {
+          "index": 10,
+          "name": "Edmund Ironside",
+          "battleyness": 13.5,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 0.5,
+          "dynasty": 3.34,
+          "total": 24.34,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "name": "Emma of Normandy",
+      "battleyness": 17.5,
+      "scandal": 4.5,
+      "subjectivity": 18,
+      "longevity": 16.5,
+      "dynasty": 15,
+      "total": 71.5,
+      "rexFactor": true,
+      "monarchs": [
+        {
+          "index": 8,
+          "name": "Aethelred the Unready",
+          "battleyness": 0,
+          "scandal": 11,
+          "subjectivity": 1.5,
+          "longevity": 16.5,
+          "dynasty": 15.03,
+          "total": 44.03,
+          "rexFactor": false
+        },
+        {
+          "index": 11,
+          "name": "Cnut",
+          "battleyness": 13.5,
+          "scandal": 8,
+          "subjectivity": 14,
+          "longevity": 11.5,
+          "dynasty": 6.68,
+          "total": 53.68,
+          "rexFactor": true
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "name": "Ælfgifu of Northampton",
+      "battleyness": 13,
+      "scandal": 9.5,
+      "subjectivity": 0,
+      "longevity": 13.5,
+      "dynasty": 10,
+      "total": 46,
+      "rexFactor": false,
+      "monarchs": [
+        {
+          "index": 11,
+          "name": "Cnut",
+          "battleyness": 13.5,
+          "scandal": 8,
+          "subjectivity": 14,
+          "longevity": 11.5,
+          "dynasty": 6.68,
+          "total": 53.68,
+          "rexFactor": true
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "name": "Edith of Wessex",
+      "battleyness": 7.5,
+      "scandal": 13.5,
+      "subjectivity": 11,
+      "longevity": 13.5,
+      "dynasty": 0,
+      "total": 45.5,
+      "rexFactor": false,
+      "monarchs": [
+        {
+          "index": 14,
+          "name": "Edward the Confessor",
+          "battleyness": 4,
+          "scandal": 1,
+          "subjectivity": 8,
+          "longevity": 13.5,
+          "dynasty": 0,
+          "total": 26.5,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "name": "Ealdgyth of Mercia",
+      "battleyness": 0,
+      "scandal": 0,
+      "subjectivity": 0,
+      "longevity": 1.5,
+      "dynasty": 7.5,
+      "total": 9,
+      "rexFactor": false,
+      "monarchs": [
+        {
+          "index": 15,
+          "name": "Harold II",
+          "battleyness": 17,
+          "scandal": 2,
+          "subjectivity": 7,
+          "longevity": 0.5,
+          "dynasty": 11.69,
+          "total": 38.19,
+          "rexFactor": false
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "name": "Matilda of Flanders",
+      "battleyness": 12.5,
+      "scandal": 13,
+      "subjectivity": 15,
+      "longevity": 10.5,
+      "dynasty": 17.5,
+      "total": 68.5,
+      "rexFactor": false,
+      "monarchs": [
+        {
+          "index": 16,
+          "name": "William the Conqueror",
+          "battleyness": 18.5,
+          "scandal": 10,
+          "subjectivity": 4,
+          "longevity": 12,
+          "dynasty": 10.02,
+          "total": 54.52,
+          "rexFactor": true
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "name": "Matilda of Scotland",
+      "battleyness": 10,
+      "scandal": 7.5,
+      "subjectivity": 18,
+      "longevity": 11,
+      "dynasty": 10,
+      "total": 56.5,
+      "rexFactor": true,
+      "monarchs": [
+        {
+          "index": 18,
+          "name": "Henry I",
+          "battleyness": 12,
+          "scandal": 15.5,
+          "subjectivity": 14.5,
+          "longevity": 16,
+          "dynasty": 1.67,
+          "total": 59.67,
+          "rexFactor": true
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "name": "Adeliza of Louvain",
+      "battleyness": 6.5,
+      "scandal": 0,
+      "subjectivity": 6.5,
+      "longevity": 9.5,
+      "dynasty": 0,
+      "total": 22.5,
+      "rexFactor": false,
+      "monarchs": [
+        {
+          "index": 18,
+          "name": "Henry I",
+          "battleyness": 12,
+          "scandal": 15.5,
+          "subjectivity": 14.5,
+          "longevity": 16,
+          "dynasty": 1.67,
+          "total": 59.67,
+          "rexFactor": true
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "name": "Matilda of Boulogne",
+      "battleyness": 18,
+      "scandal": 0,
+      "subjectivity": 14.5,
+      "longevity": 10,
+      "dynasty": 11.5,
+      "total": 54,
+      "rexFactor": true,
+      "monarchs": [
+        {
+          "index": 19,
+          "name": "Stephen",
+          "battleyness": 6,
+          "scandal": 2,
+          "subjectivity": 5,
+          "longevity": 11.5,
+          "dynasty": 3.34,
+          "total": 27.84,
+          "rexFactor": false
+        }
+      ]
+    }
+  ]
+}

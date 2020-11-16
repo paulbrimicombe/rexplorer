@@ -1,20 +1,23 @@
 <script context="module" lang="ts">
-  import type Rating from "./Rating";
   import Modal from "svelte-simple-modal";
-  import Monarchs from "../components/Monarchs.svelte";
-  import type Monarch from "./Monarch";
-
-  export function preload() {
-    return this.fetch(`data/scores.json`)
-      .then((response: { json: () => any }) => response.json())
-      .then((scores) => ({
-        scores: scores.monarchs as Rating[],
-      }));
-  }
+  import Monarchs from "../components/Ruler.svelte";
+  import type Monarch from "../types/Monarch";
 </script>
 
 <script lang="ts">
-  export let scores: Monarch[];
+  import { onMount, afterUpdate } from "svelte";
+
+  export let scores: Monarch[] = [];
+  let form;
+  let mode: "monarchs" | "consorts" = "monarchs";
+
+  function updateData() {
+    fetch(`data/${mode}.json`)
+      .then((response) => response.json())
+      .then((data) => (scores = data?.scores));
+  }
+
+  onMount(updateData);
 </script>
 
 <style>
@@ -40,5 +43,16 @@
 
 <Modal>
   <h1>Welcome to the Rexplorer!</h1>
+  <form bind:this={form}>
+    <label for="mode">Mode</label>
+    <select
+      id="mode"
+      bind:value={mode}
+      on:blur={updateData}
+      on:change={updateData}>
+      <option value="monarchs">Monarchs</option>
+      <option value="consorts">Consorts</option>
+    </select>
+  </form>
   <Monarchs {scores} />
 </Modal>
