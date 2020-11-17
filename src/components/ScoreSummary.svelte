@@ -142,22 +142,6 @@
     color: #fff;
     font-weight: bold;
   }
-
-  .battleyness {
-    background-color: #ff785a;
-  }
-  .scandal {
-    background-color: #af4d98;
-  }
-  .subjectivity {
-    background-color: #5073a5;
-  }
-  .longevity {
-    background-color: #531320;
-  }
-  .dynasty {
-    background-color: #08bdbd;
-  }
 </style>
 
 <rating {style}>

@@ -1,23 +1,5 @@
-<script context="module" lang="ts">
-  import Modal from "svelte-simple-modal";
-  import Monarchs from "../components/Ruler.svelte";
-  import type Monarch from "../types/Monarch";
-</script>
-
-<script lang="ts">
-  import { onMount, afterUpdate } from "svelte";
-
-  export let scores: Monarch[] = [];
-  let form;
-  let mode: "monarchs" | "consorts" = "monarchs";
-
-  function updateData() {
-    fetch(`data/${mode}.json`)
-      .then((response) => response.json())
-      .then((data) => (scores = data?.scores));
-  }
-
-  onMount(updateData);
+<script type="ts">
+  import "./_common-styles.svelte";
 </script>
 
 <style>
@@ -35,24 +17,60 @@
       font-size: 2.5em;
     }
   }
+
+  links {
+    font-size: 1.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+  }
+  link-item {
+    margin: 0.2em;
+  }
+  link-item > a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    line-height: 2em;
+    padding: 0.5em;
+  }
+
+  link-item > a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  link-item > a > img {
+    height: 2em;
+    width: 2em;
+    box-shadow: 0 0 2px 2px white;
+    margin-right: 1em;
+  }
 </style>
 
 <svelte:head>
   <title>Rexplorer</title>
 </svelte:head>
 
-<Modal>
-  <h1>Welcome to the Rexplorer!</h1>
-  <form bind:this={form}>
-    <label for="mode">Mode</label>
-    <select
-      id="mode"
-      bind:value={mode}
-      on:blur={updateData}
-      on:change={updateData}>
-      <option value="monarchs">Monarchs</option>
-      <option value="consorts">Consorts</option>
-    </select>
-  </form>
-  <Monarchs {scores} />
-</Modal>
+<h1>Welcome to the Rexplorer!</h1>
+<links>
+  <link-item class="monarchs">
+    <a href="monarchs">
+      <img
+        src="english-monarch-crown.png"
+        alt="English monarch crown" />Rexplore English monarchs</a>
+  </link-item>
+  <link-item class="consorts">
+    <a href="consorts">
+      <img
+        src="english-consort-crown.png"
+        alt="English consort crown" />Rexplore English consorts</a>
+  </link-item>
+  <link-item class="teams">
+    <a href="teams">
+      <img
+        src="king-and-queen.jpg"
+        alt="King and Queen playing chess" />Rexplore English royal teams</a>
+  </link-item>
+</links>

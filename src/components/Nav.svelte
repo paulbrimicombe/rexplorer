@@ -36,7 +36,7 @@
     content: "";
     width: calc(100% - 1em);
     height: 2px;
-    background-color: rgb(255, 62, 0);
+    background-color: #ff785a;
     display: block;
     bottom: -1px;
   }
@@ -53,12 +53,27 @@
     <li>
       <a
         aria-current={segment === undefined ? 'page' : undefined}
-        href=".">home</a>
+        href=".">Home</a>
+    </li>
+    <li>
+      <a
+        aria-current={segment === 'monarchs' ? 'page' : undefined}
+        href="monarchs">English Monarchs</a>
+    </li>
+    <li>
+      <a
+        aria-current={segment === 'consorts' ? 'page' : undefined}
+        href="consorts">English Consorts</a>
+    </li>
+    <li>
+      <a
+        aria-current={segment === 'teams' ? 'page' : undefined}
+        href="teams">English Royal Teams</a>
     </li>
     <li>
       <a
         aria-current={segment === 'about' ? 'page' : undefined}
-        href="about">about</a>
+        href="about">About</a>
     </li>
   </ul>
 </nav>

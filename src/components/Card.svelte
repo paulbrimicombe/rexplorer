@@ -92,22 +92,6 @@
     white-space: nowrap;
     color: white;
   }
-
-  .battleyness {
-    background-color: #FF785A;
-  }
-  .scandal {
-    background-color: #AF4D98;
-  }
-  .subjectivity {
-    background-color: #5073A5;
-  }
-  .longevity {
-    background-color: #531320;
-  }
-  .dynasty {
-    background-color: #08BDBD;
-  }
 </style>
 
 <card>

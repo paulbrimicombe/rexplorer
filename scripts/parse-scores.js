@@ -39,7 +39,7 @@ const CONSORT_MAPPING = {
   "Harold II": ["Ealdgyth of Mercia"],
   "William the Conqueror": ["Matilda of Flanders"],
   "Henry I": ["Matilda of Scotland", "Adeliza of Louvain"],
-  "Stephen": ["Matilda of Boulogne"],
+  Stephen: ["Matilda of Boulogne"],
 };
 
 const extractFields = (lines) => {
@@ -150,4 +150,36 @@ const consortResult = {
 fs.writeFileSync(
   path.join("src/routes/data/_consorts.json"),
   JSON.stringify(consortResult, null, 2)
+);
+
+const combineScores = (monarch, consort, category) => {
+  const meanScore = (monarch[category] + consort[category]) / 2;
+  return Math.round(meanScore * 100) / 100;
+};
+
+const teamsResult = {
+  scores: monarchResult.scores.reduce((teamScores, monarch) => {
+    if (monarch.consorts.length === 0) {
+      return [...teamScores, monarch];
+    }
+    const newEntries = monarch.consorts.map((consort) => {
+      return {
+        name: `${monarch.name} & ${consort.name}`,
+        battleyness: combineScores(monarch, consort, 'battleyness'),
+        scandal: combineScores(monarch, consort, 'scandal'),
+        subjectivity: combineScores(monarch, consort, 'subjectivity'),
+        longevity: combineScores(monarch, consort, 'longevity'),
+        dynasty: combineScores(monarch, consort, 'dynasty'),
+        total: combineScores(monarch, consort, 'total'),
+        rexFactor: monarch.rexFactor && consort.rexFactor,
+      };
+    });
+
+    return [...teamScores, ...newEntries];
+  }, []),
+};
+
+fs.writeFileSync(
+  path.join("src/routes/data/_teams.json"),
+  JSON.stringify(teamsResult, null, 2)
 );
