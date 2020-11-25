@@ -8,7 +8,31 @@
       "longevity": 15.25,
       "dynasty": 11.68,
       "total": 47.93,
-      "rexFactor": false
+      "rexFactor": false,
+      "linkedRatings": [
+        {
+          "index": 0,
+          "name": "Alfred the Great",
+          "battleyness": 11,
+          "scandal": 4,
+          "subjectivity": 17,
+          "longevity": 15,
+          "dynasty": 8.35,
+          "total": 55.35,
+          "rexFactor": true
+        },
+        {
+          "index": 0,
+          "name": "Ealhswith",
+          "battleyness": 3,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 15.5,
+          "dynasty": 15,
+          "total": 40.5,
+          "rexFactor": false
+        }
+      ]
     },
     {
       "name": "Edward the Elder & Ælfflæd",
@@ -18,7 +42,31 @@
       "longevity": 13.5,
       "dynasty": 18.52,
       "total": 49.77,
-      "rexFactor": false
+      "rexFactor": false,
+      "linkedRatings": [
+        {
+          "index": 1,
+          "name": "Edward the Elder",
+          "battleyness": 13.5,
+          "scandal": 2,
+          "subjectivity": 6,
+          "longevity": 14.5,
+          "dynasty": 20.04,
+          "total": 56.04,
+          "rexFactor": false
+        },
+        {
+          "index": 2,
+          "name": "Ælfflæd",
+          "battleyness": 3,
+          "scandal": 4,
+          "subjectivity": 7,
+          "longevity": 12.5,
+          "dynasty": 17,
+          "total": 43.5,
+          "rexFactor": false
+        }
+      ]
     },
     {
       "name": "Edward the Elder & Eadgifu of Kent",
@@ -28,7 +76,31 @@
       "longevity": 12.25,
       "dynasty": 16.52,
       "total": 51.27,
-      "rexFactor": false
+      "rexFactor": false,
+      "linkedRatings": [
+        {
+          "index": 1,
+          "name": "Edward the Elder",
+          "battleyness": 13.5,
+          "scandal": 2,
+          "subjectivity": 6,
+          "longevity": 14.5,
+          "dynasty": 20.04,
+          "total": 56.04,
+          "rexFactor": false
+        },
+        {
+          "index": 3,
+          "name": "Eadgifu of Kent",
+          "battleyness": 12,
+          "scandal": 0,
+          "subjectivity": 11.5,
+          "longevity": 10,
+          "dynasty": 13,
+          "total": 46.5,
+          "rexFactor": true
+        }
+      ]
     },
     {
       "index": 2,
@@ -40,7 +112,7 @@
       "dynasty": 0,
       "total": 47,
       "rexFactor": true,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "name": "Edmund I & Ælfgifu of Shaftesbury",
@@ -50,7 +122,31 @@
       "longevity": 5.25,
       "dynasty": 7.51,
       "total": 26.01,
-      "rexFactor": false
+      "rexFactor": false,
+      "linkedRatings": [
+        {
+          "index": 3,
+          "name": "Edmund I",
+          "battleyness": 10.5,
+          "scandal": 2,
+          "subjectivity": 10.5,
+          "longevity": 5,
+          "dynasty": 5.01,
+          "total": 33.01,
+          "rexFactor": false
+        },
+        {
+          "index": 4,
+          "name": "Ælfgifu of Shaftesbury",
+          "battleyness": 0,
+          "scandal": 0,
+          "subjectivity": 3.5,
+          "longevity": 5.5,
+          "dynasty": 10,
+          "total": 19,
+          "rexFactor": false
+        }
+      ]
     },
     {
       "name": "Edmund I & Æthelflæd of Damerham",
@@ -60,7 +156,31 @@
       "longevity": 4,
       "dynasty": 2.51,
       "total": 18.26,
-      "rexFactor": false
+      "rexFactor": false,
+      "linkedRatings": [
+        {
+          "index": 3,
+          "name": "Edmund I",
+          "battleyness": 10.5,
+          "scandal": 2,
+          "subjectivity": 10.5,
+          "longevity": 5,
+          "dynasty": 5.01,
+          "total": 33.01,
+          "rexFactor": false
+        },
+        {
+          "index": 5,
+          "name": "Æthelflæd of Damerham",
+          "battleyness": 0.5,
+          "scandal": 0,
+          "subjectivity": 0,
+          "longevity": 3,
+          "dynasty": 0,
+          "total": 3.5,
+          "rexFactor": false
+        }
+      ]
     },
     {
       "index": 4,
@@ -72,7 +192,7 @@
       "dynasty": 0,
       "total": 26,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "name": "Eadwig & Ælfgifu",
@@ -82,7 +202,31 @@
       "longevity": 3.75,
       "dynasty": 0,
       "total": 21.5,
-      "rexFactor": false
+      "rexFactor": false,
+      "linkedRatings": [
+        {
+          "index": 5,
+          "name": "Eadwig",
+          "battleyness": 1,
+          "scandal": 10.5,
+          "subjectivity": 3,
+          "longevity": 3,
+          "dynasty": 0,
+          "total": 17.5,
+          "rexFactor": false
+        },
+        {
+          "index": 6,
+          "name": "Ælfgifu",
+          "battleyness": 4,
+          "scandal": 17,
+          "subjectivity": 0,
+          "longevity": 4.5,
+          "dynasty": 0,
+          "total": 25.5,
+          "rexFactor": false
+        }
+      ]
     },
     {
       "name": "Edgar the Peaceable & Æthelflæd Eneda",
@@ -92,7 +236,31 @@
       "longevity": 5.75,
       "dynasty": 6.26,
       "total": 33,
-      "rexFactor": false
+      "rexFactor": false,
+      "linkedRatings": [
+        {
+          "index": 6,
+          "name": "Edgar the Peaceable",
+          "battleyness": 11,
+          "scandal": 17,
+          "subjectivity": 14,
+          "longevity": 10,
+          "dynasty": 5.01,
+          "total": 57.01,
+          "rexFactor": false
+        },
+        {
+          "index": 7,
+          "name": "Æthelflæd Eneda",
+          "battleyness": 0,
+          "scandal": 0,
+          "subjectivity": 0,
+          "longevity": 1.5,
+          "dynasty": 7.5,
+          "total": 9,
+          "rexFactor": false
+        }
+      ]
     },
     {
       "name": "Edgar the Peaceable & Wulfthryth",
@@ -102,7 +270,31 @@
       "longevity": 5.75,
       "dynasty": 6.26,
       "total": 43.51,
-      "rexFactor": false
+      "rexFactor": false,
+      "linkedRatings": [
+        {
+          "index": 6,
+          "name": "Edgar the Peaceable",
+          "battleyness": 11,
+          "scandal": 17,
+          "subjectivity": 14,
+          "longevity": 10,
+          "dynasty": 5.01,
+          "total": 57.01,
+          "rexFactor": false
+        },
+        {
+          "index": 8,
+          "name": "Wulfthryth",
+          "battleyness": 7,
+          "scandal": 10,
+          "subjectivity": 4,
+          "longevity": 1.5,
+          "dynasty": 7.5,
+          "total": 30,
+          "rexFactor": false
+        }
+      ]
     },
     {
       "name": "Edgar the Peaceable & Ælfthryth",
@@ -112,7 +304,31 @@
       "longevity": 12.5,
       "dynasty": 6.26,
       "total": 65.26,
-      "rexFactor": false
+      "rexFactor": false,
+      "linkedRatings": [
+        {
+          "index": 6,
+          "name": "Edgar the Peaceable",
+          "battleyness": 11,
+          "scandal": 17,
+          "subjectivity": 14,
+          "longevity": 10,
+          "dynasty": 5.01,
+          "total": 57.01,
+          "rexFactor": false
+        },
+        {
+          "index": 9,
+          "name": "Ælfthryth",
+          "battleyness": 17,
+          "scandal": 18,
+          "subjectivity": 16,
+          "longevity": 15,
+          "dynasty": 7.5,
+          "total": 73.5,
+          "rexFactor": true
+        }
+      ]
     },
     {
       "index": 7,
@@ -124,7 +340,7 @@
       "dynasty": 0,
       "total": 3,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "name": "Aethelred the Unready & Ælfgifu of York",
@@ -134,7 +350,31 @@
       "longevity": 13.5,
       "dynasty": 16.77,
       "total": 36.52,
-      "rexFactor": false
+      "rexFactor": false,
+      "linkedRatings": [
+        {
+          "index": 8,
+          "name": "Aethelred the Unready",
+          "battleyness": 0,
+          "scandal": 11,
+          "subjectivity": 1.5,
+          "longevity": 16.5,
+          "dynasty": 15.03,
+          "total": 44.03,
+          "rexFactor": false
+        },
+        {
+          "index": 10,
+          "name": "Ælfgifu of York",
+          "battleyness": 0,
+          "scandal": 0,
+          "subjectivity": 0,
+          "longevity": 10.5,
+          "dynasty": 18.5,
+          "total": 29,
+          "rexFactor": false
+        }
+      ]
     },
     {
       "name": "Aethelred the Unready & Emma of Normandy",
@@ -144,7 +384,31 @@
       "longevity": 16.5,
       "dynasty": 15.02,
       "total": 57.77,
-      "rexFactor": false
+      "rexFactor": false,
+      "linkedRatings": [
+        {
+          "index": 8,
+          "name": "Aethelred the Unready",
+          "battleyness": 0,
+          "scandal": 11,
+          "subjectivity": 1.5,
+          "longevity": 16.5,
+          "dynasty": 15.03,
+          "total": 44.03,
+          "rexFactor": false
+        },
+        {
+          "index": 13,
+          "name": "Emma of Normandy",
+          "battleyness": 17.5,
+          "scandal": 4.5,
+          "subjectivity": 18,
+          "longevity": 16.5,
+          "dynasty": 15,
+          "total": 71.5,
+          "rexFactor": true
+        }
+      ]
     },
     {
       "name": "Sweyn Forkbeard & Sigrid the Haughty",
@@ -154,7 +418,31 @@
       "longevity": 0.25,
       "dynasty": 8.25,
       "total": 35.26,
-      "rexFactor": false
+      "rexFactor": false,
+      "linkedRatings": [
+        {
+          "index": 9,
+          "name": "Sweyn Forkbeard",
+          "battleyness": 16,
+          "scandal": 6,
+          "subjectivity": 0,
+          "longevity": 0.5,
+          "dynasty": 5.01,
+          "total": 27.51,
+          "rexFactor": false
+        },
+        {
+          "index": 11,
+          "name": "Sigrid the Haughty",
+          "battleyness": 14,
+          "scandal": 17.5,
+          "subjectivity": 0,
+          "longevity": 0,
+          "dynasty": 11.5,
+          "total": 43,
+          "rexFactor": false
+        }
+      ]
     },
     {
       "name": "Edmund Ironside & Ealdgyth",
@@ -164,7 +452,31 @@
       "longevity": 0.75,
       "dynasty": 6.67,
       "total": 21.17,
-      "rexFactor": false
+      "rexFactor": false,
+      "linkedRatings": [
+        {
+          "index": 10,
+          "name": "Edmund Ironside",
+          "battleyness": 13.5,
+          "scandal": 0,
+          "subjectivity": 7,
+          "longevity": 0.5,
+          "dynasty": 3.34,
+          "total": 24.34,
+          "rexFactor": false
+        },
+        {
+          "index": 12,
+          "name": "Ealdgyth",
+          "battleyness": 4,
+          "scandal": 3,
+          "subjectivity": 0,
+          "longevity": 1,
+          "dynasty": 10,
+          "total": 18,
+          "rexFactor": false
+        }
+      ]
     },
     {
       "name": "Cnut & Emma of Normandy",
@@ -174,7 +486,31 @@
       "longevity": 14,
       "dynasty": 10.84,
       "total": 62.59,
-      "rexFactor": true
+      "rexFactor": true,
+      "linkedRatings": [
+        {
+          "index": 11,
+          "name": "Cnut",
+          "battleyness": 13.5,
+          "scandal": 8,
+          "subjectivity": 14,
+          "longevity": 11.5,
+          "dynasty": 6.68,
+          "total": 53.68,
+          "rexFactor": true
+        },
+        {
+          "index": 13,
+          "name": "Emma of Normandy",
+          "battleyness": 17.5,
+          "scandal": 4.5,
+          "subjectivity": 18,
+          "longevity": 16.5,
+          "dynasty": 15,
+          "total": 71.5,
+          "rexFactor": true
+        }
+      ]
     },
     {
       "name": "Cnut & Ælfgifu of Northampton",
@@ -184,7 +520,31 @@
       "longevity": 12.5,
       "dynasty": 8.34,
       "total": 49.84,
-      "rexFactor": false
+      "rexFactor": false,
+      "linkedRatings": [
+        {
+          "index": 11,
+          "name": "Cnut",
+          "battleyness": 13.5,
+          "scandal": 8,
+          "subjectivity": 14,
+          "longevity": 11.5,
+          "dynasty": 6.68,
+          "total": 53.68,
+          "rexFactor": true
+        },
+        {
+          "index": 14,
+          "name": "Ælfgifu of Northampton",
+          "battleyness": 13,
+          "scandal": 9.5,
+          "subjectivity": 0,
+          "longevity": 13.5,
+          "dynasty": 10,
+          "total": 46,
+          "rexFactor": false
+        }
+      ]
     },
     {
       "index": 12,
@@ -196,7 +556,7 @@
       "dynasty": 0,
       "total": 10,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 13,
@@ -208,7 +568,7 @@
       "dynasty": 0,
       "total": 13.5,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "name": "Edward the Confessor & Edith of Wessex",
@@ -218,7 +578,31 @@
       "longevity": 13.5,
       "dynasty": 0,
       "total": 36,
-      "rexFactor": false
+      "rexFactor": false,
+      "linkedRatings": [
+        {
+          "index": 14,
+          "name": "Edward the Confessor",
+          "battleyness": 4,
+          "scandal": 1,
+          "subjectivity": 8,
+          "longevity": 13.5,
+          "dynasty": 0,
+          "total": 26.5,
+          "rexFactor": false
+        },
+        {
+          "index": 15,
+          "name": "Edith of Wessex",
+          "battleyness": 7.5,
+          "scandal": 13.5,
+          "subjectivity": 11,
+          "longevity": 13.5,
+          "dynasty": 0,
+          "total": 45.5,
+          "rexFactor": false
+        }
+      ]
     },
     {
       "name": "Harold II & Ealdgyth of Mercia",
@@ -228,7 +612,31 @@
       "longevity": 1,
       "dynasty": 9.59,
       "total": 23.6,
-      "rexFactor": false
+      "rexFactor": false,
+      "linkedRatings": [
+        {
+          "index": 15,
+          "name": "Harold II",
+          "battleyness": 17,
+          "scandal": 2,
+          "subjectivity": 7,
+          "longevity": 0.5,
+          "dynasty": 11.69,
+          "total": 38.19,
+          "rexFactor": false
+        },
+        {
+          "index": 16,
+          "name": "Ealdgyth of Mercia",
+          "battleyness": 0,
+          "scandal": 0,
+          "subjectivity": 0,
+          "longevity": 1.5,
+          "dynasty": 7.5,
+          "total": 9,
+          "rexFactor": false
+        }
+      ]
     },
     {
       "name": "William the Conqueror & Matilda of Flanders",
@@ -238,7 +646,31 @@
       "longevity": 11.25,
       "dynasty": 13.76,
       "total": 61.51,
-      "rexFactor": false
+      "rexFactor": false,
+      "linkedRatings": [
+        {
+          "index": 16,
+          "name": "William the Conqueror",
+          "battleyness": 18.5,
+          "scandal": 10,
+          "subjectivity": 4,
+          "longevity": 12,
+          "dynasty": 10.02,
+          "total": 54.52,
+          "rexFactor": true
+        },
+        {
+          "index": 17,
+          "name": "Matilda of Flanders",
+          "battleyness": 12.5,
+          "scandal": 13,
+          "subjectivity": 15,
+          "longevity": 10.5,
+          "dynasty": 17.5,
+          "total": 68.5,
+          "rexFactor": false
+        }
+      ]
     },
     {
       "index": 17,
@@ -250,7 +682,7 @@
       "dynasty": 0,
       "total": 39.5,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "name": "Henry I & Matilda of Scotland",
@@ -260,7 +692,31 @@
       "longevity": 13.5,
       "dynasty": 5.84,
       "total": 58.09,
-      "rexFactor": true
+      "rexFactor": true,
+      "linkedRatings": [
+        {
+          "index": 18,
+          "name": "Henry I",
+          "battleyness": 12,
+          "scandal": 15.5,
+          "subjectivity": 14.5,
+          "longevity": 16,
+          "dynasty": 1.67,
+          "total": 59.67,
+          "rexFactor": true
+        },
+        {
+          "index": 18,
+          "name": "Matilda of Scotland",
+          "battleyness": 10,
+          "scandal": 7.5,
+          "subjectivity": 18,
+          "longevity": 11,
+          "dynasty": 10,
+          "total": 56.5,
+          "rexFactor": true
+        }
+      ]
     },
     {
       "name": "Henry I & Adeliza of Louvain",
@@ -270,7 +726,31 @@
       "longevity": 12.75,
       "dynasty": 0.84,
       "total": 41.09,
-      "rexFactor": false
+      "rexFactor": false,
+      "linkedRatings": [
+        {
+          "index": 18,
+          "name": "Henry I",
+          "battleyness": 12,
+          "scandal": 15.5,
+          "subjectivity": 14.5,
+          "longevity": 16,
+          "dynasty": 1.67,
+          "total": 59.67,
+          "rexFactor": true
+        },
+        {
+          "index": 19,
+          "name": "Adeliza of Louvain",
+          "battleyness": 6.5,
+          "scandal": 0,
+          "subjectivity": 6.5,
+          "longevity": 9.5,
+          "dynasty": 0,
+          "total": 22.5,
+          "rexFactor": false
+        }
+      ]
     },
     {
       "name": "Stephen & Matilda of Boulogne",
@@ -280,7 +760,31 @@
       "longevity": 10.75,
       "dynasty": 7.42,
       "total": 40.92,
-      "rexFactor": false
+      "rexFactor": false,
+      "linkedRatings": [
+        {
+          "index": 19,
+          "name": "Stephen",
+          "battleyness": 6,
+          "scandal": 2,
+          "subjectivity": 5,
+          "longevity": 11.5,
+          "dynasty": 3.34,
+          "total": 27.84,
+          "rexFactor": false
+        },
+        {
+          "index": 20,
+          "name": "Matilda of Boulogne",
+          "battleyness": 18,
+          "scandal": 0,
+          "subjectivity": 14.5,
+          "longevity": 10,
+          "dynasty": 11.5,
+          "total": 54,
+          "rexFactor": true
+        }
+      ]
     },
     {
       "index": 20,
@@ -292,7 +796,7 @@
       "dynasty": 6.68,
       "total": 74.18,
       "rexFactor": true,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 21,
@@ -304,7 +808,7 @@
       "dynasty": 0,
       "total": 47.5,
       "rexFactor": true,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 22,
@@ -316,7 +820,7 @@
       "dynasty": 8.35,
       "total": 48.85,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 23,
@@ -328,7 +832,7 @@
       "dynasty": 6.68,
       "total": 42.18,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 24,
@@ -340,7 +844,7 @@
       "dynasty": 11.69,
       "total": 72.69,
       "rexFactor": true,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 25,
@@ -352,7 +856,7 @@
       "dynasty": 6.68,
       "total": 39.68,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 26,
@@ -364,7 +868,7 @@
       "dynasty": 6.68,
       "total": 57.68,
       "rexFactor": true,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 27,
@@ -376,7 +880,7 @@
       "dynasty": 0,
       "total": 38,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 28,
@@ -388,7 +892,7 @@
       "dynasty": 8.35,
       "total": 54.85,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 29,
@@ -400,7 +904,7 @@
       "dynasty": 1.67,
       "total": 47.17,
       "rexFactor": true,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 30,
@@ -412,7 +916,7 @@
       "dynasty": 0,
       "total": 16.5,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 31,
@@ -424,7 +928,7 @@
       "dynasty": 11.69,
       "total": 69.19,
       "rexFactor": true,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 32,
@@ -436,7 +940,7 @@
       "dynasty": 0,
       "total": 0.5,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 33,
@@ -448,7 +952,7 @@
       "dynasty": 0,
       "total": 45,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 34,
@@ -460,7 +964,7 @@
       "dynasty": 5.01,
       "total": 51.51,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 35,
@@ -472,7 +976,7 @@
       "dynasty": 5.01,
       "total": 57.01,
       "rexFactor": true,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 36,
@@ -484,7 +988,7 @@
       "dynasty": 0,
       "total": 13.5,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 37,
@@ -496,7 +1000,7 @@
       "dynasty": 0,
       "total": 27.5,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 38,
@@ -508,7 +1012,7 @@
       "dynasty": 0,
       "total": 46.5,
       "rexFactor": true,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 39,
@@ -520,7 +1024,7 @@
       "dynasty": 3.34,
       "total": 43.34,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 40,
@@ -532,7 +1036,7 @@
       "dynasty": 10.02,
       "total": 28.02,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 41,
@@ -544,7 +1048,7 @@
       "dynasty": 8.35,
       "total": 56.35,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 42,
@@ -556,7 +1060,7 @@
       "dynasty": 0,
       "total": 44.5,
       "rexFactor": true,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 43,
@@ -568,7 +1072,7 @@
       "dynasty": 6.68,
       "total": 28.18,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 44,
@@ -580,7 +1084,7 @@
       "dynasty": 0,
       "total": 45.5,
       "rexFactor": true,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 45,
@@ -592,7 +1096,7 @@
       "dynasty": 0,
       "total": 37,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 46,
@@ -604,7 +1108,7 @@
       "dynasty": 3.34,
       "total": 37.34,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 47,
@@ -616,7 +1120,7 @@
       "dynasty": 5.01,
       "total": 51.01,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 48,
@@ -628,7 +1132,7 @@
       "dynasty": 18.37,
       "total": 67.37,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 49,
@@ -640,7 +1144,7 @@
       "dynasty": 0,
       "total": 39,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 50,
@@ -652,7 +1156,7 @@
       "dynasty": 0,
       "total": 39,
       "rexFactor": true,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 51,
@@ -664,7 +1168,7 @@
       "dynasty": 10.02,
       "total": 68.02,
       "rexFactor": true,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 52,
@@ -676,7 +1180,7 @@
       "dynasty": 6.68,
       "total": 48.68,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 53,
@@ -688,7 +1192,7 @@
       "dynasty": 8.35,
       "total": 52.85,
       "rexFactor": true,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 54,
@@ -700,7 +1204,7 @@
       "dynasty": 0,
       "total": 25.5,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 55,
@@ -712,7 +1216,7 @@
       "dynasty": 3.34,
       "total": 45.84,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     },
     {
       "index": 56,
@@ -724,7 +1228,7 @@
       "dynasty": 6.68,
       "total": 51.68,
       "rexFactor": false,
-      "consorts": []
+      "linkedRatings": []
     }
   ]
 }

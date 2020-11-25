@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type Rating from "../routes/Rating";
+  import type Rating from "../types/Rating";
   import { afterUpdate, beforeUpdate, createEventDispatcher } from "svelte";
   import { scale } from "svelte/transition";
 
@@ -27,28 +27,29 @@
 
 <style>
   rating {
-    border-radius: 1.5em;
     display: flex;
-    align-items: start;
+    flex: 1;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
     justify-items: center;
-    border-radius: 0.2em;
-    height: 100%;
   }
 
   button:hover {
-    background: rgba(0, 0, 0, 0.1);
+    border: solid 1px red;
   }
 
   button {
+    padding: 1em 0.7em;
     height: 100%;
-    padding: 0 0.7em;
     background: none;
-    border: none;
+    border: 1px rgba(0,0,0,0) solid;
     cursor: pointer;
     flex: 1;
     display: flex;
     align-items: center;
     justify-items: center;
+    border-radius: 0.2em;
   }
 
   total {
@@ -68,7 +69,7 @@
   }
 
   img {
-    width: 1.6em;
+    width: 1.5em;
     transform: rotate(-45deg);
   }
 
@@ -82,7 +83,7 @@
 
   badge {
     position: absolute;
-    left: -1em;
+    left: -0.9em;
     top: -0.5em;
     z-index: 10;
   }

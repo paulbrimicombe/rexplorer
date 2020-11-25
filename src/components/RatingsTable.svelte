@@ -8,7 +8,7 @@
   import ScoreSummary from "./ScoreSummary.svelte";
 
   export let scores: RatedPerson[] = [];
-  export let linkedRatingName = "linked ratings"
+  export let linkedRatingName = "linked ratings";
 
   let sortField = null;
   let showLinkedRatings = false;
@@ -63,17 +63,48 @@
     display: flex;
     flex-direction: column;
     transition: height 1s;
+    padding: 0.3em 0.3em;
+  }
+
+  ruler:hover {
+    background: rgba(0, 0, 0, 0.15);
   }
 
   ruler:nth-child(even) {
     background-color: rgba(0, 0, 0, 0.05);
   }
 
+  ruler:nth-child(even):hover {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+
+  linked-to {
+    color: #b69119;
+    line-height: 0.5em;
+    font-size: 2em;
+    height: 0.7em;
+    display: flex;
+    margin-left: 1.25em;
+    margin-right: 0.25em;
+  }
+
+  linked-to > span {
+    display: block;
+  }
+
   linked-rulers {
     flex: 1;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    align-items: start;
+  }
+
+  linked-ruler {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
   }
 </style>
 
@@ -97,7 +128,8 @@
     </field>
     <field>
       <label for="show-linked-ratings">
-        Show {linkedRatingName}?
+        Show
+        {linkedRatingName}?
         <input
           type="checkbox"
           id="show-linked-ratings"
@@ -107,8 +139,7 @@
   </form>
   <ruler-list>
     {#each scores as score}
-      <ruler
-        style={`height: ${showLinkedRatings ? (score.linkedRatings.length || 1) * 5 : 5}em`}>
+      <ruler>
         <ScoreSummary
           rating={score}
           scoreHighlight={sortField}
@@ -116,9 +147,12 @@
           {#if showLinkedRatings}
             <linked-rulers transition:fade={{ duration: 400 }}>
               {#each score.linkedRatings as consort}
-                <ScoreSummary
-                  rating={consort}
-                  on:select={() => showCard(consort)} />
+                <linked-ruler>
+                  <linked-to><span>⚭</span></linked-to>
+                  <ScoreSummary
+                    rating={consort}
+                    on:select={() => showCard(consort)} />
+                </linked-ruler>
               {/each}
             </linked-rulers>
           {/if}

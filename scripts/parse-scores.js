@@ -160,18 +160,29 @@ const combineScores = (monarch, consort, category) => {
 const teamsResult = {
   scores: monarchResult.scores.reduce((teamScores, monarch) => {
     if (monarch.consorts.length === 0) {
-      return [...teamScores, monarch];
+      return [
+        ...teamScores,
+        {
+          ...monarch,
+          consorts: undefined,
+          linkedRatings: [],
+        },
+      ];
     }
     const newEntries = monarch.consorts.map((consort) => {
       return {
         name: `${monarch.name} & ${consort.name}`,
-        battleyness: combineScores(monarch, consort, 'battleyness'),
-        scandal: combineScores(monarch, consort, 'scandal'),
-        subjectivity: combineScores(monarch, consort, 'subjectivity'),
-        longevity: combineScores(monarch, consort, 'longevity'),
-        dynasty: combineScores(monarch, consort, 'dynasty'),
-        total: combineScores(monarch, consort, 'total'),
+        battleyness: combineScores(monarch, consort, "battleyness"),
+        scandal: combineScores(monarch, consort, "scandal"),
+        subjectivity: combineScores(monarch, consort, "subjectivity"),
+        longevity: combineScores(monarch, consort, "longevity"),
+        dynasty: combineScores(monarch, consort, "dynasty"),
+        total: combineScores(monarch, consort, "total"),
         rexFactor: monarch.rexFactor && consort.rexFactor,
+        linkedRatings: [
+          { ...monarch, consorts: undefined },
+          { ...consort, monarchs: undefined },
+        ],
       };
     });
 

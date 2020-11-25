@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type Rating from "../routes/Rating";
+  import type Rating from "../types/Rating";
   export let rating: Rating;
 </script>
 

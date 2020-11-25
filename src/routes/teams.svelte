@@ -9,9 +9,6 @@
     const data = await res.json();
 
     if (res.status === 200) {
-      (data?.scores || []).forEach((rating: RatedPerson) => {
-        rating.linkedRatings = [];
-      });
       return data;
     } else {
       this.error(res.status, data.message);
@@ -58,7 +55,11 @@
 
 <Modal>
   <h1 class="teams">
-    <img src="king-and-queen.jpg" alt="King and Queen playing chess" />
+    <img
+      width="64"
+      height="64"
+      src="king-and-queen.webp"
+      alt="King and Queen playing chess" />
     English Royal Teams
   </h1>
   <RatingsTable {scores} />

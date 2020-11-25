@@ -59,7 +59,11 @@
 
 <Modal>
   <h1 class="consorts">
-    <img src="english-consort-crown.png" alt="English consort crown" />
+    <img
+      width="64"
+      height="64"
+      src="english-consort-crown.webp"
+      alt="English consort crown" />
     English Consorts
   </h1>
   <RatingsTable {scores} linkedRatingName="monarchs" />

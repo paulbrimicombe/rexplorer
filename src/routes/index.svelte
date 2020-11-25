@@ -32,6 +32,7 @@
     color: white;
     text-decoration: none;
     display: flex;
+    align-items: center;
     flex-direction: row;
     line-height: 2em;
     padding: 0.5em;
@@ -42,8 +43,6 @@
   }
 
   link-item > a > img {
-    height: 2em;
-    width: 2em;
     box-shadow: 0 0 2px 2px white;
     margin-right: 1em;
   }
@@ -58,19 +57,25 @@
   <link-item class="monarchs">
     <a href="monarchs">
       <img
-        src="english-monarch-crown.png"
+        width="64"
+        height="64"
+        src="english-monarch-crown.webp"
         alt="English monarch crown" />Rexplore English monarchs</a>
   </link-item>
   <link-item class="consorts">
     <a href="consorts">
       <img
-        src="english-consort-crown.png"
+        width="64"
+        height="64"
+        src="english-consort-crown.webp"
         alt="English consort crown" />Rexplore English consorts</a>
   </link-item>
   <link-item class="teams">
     <a href="teams">
       <img
-        src="king-and-queen.jpg"
+        width="64"
+        height="64"
+        src="king-and-queen.webp"
         alt="King and Queen playing chess" />Rexplore English royal teams</a>
   </link-item>
 </links>
