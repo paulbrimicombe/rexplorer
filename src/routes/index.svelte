@@ -3,23 +3,8 @@
 </script>
 
 <style>
-  h1 {
-    text-align: center;
-    margin: 0 auto;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin: 0;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      font-size: 2.5em;
-    }
-  }
-
   links {
-    font-size: 1.8em;
+    font-size: 1.8rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,7 +19,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    line-height: 2em;
+    line-height: 1em;
     padding: 0.5em;
   }
 
@@ -52,7 +37,6 @@
   <title>Rexplorer</title>
 </svelte:head>
 
-<h1>Welcome to the Rexplorer!</h1>
 <links>
   <link-item class="monarchs">
     <a href="monarchs">
@@ -60,7 +44,8 @@
         width="64"
         height="64"
         src="english-monarch-crown.webp"
-        alt="English monarch crown" />Rexplore English monarchs</a>
+        alt="English monarch crown" />
+      Rexplore English monarchs</a>
   </link-item>
   <link-item class="consorts">
     <a href="consorts">
@@ -68,7 +53,8 @@
         width="64"
         height="64"
         src="english-consort-crown.webp"
-        alt="English consort crown" />Rexplore English consorts</a>
+        alt="English consort crown" />
+      Rexplore English consorts</a>
   </link-item>
   <link-item class="teams">
     <a href="teams">
@@ -76,6 +62,7 @@
         width="64"
         height="64"
         src="king-and-queen.webp"
-        alt="King and Queen playing chess" />Rexplore English royal teams</a>
+        alt="King and Queen playing chess" />
+      Rexplore English royal teams</a>
   </link-item>
 </links>

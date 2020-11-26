@@ -38,7 +38,7 @@
     background: linear-gradient(to bottom, #c0c0c0 0%, #b1b1b1 100%);
     border: 1px solid #a2a2a2;
     box-shadow: inset 0 1px 0 #cfcfcf;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     writing-mode: vertical-rl;
   }
 
@@ -58,7 +58,7 @@
     border-radius: 50%;
     width: 3em;
     height: 3em;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,7 +79,7 @@
 
   score {
     margin: 0.1em 0;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     background-color: rgba(0,0,0,0.3);
   }
 

@@ -1,6 +1,6 @@
 <style>
   :global(.battleyness) {
-    background-color: #ff785a;
+    background-color: #ea6041;
   }
   :global(.scandal) {
     background-color: #af4d98;
@@ -15,7 +15,7 @@
     background-color: #08bdbd;
   }
   :global(.monarchs) {
-    background: #ff785a;
+    background: #ea6041;
   }
   :global(.consorts) {
     background: #5073a5;

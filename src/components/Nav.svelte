@@ -36,7 +36,7 @@
     content: "";
     width: calc(100% - 1em);
     height: 2px;
-    background-color: #ff785a;
+    background-color: #ea6041;
     display: block;
     bottom: -1px;
   }
