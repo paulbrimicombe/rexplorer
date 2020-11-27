@@ -48,7 +48,10 @@
 </style>
 
 <svelte:head>
-  <title>Rexplorer</title>
+  <title>Rexplorer monarchs</title>
+  <meta
+    name="Description"
+    content="Rexplorer for exploring Rex Factor scores for English Monarchs" />
 </svelte:head>
 
 <Modal>

@@ -35,6 +35,9 @@
 
 <svelte:head>
   <title>Rexplorer</title>
+  <meta
+    name="Description"
+    content="The Rexplorer home page for exploring Rex Factor scores" />
 </svelte:head>
 
 <links>

@@ -69,7 +69,7 @@
   <total>{rating.total}</total>
   <name>
     {#if rating.rexFactor}
-      <badge><img src="/crown.svg" alt="Rex Factor winner" /></badge>
+      <badge><img src="crown.svg" alt="Rex Factor winner" /></badge>
     {/if}
     {rating.name}
   </name>

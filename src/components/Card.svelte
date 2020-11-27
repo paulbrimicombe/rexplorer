@@ -98,13 +98,13 @@
   <name>
     <span>
       {#if rating.rexFactor}
-        <img src="/crown.svg" alt="Rex Factor winner" />
+        <img src="crown.svg" alt="Rex Factor winner" />
       {/if}
       {rating.name}
     </span>
   </name>
   <content>
-    <portrait style="background-image: url('/portraits/{rating.name}.webp')" />
+    <portrait style="background-image: url('portraits/{rating.name}.webp')" />
     <total>{rating.total}</total>
     <scores>
       <score>

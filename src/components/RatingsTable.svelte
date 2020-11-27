@@ -116,6 +116,11 @@
     padding: 0 0.5em;
   }
 
+  #name-filter {
+    width: 100%;
+    max-width: 10em;
+  }
+
   ruler {
     display: contents;
   }
@@ -229,7 +234,7 @@
 
     linked-ruler > linked-to {
       grid-column-start: 1;
-      padding-left: 2em;
+      padding-left: 1.25em;
     }
 
     linked-ruler > ruler-bars {

@@ -47,7 +47,10 @@
 </style>
 
 <svelte:head>
-  <title>Rexplorer</title>
+  <title>Rexplorer consort & monarch teams</title>
+  <meta
+    name="Description"
+    content="Rexplorer for exploring Rex Factor scores for English Monarch & Consort teams" />
 </svelte:head>
 
 <Modal>

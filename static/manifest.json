@@ -4,7 +4,7 @@
   "name": "Rexplorer",
   "short_name": "Rexplorer",
   "display": "minimal-ui",
-  "start_url": "/index.html",
+  "start_url": "/rexplorer/",
   "icons": [
     {
       "src": "logo-192.png",
