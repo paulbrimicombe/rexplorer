@@ -9,6 +9,9 @@
     const data = await res.json();
 
     if (res.status === 200) {
+      (data?.scores || []).forEach((monarch: RatedPerson) => {
+        monarch.linkedRatings = monarch.linkedRatings || [];
+      });
       return data;
     } else {
       this.error(res.status, data.message);
@@ -56,5 +59,5 @@
       alt="King and Queen playing chess" />
     English Royal Teams
   </h1>
-  <RatingsTable {scores} />
+  <RatingsTable {scores} linkedRatingName="individual scores" linkSymbol="" />
 </Modal>

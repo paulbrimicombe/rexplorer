@@ -11,7 +11,7 @@
 
     if (res.status === 200) {
       (data?.scores || []).forEach((monarch: Monarch & RatedPerson) => {
-        monarch.linkedRatings = monarch.consorts;
+        monarch.linkedRatings = monarch.consorts || [];
       });
       return data;
     } else {

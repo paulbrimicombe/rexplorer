@@ -164,6 +164,7 @@ const teamsResult = {
         ...teamScores,
         {
           ...monarch,
+          index: teamScores.length,
           consorts: undefined,
           linkedRatings: [],
         },
@@ -179,6 +180,7 @@ const teamsResult = {
         dynasty: combineScores(monarch, consort, "dynasty"),
         total: combineScores(monarch, consort, "total"),
         rexFactor: monarch.rexFactor && consort.rexFactor,
+        index: teamScores.length,
         linkedRatings: [
           { ...monarch, consorts: undefined },
           { ...consort, monarchs: undefined },

@@ -9,6 +9,7 @@
       "dynasty": 11.68,
       "total": 47.93,
       "rexFactor": false,
+      "index": 0,
       "linkedRatings": [
         {
           "index": 0,
@@ -43,6 +44,7 @@
       "dynasty": 18.52,
       "total": 49.77,
       "rexFactor": false,
+      "index": 1,
       "linkedRatings": [
         {
           "index": 1,
@@ -77,6 +79,7 @@
       "dynasty": 16.52,
       "total": 51.27,
       "rexFactor": false,
+      "index": 1,
       "linkedRatings": [
         {
           "index": 1,
@@ -103,7 +106,7 @@
       ]
     },
     {
-      "index": 2,
+      "index": 3,
       "name": "Athelstan",
       "battleyness": 17,
       "scandal": 8,
@@ -123,6 +126,7 @@
       "dynasty": 7.51,
       "total": 26.01,
       "rexFactor": false,
+      "index": 4,
       "linkedRatings": [
         {
           "index": 3,
@@ -157,6 +161,7 @@
       "dynasty": 2.51,
       "total": 18.26,
       "rexFactor": false,
+      "index": 4,
       "linkedRatings": [
         {
           "index": 3,
@@ -183,7 +188,7 @@
       ]
     },
     {
-      "index": 4,
+      "index": 6,
       "name": "Eadred",
       "battleyness": 8.5,
       "scandal": 7,
@@ -203,6 +208,7 @@
       "dynasty": 0,
       "total": 21.5,
       "rexFactor": false,
+      "index": 7,
       "linkedRatings": [
         {
           "index": 5,
@@ -237,6 +243,7 @@
       "dynasty": 6.26,
       "total": 33,
       "rexFactor": false,
+      "index": 8,
       "linkedRatings": [
         {
           "index": 6,
@@ -271,6 +278,7 @@
       "dynasty": 6.26,
       "total": 43.51,
       "rexFactor": false,
+      "index": 8,
       "linkedRatings": [
         {
           "index": 6,
@@ -305,6 +313,7 @@
       "dynasty": 6.26,
       "total": 65.26,
       "rexFactor": false,
+      "index": 8,
       "linkedRatings": [
         {
           "index": 6,
@@ -331,7 +340,7 @@
       ]
     },
     {
-      "index": 7,
+      "index": 11,
       "name": "Edward the Martyr",
       "battleyness": 0,
       "scandal": 1,
@@ -351,6 +360,7 @@
       "dynasty": 16.77,
       "total": 36.52,
       "rexFactor": false,
+      "index": 12,
       "linkedRatings": [
         {
           "index": 8,
@@ -385,6 +395,7 @@
       "dynasty": 15.02,
       "total": 57.77,
       "rexFactor": false,
+      "index": 12,
       "linkedRatings": [
         {
           "index": 8,
@@ -419,6 +430,7 @@
       "dynasty": 8.25,
       "total": 35.26,
       "rexFactor": false,
+      "index": 14,
       "linkedRatings": [
         {
           "index": 9,
@@ -453,6 +465,7 @@
       "dynasty": 6.67,
       "total": 21.17,
       "rexFactor": false,
+      "index": 15,
       "linkedRatings": [
         {
           "index": 10,
@@ -487,6 +500,7 @@
       "dynasty": 10.84,
       "total": 62.59,
       "rexFactor": true,
+      "index": 16,
       "linkedRatings": [
         {
           "index": 11,
@@ -521,6 +535,7 @@
       "dynasty": 8.34,
       "total": 49.84,
       "rexFactor": false,
+      "index": 16,
       "linkedRatings": [
         {
           "index": 11,
@@ -547,7 +562,7 @@
       ]
     },
     {
-      "index": 12,
+      "index": 18,
       "name": "Harold I",
       "battleyness": 0,
       "scandal": 3.5,
@@ -559,7 +574,7 @@
       "linkedRatings": []
     },
     {
-      "index": 13,
+      "index": 19,
       "name": "Harthacnut",
       "battleyness": 4,
       "scandal": 5.5,
@@ -579,6 +594,7 @@
       "dynasty": 0,
       "total": 36,
       "rexFactor": false,
+      "index": 20,
       "linkedRatings": [
         {
           "index": 14,
@@ -613,6 +629,7 @@
       "dynasty": 9.59,
       "total": 23.6,
       "rexFactor": false,
+      "index": 21,
       "linkedRatings": [
         {
           "index": 15,
@@ -647,6 +664,7 @@
       "dynasty": 13.76,
       "total": 61.51,
       "rexFactor": false,
+      "index": 22,
       "linkedRatings": [
         {
           "index": 16,
@@ -673,7 +691,7 @@
       ]
     },
     {
-      "index": 17,
+      "index": 23,
       "name": "William Rufus",
       "battleyness": 10,
       "scandal": 14,
@@ -693,6 +711,7 @@
       "dynasty": 5.84,
       "total": 58.09,
       "rexFactor": true,
+      "index": 24,
       "linkedRatings": [
         {
           "index": 18,
@@ -727,6 +746,7 @@
       "dynasty": 0.84,
       "total": 41.09,
       "rexFactor": false,
+      "index": 24,
       "linkedRatings": [
         {
           "index": 18,
@@ -761,6 +781,7 @@
       "dynasty": 7.42,
       "total": 40.92,
       "rexFactor": false,
+      "index": 26,
       "linkedRatings": [
         {
           "index": 19,
@@ -787,7 +808,7 @@
       ]
     },
     {
-      "index": 20,
+      "index": 27,
       "name": "Henry II",
       "battleyness": 17,
       "scandal": 17.5,
@@ -799,7 +820,7 @@
       "linkedRatings": []
     },
     {
-      "index": 21,
+      "index": 28,
       "name": "Richard the Lionheart",
       "battleyness": 18,
       "scandal": 16,
@@ -811,7 +832,7 @@
       "linkedRatings": []
     },
     {
-      "index": 22,
+      "index": 29,
       "name": "John",
       "battleyness": 8,
       "scandal": 18,
@@ -823,7 +844,7 @@
       "linkedRatings": []
     },
     {
-      "index": 23,
+      "index": 30,
       "name": "Henry III",
       "battleyness": 6,
       "scandal": 5,
@@ -835,7 +856,7 @@
       "linkedRatings": []
     },
     {
-      "index": 24,
+      "index": 31,
       "name": "Edward I",
       "battleyness": 17,
       "scandal": 14,
@@ -847,7 +868,7 @@
       "linkedRatings": []
     },
     {
-      "index": 25,
+      "index": 32,
       "name": "Edward II",
       "battleyness": 4,
       "scandal": 17.5,
@@ -859,7 +880,7 @@
       "linkedRatings": []
     },
     {
-      "index": 26,
+      "index": 33,
       "name": "Edward III",
       "battleyness": 17.5,
       "scandal": 3.5,
@@ -871,7 +892,7 @@
       "linkedRatings": []
     },
     {
-      "index": 27,
+      "index": 34,
       "name": "Richard II",
       "battleyness": 7,
       "scandal": 9,
@@ -883,7 +904,7 @@
       "linkedRatings": []
     },
     {
-      "index": 28,
+      "index": 35,
       "name": "Henry IV",
       "battleyness": 12.5,
       "scandal": 17,
@@ -895,7 +916,7 @@
       "linkedRatings": []
     },
     {
-      "index": 29,
+      "index": 36,
       "name": "Henry V",
       "battleyness": 20,
       "scandal": 3.5,
@@ -907,7 +928,7 @@
       "linkedRatings": []
     },
     {
-      "index": 30,
+      "index": 37,
       "name": "Henry VI",
       "battleyness": 0,
       "scandal": 0,
@@ -919,7 +940,7 @@
       "linkedRatings": []
     },
     {
-      "index": 31,
+      "index": 38,
       "name": "Edward IV",
       "battleyness": 15.5,
       "scandal": 16,
@@ -931,7 +952,7 @@
       "linkedRatings": []
     },
     {
-      "index": 32,
+      "index": 39,
       "name": "Edward V",
       "battleyness": 0,
       "scandal": 0,
@@ -943,7 +964,7 @@
       "linkedRatings": []
     },
     {
-      "index": 33,
+      "index": 40,
       "name": "Richard III",
       "battleyness": 12,
       "scandal": 20,
@@ -955,7 +976,7 @@
       "linkedRatings": []
     },
     {
-      "index": 34,
+      "index": 41,
       "name": "Henry VII",
       "battleyness": 11,
       "scandal": 6,
@@ -967,7 +988,7 @@
       "linkedRatings": []
     },
     {
-      "index": 35,
+      "index": 42,
       "name": "Henry VIII",
       "battleyness": 8,
       "scandal": 20,
@@ -979,7 +1000,7 @@
       "linkedRatings": []
     },
     {
-      "index": 36,
+      "index": 43,
       "name": "Edward VI",
       "battleyness": 4,
       "scandal": 0,
@@ -991,7 +1012,7 @@
       "linkedRatings": []
     },
     {
-      "index": 37,
+      "index": 44,
       "name": "Mary I",
       "battleyness": 10,
       "scandal": 11,
@@ -1003,7 +1024,7 @@
       "linkedRatings": []
     },
     {
-      "index": 38,
+      "index": 45,
       "name": "Elizabeth I",
       "battleyness": 13,
       "scandal": 5.5,
@@ -1015,7 +1036,7 @@
       "linkedRatings": []
     },
     {
-      "index": 39,
+      "index": 46,
       "name": "James I",
       "battleyness": 0,
       "scandal": 14,
@@ -1027,7 +1048,7 @@
       "linkedRatings": []
     },
     {
-      "index": 40,
+      "index": 47,
       "name": "Charles I",
       "battleyness": 0,
       "scandal": 2,
@@ -1039,7 +1060,7 @@
       "linkedRatings": []
     },
     {
-      "index": 41,
+      "index": 48,
       "name": "Oliver Cromwell",
       "battleyness": 19.5,
       "scandal": 20,
@@ -1051,7 +1072,7 @@
       "linkedRatings": []
     },
     {
-      "index": 42,
+      "index": 49,
       "name": "Charles II",
       "battleyness": 1,
       "scandal": 16,
@@ -1063,7 +1084,7 @@
       "linkedRatings": []
     },
     {
-      "index": 43,
+      "index": 50,
       "name": "James II",
       "battleyness": 2.5,
       "scandal": 16,
@@ -1075,7 +1096,7 @@
       "linkedRatings": []
     },
     {
-      "index": 44,
+      "index": 51,
       "name": "William III & Mary II",
       "battleyness": 16,
       "scandal": 4,
@@ -1087,7 +1108,7 @@
       "linkedRatings": []
     },
     {
-      "index": 45,
+      "index": 52,
       "name": "Anne",
       "battleyness": 14,
       "scandal": 0,
@@ -1099,7 +1120,7 @@
       "linkedRatings": []
     },
     {
-      "index": 46,
+      "index": 53,
       "name": "George I",
       "battleyness": 6,
       "scandal": 11,
@@ -1111,7 +1132,7 @@
       "linkedRatings": []
     },
     {
-      "index": 47,
+      "index": 54,
       "name": "George II",
       "battleyness": 17.5,
       "scandal": 3,
@@ -1123,7 +1144,7 @@
       "linkedRatings": []
     },
     {
-      "index": 48,
+      "index": 55,
       "name": "George III",
       "battleyness": 15,
       "scandal": 0,
@@ -1135,7 +1156,7 @@
       "linkedRatings": []
     },
     {
-      "index": 49,
+      "index": 56,
       "name": "George IV",
       "battleyness": 7,
       "scandal": 15,
@@ -1147,7 +1168,7 @@
       "linkedRatings": []
     },
     {
-      "index": 50,
+      "index": 57,
       "name": "William IV",
       "battleyness": 8,
       "scandal": 10,
@@ -1159,7 +1180,7 @@
       "linkedRatings": []
     },
     {
-      "index": 51,
+      "index": 58,
       "name": "Victoria",
       "battleyness": 15.5,
       "scandal": 7,
@@ -1171,7 +1192,7 @@
       "linkedRatings": []
     },
     {
-      "index": 52,
+      "index": 59,
       "name": "Edward VII",
       "battleyness": 6,
       "scandal": 16,
@@ -1183,7 +1204,7 @@
       "linkedRatings": []
     },
     {
-      "index": 53,
+      "index": 60,
       "name": "George V",
       "battleyness": 13.5,
       "scandal": 2,
@@ -1195,7 +1216,7 @@
       "linkedRatings": []
     },
     {
-      "index": 54,
+      "index": 61,
       "name": "Edward VIII",
       "battleyness": 2,
       "scandal": 18.5,
@@ -1207,7 +1228,7 @@
       "linkedRatings": []
     },
     {
-      "index": 55,
+      "index": 62,
       "name": "George VI",
       "battleyness": 15,
       "scandal": 0.5,
@@ -1219,7 +1240,7 @@
       "linkedRatings": []
     },
     {
-      "index": 56,
+      "index": 63,
       "name": "Elizabeth II",
       "battleyness": 10,
       "scandal": 0,

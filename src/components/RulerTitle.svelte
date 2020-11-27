@@ -14,6 +14,7 @@
 
   button {
     height: 100%;
+    width: 100%;
     background: none;
     border: 1px rgba(0, 0, 0, 0) solid;
     cursor: pointer;
@@ -23,6 +24,7 @@
     justify-items: center;
     border-radius: 0.2em;
     margin: 0.5em 0.2em;
+    padding: 0.2em;
   }
 
   total {

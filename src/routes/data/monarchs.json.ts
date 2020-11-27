@@ -1,14 +1,11 @@
-import type { ServerResponse } from 'http';
-import { scores } from "./_monarchs.json";
+import type { ServerResponse } from "http";
+import RatingsLoader from "./_RatingsLoader";
 
-const contents = JSON.stringify(
-  { scores }
-);
-
-export function get(_, res: ServerResponse) {
+export async function get(_, res: ServerResponse) {
+  const data = await RatingsLoader.load({ type: "monarchs" });
   res.writeHead(200, {
     "Content-Type": "application/json",
   });
 
-  res.end(contents);
+  res.end(JSON.stringify(data));
 }

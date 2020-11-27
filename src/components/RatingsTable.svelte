@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { afterUpdate, beforeUpdate, getContext } from "svelte";
+  import { beforeUpdate, getContext } from "svelte";
 
   import type Rating from "../types/Rating";
   import type RatedPerson from "../types/RatedPerson";
@@ -10,10 +10,14 @@
 
   export let scores: RatedPerson[] = [];
   export let linkedRatingName = "linked ratings";
+  export let linkSymbol = "⚭";
 
-  let sortField = null;
-  let showScoreHighlight = null;
+  let displayScores = scores;
+
+  let sortField: string | null = null;
+  let showScoreHighlight = false;
   let showLinkedRatings = false;
+  let nameFilter: string | null = null;
   let rulersGrid = null;
 
   const modal: any = getContext("simple-modal");
@@ -21,6 +25,10 @@
   beforeUpdate(() => {
     showScoreHighlight =
       sortField && sortField !== "index" && sortField !== "total";
+
+    displayScores = scores;
+    filterRatings();
+    sortRatings();
   });
 
   const showCard = (rating: Rating) => {
@@ -39,19 +47,32 @@
     );
   };
 
-  const sortRatings = () => {
-    if (sortField) {
-      scores = scores.sort((a, b) => {
-        if (a[sortField] === b[sortField]) {
-          return 0;
-        } else {
-          if (sortField === "index") {
-            return a[sortField] > b[sortField] ? 1 : -1;
-          }
-          return a[sortField] > b[sortField] ? -1 : 1;
-        }
-      });
+  const filterRatings = () => {
+    if (!nameFilter) {
+      displayScores = scores || [];
+      return;
     }
+
+    const lowerCaseFilter = nameFilter.toLocaleLowerCase();
+    displayScores = scores.filter((score) =>
+      score.name.toLocaleLowerCase().includes(lowerCaseFilter)
+    );
+  };
+
+  const sortRatings = () => {
+    if (!sortField) {
+      return;
+    }
+    displayScores = displayScores.sort((a, b) => {
+      if (a[sortField] === b[sortField]) {
+        return 0;
+      } else {
+        if (sortField === "index") {
+          return a[sortField] > b[sortField] ? 1 : -1;
+        }
+        return a[sortField] > b[sortField] ? -1 : 1;
+      }
+    });
   };
 
   const calculateBarsColSpan = (
@@ -121,7 +142,7 @@
     background-color: rgba(0, 0, 0, 0.15);
   }
 
-  ruler-details { 
+  ruler-details {
     display: contents;
   }
 
@@ -135,18 +156,21 @@
     box-sizing: border-box;
   }
 
-
   linked-to {
     color: #b69119;
     font-size: 2rem;
     display: flex;
     padding-left: 1em;
-    padding-right: 0.25em;
   }
 
   linked-to > span {
     display: block;
     padding-bottom: 0.5rem;
+  }
+
+  linked-to > ruler-title {
+    padding: 0 0.2em;
+    width: 100%;
   }
 
   rulers {
@@ -222,11 +246,7 @@
 <form>
   <field>
     <label for="sort-field">Sort</label>
-    <select
-      id="sort-field"
-      bind:value={sortField}
-      on:change={sortRatings}
-      on:blur={sortRatings}>
+    <select id="sort-field" bind:value={sortField}>
       <option value="index">Chronological</option>
       <option value="total">Total score</option>
       <option value="battleyness">Battleyness</option>
@@ -246,9 +266,17 @@
         bind:checked={showLinkedRatings} />
     </label>
   </field>
+  <field>
+    <label for="name-filter"> Filter by name </label>
+    <input
+      type="text"
+      id="name-filter"
+      bind:value={nameFilter}
+      on:select|preventDefault />
+  </field>
 </form>
 <rulers bind:this={rulersGrid}>
-  {#each scores as score}
+  {#each displayScores as score}
     <ruler>
       <ruler-details>
         <ruler-title style={`--row-span: ${score.linkedRatings.length}`}>
@@ -258,7 +286,7 @@
           data-last-col={!showScoreHighlight}
           style="--row-span: {score.linkedRatings.length};
           --col-span: {calculateBarsColSpan(score, showLinkedRatings, showScoreHighlight)};
-          --display: {showScoreHighlight ? 'none' : 'block'};
+          --display: {showScoreHighlight ? 'none' : 'flex'};
         ">
           <RatingBarChart rating={score} />
         </ruler-bars>
@@ -276,7 +304,7 @@
         {#each score.linkedRatings as consort}
           <linked-ruler>
             <linked-to style={`--col-start: 4`}>
-              <span>⚭</span>
+              <span>{linkSymbol}</span>
               <ruler-title>
                 <RulerTitle
                   rating={consort}
