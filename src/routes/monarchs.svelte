@@ -33,7 +33,6 @@
     justify-content: center;
     margin: 0 auto;
     font-size: 2rem;
-    text-transform: uppercase;
     font-weight: 700;
     color: white;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);

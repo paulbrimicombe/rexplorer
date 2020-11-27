@@ -160,16 +160,9 @@ const combineScores = (monarch, consort, category) => {
 const teamsResult = {
   scores: monarchResult.scores.reduce((teamScores, monarch) => {
     if (monarch.consorts.length === 0) {
-      return [
-        ...teamScores,
-        {
-          ...monarch,
-          index: teamScores.length,
-          consorts: undefined,
-          linkedRatings: [],
-        },
-      ];
+      return teamScores;
     }
+
     const newEntries = monarch.consorts.map((consort) => {
       return {
         name: `${monarch.name} & ${consort.name}`,
