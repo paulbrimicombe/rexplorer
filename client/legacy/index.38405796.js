@@ -1,1 +1,0 @@
-import{x as t}from"./client.c9ec5f66.js";function o(o,i){var a=i.delay,e=void 0===a?0:a,n=i.duration,c=void 0===n?400:n,r=i.easing,d=void 0===r?t:r,s=+getComputedStyle(o).opacity;return{delay:e,duration:c,easing:d,css:function(t){return"opacity: ".concat(t*s)}}}export{o as f};
