@@ -59,7 +59,7 @@
       <img
         width="64"
         height="64"
-        src="english-monarch-crown.webp"
+        src="english-monarch-crown.jpg"
         alt="English monarch crown" />
       English Monarchs
     </h1>

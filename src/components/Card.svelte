@@ -112,7 +112,7 @@
   </name>
   <content>
     {#each rating.name as name}
-      <portrait style="background-image: url('portraits/{name}.webp')" />
+      <portrait style="background-image: url('portraits/{name}.jpg')" />
     {/each}
     <total>{rating.total}</total>
     <scores>

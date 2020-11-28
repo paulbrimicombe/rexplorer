@@ -58,7 +58,7 @@
       <img
         width="64"
         height="64"
-        src="king-and-queen.webp"
+        src="king-and-queen.jpg"
         alt="King and Queen playing chess" />
       English Royal Teams
     </h1>

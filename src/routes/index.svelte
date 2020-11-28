@@ -48,7 +48,7 @@
       <img
         width="64"
         height="64"
-        src="english-monarch-crown.webp"
+        src="english-monarch-crown.jpg"
         alt="English monarch crown" />
       Rexplore English monarchs</a>
   </link-item>
@@ -57,7 +57,7 @@
       <img
         width="64"
         height="64"
-        src="english-consort-crown.webp"
+        src="english-consort-crown.jpg"
         alt="English consort crown" />
       Rexplore English consorts</a>
   </link-item>
@@ -66,7 +66,7 @@
       <img
         width="64"
         height="64"
-        src="king-and-queen.webp"
+        src="king-and-queen.jpg"
         alt="King and Queen playing chess" />
       Rexplore English royal teams</a>
   </link-item>

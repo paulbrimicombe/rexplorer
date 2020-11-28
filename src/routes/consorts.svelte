@@ -59,7 +59,7 @@
       <img
         width="64"
         height="64"
-        src="english-consort-crown.webp"
+        src="english-consort-crown.jpg"
         alt="English consort crown" />
       English Consorts
     </h1>
