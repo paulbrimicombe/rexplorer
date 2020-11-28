@@ -55,7 +55,7 @@
 
     const lowerCaseFilter = nameFilter.toLocaleLowerCase();
     displayScores = scores.filter((score) =>
-      score.name.toLocaleLowerCase().includes(lowerCaseFilter)
+      score.name.join(' ').toLocaleLowerCase().includes(lowerCaseFilter)
     );
   };
 
@@ -281,43 +281,43 @@
   </field>
 </form>
 <rulers bind:this={rulersGrid}>
-  {#each displayScores as score}
+  {#each displayScores as rating}
     <ruler>
       <ruler-details>
-        <ruler-title style={`--row-span: ${score.linkedRatings.length}`}>
-          <RulerTitle rating={score} on:select={() => showCard(score)} />
+        <ruler-title style={`--row-span: ${rating.linkedRatings.length}`}>
+          <RulerTitle rating={rating} on:select={() => showCard(rating)} />
         </ruler-title>
         <ruler-bars
           data-last-col={!showScoreHighlight}
-          style="--row-span: {score.linkedRatings.length};
-          --col-span: {calculateBarsColSpan(score, showLinkedRatings, showScoreHighlight)};
+          style="--row-span: {rating.linkedRatings.length};
+          --col-span: {calculateBarsColSpan(rating, showLinkedRatings, showScoreHighlight)};
           --display: {showScoreHighlight ? 'none' : 'flex'};
         ">
-          <RatingBarChart rating={score} />
+          <RatingBarChart rating={rating} />
         </ruler-bars>
         {#if showScoreHighlight}
           <score-summary
             style={`
-            --col-span: ${calculateHighlightColSpan(score, showLinkedRatings)};
-            --row-span: ${score.linkedRatings.length}`}>
-            <ScoreHighlightBar rating={score} scoreHighlight={sortField} />
+            --col-span: ${calculateHighlightColSpan(rating, showLinkedRatings)};
+            --row-span: ${rating.linkedRatings.length}`}>
+            <ScoreHighlightBar rating={rating} scoreHighlight={sortField} />
           </score-summary>
         {/if}
       </ruler-details>
 
       {#if showLinkedRatings}
-        {#each score.linkedRatings as consort}
+        {#each rating.linkedRatings as linkedRating}
           <linked-ruler>
             <linked-to style={`--col-start: 4`}>
               <span>{linkSymbol}</span>
               <ruler-title>
                 <RulerTitle
-                  rating={consort}
-                  on:select={() => showCard(consort)} />
+                  rating={linkedRating}
+                  on:select={() => showCard(linkedRating)} />
               </ruler-title>
             </linked-to>
             <ruler-bars>
-              <RatingBarChart rating={score} />
+              <RatingBarChart rating={linkedRating} />
             </ruler-bars>
           </linked-ruler>
         {/each}

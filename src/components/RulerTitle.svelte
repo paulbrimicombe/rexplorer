@@ -56,6 +56,10 @@
     position: relative;
   }
 
+  name > span {
+    position: relative;
+  }
+
   badge {
     position: absolute;
     left: -0.9em;
@@ -65,12 +69,18 @@
 </style>
 
 <button
-  on:click|preventDefault|stopPropagation={() => dispatch('select', rating)}>
+  on:click|preventDefault|stopPropagation={() => dispatch('select', rating)}
+  tabindex="0">
   <total>{rating.total}</total>
   <name>
-    {#if rating.rexFactor}
-      <badge><img src="crown.svg" alt="Rex Factor winner" /></badge>
-    {/if}
-    {rating.name}
+    {#each rating.name as name, index}
+      <span>
+        {name}
+        {#if rating.rexFactor[index]}
+          <badge><img src="crown.svg" alt="Rex Factor winner" /></badge>
+        {/if}
+      </span>
+      {#if index !== rating.name.length - 1}<span> & </span>{/if}
+    {/each}
   </name>
 </button>

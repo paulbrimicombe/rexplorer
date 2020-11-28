@@ -42,9 +42,13 @@
     writing-mode: vertical-rl;
   }
 
-  name span {
+  name > span {
     padding: 0.7em 0.2em;
     display: block;
+  }
+
+  name > span > span:last-child {
+    display: none;
   }
 
   name img {
@@ -80,7 +84,7 @@
   score {
     margin: 0.1em 0;
     font-size: 1.5rem;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   bar {
@@ -97,45 +101,55 @@
 <card>
   <name>
     <span>
-      {#if rating.rexFactor}
-        <img src="crown.svg" alt="Rex Factor winner" />
-      {/if}
-      {rating.name}
+      {#each rating.name as name, index}
+        {#if rating.rexFactor[index]}
+          <img src="crown.svg" alt="Rex Factor winner" />
+        {/if}
+        <span>{name}</span>
+        <span> & </span>
+      {/each}
     </span>
   </name>
   <content>
-    <portrait style="background-image: url('portraits/{rating.name}.webp')" />
+    {#each rating.name as name}
+      <portrait style="background-image: url('portraits/{name}.webp')" />
+    {/each}
     <total>{rating.total}</total>
     <scores>
       <score>
         <bar
           style={`width: ${(100 * rating.battleyness) / 20}%`}
           class="battleyness">
-          &nbsp;Battleyness {rating.battleyness}
+          &nbsp;Battleyness
+          {rating.battleyness}
         </bar>
       </score>
       <score>
         <bar style={`width: ${(100 * rating.scandal) / 20}%`} class="scandal">
-          &nbsp;Scandal {rating.scandal}
+          &nbsp;Scandal
+          {rating.scandal}
         </bar>
       </score>
       <score>
         <bar
           style={`width: ${(100 * rating.subjectivity) / 20}%`}
           class="subjectivity">
-          &nbsp;Subjectivity {rating.subjectivity}
+          &nbsp;Subjectivity
+          {rating.subjectivity}
         </bar>
       </score>
       <score>
         <bar
           style={`width: ${(100 * rating.longevity) / 20}%`}
           class="longevity">
-          &nbsp;Longevity {rating.longevity}
+          &nbsp;Longevity
+          {rating.longevity}
         </bar>
       </score>
       <score>
         <bar style={`width: ${(100 * rating.dynasty) / 20}%`} class="dynasty">
-          &nbsp;Dynasty {rating.dynasty}
+          &nbsp;Dynasty
+          {rating.dynasty}
         </bar>
       </score>
     </scores>

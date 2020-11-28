@@ -21,6 +21,8 @@
 </script>
 
 <script lang="ts">
+  import { fade } from "svelte/transition";
+
   export let scores: RatedPerson[] = [];
 </script>
 
@@ -31,7 +33,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    margin: 0em auto;
     font-size: 2rem;
     font-weight: 700;
     color: white;
@@ -39,8 +41,6 @@
   }
 
   h1 img {
-    height: 1.5em;
-    width: 1.5em;
     margin-right: 0.5em;
     box-shadow: 0 0 2px 2px white;
   }
@@ -54,13 +54,15 @@
 </svelte:head>
 
 <Modal>
-  <h1 class="monarchs">
-    <img
-      width="64"
-      height="64"
-      src="english-monarch-crown.webp"
-      alt="English monarch crown" />
-    English Monarchs
-  </h1>
-  <RatingsTable {scores} linkedRatingName="consorts" />
+  <div in:fade={{ delay: 300, duration: 200 }} out:fade={{ duration: 200 }}>
+    <h1 class="monarchs">
+      <img
+        width="64"
+        height="64"
+        src="english-monarch-crown.webp"
+        alt="English monarch crown" />
+      English Monarchs
+    </h1>
+    <RatingsTable {scores} linkedRatingName="consorts" />
+  </div>
 </Modal>

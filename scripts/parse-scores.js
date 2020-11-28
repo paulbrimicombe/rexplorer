@@ -115,10 +115,18 @@ const monarchResult = {
       const consort = consortData.scores.find((consort) => {
         return consort.name === name;
       });
-      return consort || [];
+      return (
+        {
+          ...consort,
+          name: [consort.name],
+          rexFactor: [consort.rexFactor],
+        } || []
+      );
     });
     return {
       ...monarch,
+      name: [monarch.name],
+      rexFactor: [monarch.rexFactor],
       consorts,
     };
   }),
@@ -138,10 +146,18 @@ const consortResult = {
       const monarch = monarchData.scores.find((monarch) => {
         return monarch.name === name;
       });
-      return monarch || [];
+      return (
+        {
+          ...monarch,
+          name: [monarch.name],
+          rexFactor: [monarch.rexFactor],
+        } || []
+      );
     });
     return {
       ...consort,
+      name: [consort.name],
+      rexFactor: [consort.rexFactor],
       monarchs,
     };
   }),
@@ -165,14 +181,14 @@ const teamsResult = {
 
     const newEntries = monarch.consorts.map((consort) => {
       return {
-        name: `${monarch.name} & ${consort.name}`,
+        name: [...monarch.name, ...consort.name],
         battleyness: combineScores(monarch, consort, "battleyness"),
         scandal: combineScores(monarch, consort, "scandal"),
         subjectivity: combineScores(monarch, consort, "subjectivity"),
         longevity: combineScores(monarch, consort, "longevity"),
         dynasty: combineScores(monarch, consort, "dynasty"),
         total: combineScores(monarch, consort, "total"),
-        rexFactor: monarch.rexFactor && consort.rexFactor,
+        rexFactor: [...monarch.rexFactor, ...consort.rexFactor],
         index: teamScores.length,
         linkedRatings: [
           { ...monarch, consorts: undefined },

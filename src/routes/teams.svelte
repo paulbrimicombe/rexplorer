@@ -20,6 +20,8 @@
 </script>
 
 <script lang="ts">
+  import { fade } from "svelte/transition";
+
   export let scores: RatedPerson[] = [];
 </script>
 
@@ -38,8 +40,6 @@
   }
 
   h1 img {
-    height: 1.5em;
-    width: 1.5em;
     margin-right: 0.5em;
     box-shadow: 0 0 2px 2px white;
   }
@@ -53,13 +53,15 @@
 </svelte:head>
 
 <Modal>
-  <h1 class="teams">
-    <img
-      width="64"
-      height="64"
-      src="king-and-queen.webp"
-      alt="King and Queen playing chess" />
-    English Royal Teams
-  </h1>
-  <RatingsTable {scores} linkedRatingName="individual scores" linkSymbol="" />
+  <div in:fade={{ delay: 300, duration: 200 }} out:fade={{ duration: 200 }}>
+    <h1 class="teams">
+      <img
+        width="64"
+        height="64"
+        src="king-and-queen.webp"
+        alt="King and Queen playing chess" />
+      English Royal Teams
+    </h1>
+    <RatingsTable {scores} linkedRatingName="individual scores" linkSymbol="" />
+  </div>
 </Modal>

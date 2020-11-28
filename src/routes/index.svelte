@@ -1,4 +1,6 @@
 <script type="ts">
+  import { fade } from "svelte/transition";
+
   import "./_common-styles.svelte";
 </script>
 
@@ -40,7 +42,7 @@
     content="The Rexplorer home page for exploring Rex Factor scores" />
 </svelte:head>
 
-<links>
+<links in:fade={{ delay: 300, duration: 200 }} out:fade={{ duration: 200 }}>
   <link-item class="monarchs">
     <a href="monarchs">
       <img

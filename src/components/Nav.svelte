@@ -71,7 +71,7 @@
       box-sizing: content-box;
     }
 
-    a {
+    li > a {
       width: 100%;
     }
 
