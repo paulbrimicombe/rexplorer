@@ -35,9 +35,7 @@
     justify-content: center;
     margin: 0em auto;
     font-size: 2rem;
-    font-weight: 700;
-    color: white;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    color: black;
   }
 
   h1 img {
@@ -55,13 +53,13 @@
 
 <Modal>
   <div in:fade={{ delay: 300, duration: 200 }} out:fade={{ duration: 200 }}>
-    <h1 class="monarchs">
+    <h1 class="banner">
       <img
         width="64"
         height="64"
         src="english-monarch-crown.jpg"
         alt="English monarch crown" />
-      English Monarchs
+      <p>English Monarchs</p>
     </h1>
     <RatingsTable {scores} linkedRatingName="consorts" />
   </div>

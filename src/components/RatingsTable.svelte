@@ -7,6 +7,7 @@
   import RulerTitle from "./RulerTitle.svelte";
   import RatingBarChart from "./RatingBarChart.svelte";
   import ScoreHighlightBar from "./ScoreHighlightBar.svelte";
+  import { fade } from "svelte/transition";
 
   export let scores: RatedPerson[] = [];
   export let linkedRatingName = "linked ratings";
@@ -55,7 +56,7 @@
 
     const lowerCaseFilter = nameFilter.toLocaleLowerCase();
     displayScores = scores.filter((score) =>
-      score.name.join(' ').toLocaleLowerCase().includes(lowerCaseFilter)
+      score.name.join(" ").toLocaleLowerCase().includes(lowerCaseFilter)
     );
   };
 
@@ -73,33 +74,6 @@
         return a[sortField] > b[sortField] ? -1 : 1;
       }
     });
-  };
-
-  const calculateBarsColSpan = (
-    score: RatedPerson,
-    showLinkedRatings: boolean,
-    showScoreHighlight: boolean
-  ) => {
-    if (showScoreHighlight) {
-      return 1;
-    }
-
-    if (score.linkedRatings.length && showLinkedRatings) {
-      return 2;
-    }
-
-    return 4;
-  };
-
-  const calculateHighlightColSpan = (
-    score: RatedPerson,
-    showLinkedRatings: boolean
-  ) => {
-    let colSpan = 1;
-    if (!score.linkedRatings.length || !showLinkedRatings) {
-      colSpan += 2;
-    }
-    return colSpan;
   };
 </script>
 
@@ -147,20 +121,6 @@
     background-color: rgba(0, 0, 0, 0.15);
   }
 
-  ruler-details {
-    display: contents;
-  }
-
-  ruler-details > * {
-    background: inherit;
-    height: 100%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 0.7em 0;
-    box-sizing: border-box;
-  }
-
   linked-to {
     color: #b69119;
     font-size: 2rem;
@@ -180,28 +140,14 @@
 
   rulers {
     display: grid;
-    grid-template-columns: 1fr auto auto auto 1fr;
     align-items: center;
     justify-content: left;
   }
 
-  ruler-details > ruler-title {
+  ruler-title {
     grid-column-start: 1;
     grid-row-end: span var(--row-span);
-  }
-  ruler-details > ruler-bars {
-    grid-column-start: 2;
-    grid-column-end: span var(--col-span);
-    grid-row-end: span var(--row-span);
-  }
-  ruler-details > score-summary {
-    grid-column-start: 3;
-    grid-column-end: span var(--col-span);
-    grid-row-end: span var(--row-span);
-  }
-
-  linked-to {
-    grid-column-start: var(--col-start);
+    /* grid-column-end: span var(--col-span); */
   }
 
   linked-ruler {
@@ -217,33 +163,34 @@
     box-sizing: border-box;
   }
 
+  ruler-score-details {
+    display: flex;
+    flex: 1;
+  }
+
   @media (max-width: 800px) {
-    ruler-details > ruler-title {
+    rulers {
+      grid-template-columns: 1fr;
+    }
+
+    ruler-title {
       grid-column-start: 1;
-    }
-
-    ruler-details > ruler-bars {
-      grid-column-start: 2;
-      grid-column-end: span 1;
-      display: var(--display);
-    }
-
-    ruler-details > ruler-bars[data-last-col="true"] {
-      grid-column-end: span 4;
     }
 
     linked-ruler > linked-to {
-      grid-column-start: 1;
       padding-left: 1.25em;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (max-width: 400px) {
+    ruler-bars {
+      display: var(--display);
     }
 
-    linked-ruler > ruler-bars {
-      grid-column-end: span 4;
-    }
-
-    ruler-details > score-summary {
-      grid-column-end: span 4;
-      padding-right: 0.7em;
+    linked-ruler > linked-to {
+      padding-left: 0.5em;
+      grid-column-start: 1;
     }
   }
 </style>
@@ -280,47 +227,52 @@
       on:select|preventDefault />
   </field>
 </form>
-<rulers bind:this={rulersGrid}>
+<rulers bind:this={rulersGrid} style={`grid-template-columns: 1fr auto`}>
   {#each displayScores as rating}
     <ruler>
-      <ruler-details>
-        <ruler-title style={`--row-span: ${rating.linkedRatings.length}`}>
-          <RulerTitle rating={rating} on:select={() => showCard(rating)} />
-        </ruler-title>
-        <ruler-bars
-          data-last-col={!showScoreHighlight}
-          style="--row-span: {rating.linkedRatings.length};
-          --col-span: {calculateBarsColSpan(rating, showLinkedRatings, showScoreHighlight)};
-          --display: {showScoreHighlight ? 'none' : 'flex'};
-        ">
-          <RatingBarChart rating={rating} />
-        </ruler-bars>
-        {#if showScoreHighlight}
-          <score-summary
-            style={`
-            --col-span: ${calculateHighlightColSpan(rating, showLinkedRatings)};
-            --row-span: ${rating.linkedRatings.length}`}>
-            <ScoreHighlightBar rating={rating} scoreHighlight={sortField} />
-          </score-summary>
-        {/if}
-      </ruler-details>
+      <ruler-title
+        style={`
+        --row-span: ${rating.linkedRatings.length};
+        --col-span: ${showLinkedRatings ? 1 : 2};`}>
+        <RulerTitle {rating} on:select={() => showCard(rating)}>
+          <ruler-score-details>
+            <ruler-bars
+              style="
+            --display: {showScoreHighlight ? 'none' : 'flex'};">
+              <RatingBarChart {rating} />
+            </ruler-bars>
+            {#if showScoreHighlight}
+              <score-summary>
+                <ScoreHighlightBar {rating} scoreHighlight={sortField} />
+              </score-summary>
+            {/if}
+          </ruler-score-details>
+        </RulerTitle>
+      </ruler-title>
 
-      {#if showLinkedRatings}
+      {#if showLinkedRatings && rating.linkedRatings.length !== 0}
         {#each rating.linkedRatings as linkedRating}
           <linked-ruler>
-            <linked-to style={`--col-start: 4`}>
+            <linked-to>
               <span>{linkSymbol}</span>
               <ruler-title>
                 <RulerTitle
                   rating={linkedRating}
-                  on:select={() => showCard(linkedRating)} />
+                  on:select={() => showCard(linkedRating)}>
+                  <ruler-bars style="flex: 2">
+                    <RatingBarChart rating={linkedRating} />
+                  </ruler-bars>
+                </RulerTitle>
               </ruler-title>
             </linked-to>
-            <ruler-bars>
-              <RatingBarChart rating={linkedRating} />
-            </ruler-bars>
           </linked-ruler>
         {/each}
+      {/if}
+
+      {#if !showLinkedRatings || rating.linkedRatings.length === 0}
+        <linked-ruler>
+          <div style="grid-row-end: span {rating.linkedRatings.length || 1}" />
+        </linked-ruler>
       {/if}
     </ruler>
   {/each}

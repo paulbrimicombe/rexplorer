@@ -83,4 +83,5 @@
       {#if index !== rating.name.length - 1}<span> & </span>{/if}
     {/each}
   </name>
+  <slot></slot>
 </button>
