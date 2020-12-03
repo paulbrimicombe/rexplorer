@@ -21,27 +21,10 @@
 
 <script lang="ts">
   import { fade } from "svelte/transition";
+  import Banner from "../components/Banner.svelte";
 
   export let scores: RatedPerson[] = [];
 </script>
-
-<style>
-  h1 {
-    padding: 0.3em;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    font-size: 2rem;
-    color: black;
-  }
-
-  h1 img {
-    margin-right: 0.5em;
-    box-shadow: 0 0 2px 2px white;
-  }
-</style>
 
 <svelte:head>
   <title>Rexplorer consort & monarch teams</title>
@@ -52,14 +35,11 @@
 
 <Modal>
   <div in:fade={{ delay: 300, duration: 200 }} out:fade={{ duration: 200 }}>
-    <h1 class ="banner">
-      <img
-        width="64"
-        height="64"
-        src="king-and-queen.jpg"
-        alt="King and Queen playing chess" />
-      <p>English Royal Teams</p>
-    </h1>
+    <Banner
+      title="English Royal Teams"
+      imagePath="king-and-queen.jpg"
+      imageAlt="King and queen playing chess"
+      imageSize={64} />
     <RatingsTable {scores} linkedRatingName="individual scores" linkSymbol="" />
   </div>
 </Modal>

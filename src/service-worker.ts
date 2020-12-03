@@ -14,6 +14,7 @@ const DATA_ENDPOINTS = [
 const to_cache = shell
   .concat(files)
   .concat(DATA_ENDPOINTS)
+  .concat('/')
   .map((path) => `/rexplorer${path}`);
 
 const staticAssets = new Set(to_cache);
@@ -42,8 +43,6 @@ serviceWorker.onactivate = (event: ExtendableEvent) => {
         if (key !== STATIC_ASSETS_CACHE_KEY && key !== OFFLINE_ASSETS_CACHE_KEY)
           await caches.delete(key);
       }
-
-      serviceWorker.clients.claim();
     })
   );
 };

@@ -1,43 +1,14 @@
 <script type="ts">
   import { fade } from "svelte/transition";
+  import Banner from "../components/Banner.svelte";
 
   import "./_common-styles.svelte";
 </script>
 
 <style>
-  links {
-    font-size: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-  }
-
-  h1 {
-    margin: 0;
-  }
-
-  link-item {
-    margin: 0.2em;
-  }
-
-  link-item > a {
-    color: black;
+  a {
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    line-height: 1em;
-    padding: 0.5em;
-  }
-
-  link-item > a:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-
-  link-item > a > img {
-    box-shadow: 0 0 2px 2px white;
-    margin-right: 0.5em;
+    display: inline;
   }
 </style>
 
@@ -48,38 +19,32 @@
     content="The Rexplorer home page for exploring Rex Factor scores" />
 </svelte:head>
 
-<links in:fade={{ delay: 300, duration: 200 }} out:fade={{ duration: 200 }}>
-  <link-item class="banner">
-    <a href="monarchs">
-      <img
-        width="64"
-        height="64"
-        src="english-monarch-crown.jpg"
-        alt="English monarch crown" />
-      <h1>
-        <p>Rexplore English monarchs</p>
-      </h1></a>
-  </link-item>
-  <link-item class="banner">
-    <a href="consorts">
-      <img
-        width="64"
-        height="64"
-        src="english-consort-crown.jpg"
-        alt="English consort crown" />
-      <h1>
-        <p>Rexplore English consorts</p>
-      </h1></a>
-  </link-item>
-  <link-item class="banner">
-    <a href="teams">
-      <img
-        width="64"
-        height="64"
-        src="king-and-queen.jpg"
-        alt="King and Queen playing chess" />
-      <h1>
-        <p>Rexplore English royal teams</p>
-      </h1></a>
-  </link-item>
-</links>
+<div in:fade={{ delay: 300, duration: 200 }} out:fade={{ duration: 200 }}>
+  <a href="monarchs">
+    <Banner
+      title="English monarchs"
+      imagePath="english-monarch-crown.jpg"
+      imageAlt="English monarch crown"
+      imageSize={64}
+      hoverable={true}
+      style="grid-template-columns: auto 1fr; padding: 0.5em" />
+  </a>
+  <a href="consorts">
+    <Banner
+      title="English consorts"
+      imagePath="english-consort-crown.jpg"
+      imageAlt="English consort crown"
+      imageSize={64}
+      hoverable={true}
+      style="grid-template-columns: auto 1fr; padding: 0.5em" />
+  </a>
+  <a href="teams">
+    <Banner
+      title="English royal teams"
+      imagePath="king-and-queen.jpg"
+      imageAlt="King and Queen playing chess"
+      imageSize={64}
+      hoverable={true}
+      style="grid-template-columns: auto 1fr; padding: 0.5em" />
+  </a>
+</div>

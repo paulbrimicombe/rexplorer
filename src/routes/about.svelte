@@ -1,20 +1,18 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
+  import Banner from "../components/Banner.svelte";
 </script>
 
 <svelte:head>
   <title>About</title>
 </svelte:head>
 
-<style>
-  h1 {
-    padding: 0.4em;
-    display: flex;
-  }
-</style>
-
 <div in:fade={{ delay: 300, duration: 200 }} out:fade={{ duration: 200 }}>
-  <h1 class="banner"><p>About the Rexplorer</p></h1>
+  <Banner
+    title="About the Rexplorer"
+    imagePath="confessor.jpg"
+    imageAlt="Edward the Confessor looking at his crown"
+    imageSize={64} />
 
   <p>
     The Rexplorer is for fans of the

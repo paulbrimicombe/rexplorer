@@ -21,32 +21,8 @@ h6 {
   font-weight: normal;
 }
 
-h1 {
-  font-size: 2rem;
-  font-family: uncial, Luminari, 'Brush Script MT', 'Bradley Hand';
-}
-
-h1>p {
-  margin: 0;
-}
-
-h1>p::first-letter {
-  font-size: 2em;
-  line-height: 0.3em;
-  float: left;
-  background-color: #bd5c5c;
-  padding-bottom: 0.5em;
-  border: 1px solid #b69119;
-  box-shadow: inset 0px 0px 2px 2px #e3be46;
-}
-
 a {
   color: inherit;
-}
-
-.banner {
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px inset;
-  background-color: antiquewhite;
 }
 
 @media (min-width: 480px) {
