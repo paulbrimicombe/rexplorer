@@ -7,7 +7,6 @@
   import RulerTitle from "./RulerTitle.svelte";
   import RatingBarChart from "./RatingBarChart.svelte";
   import ScoreHighlightBar from "./ScoreHighlightBar.svelte";
-  import { fade } from "svelte/transition";
 
   export let scores: RatedPerson[] = [];
   export let linkedRatingName = "linked ratings";
@@ -147,7 +146,6 @@
   ruler-title {
     grid-column-start: 1;
     grid-row-end: span var(--row-span);
-    /* grid-column-end: span var(--col-span); */
   }
 
   linked-ruler {
