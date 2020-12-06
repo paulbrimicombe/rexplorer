@@ -12,23 +12,60 @@
   export let linkedRatingName = "linked ratings";
   export let linkSymbol = "⚭";
 
-  let displayScores = scores;
-
   let sortField: string | null = null;
-  let showScoreHighlight = false;
   let showLinkedRatings = false;
   let nameFilter: string | null = null;
-  let rulersGrid = null;
+
+  let initialised = false;
+
+  let displayScores = scores;
+  let showScoreHighlight = false;
 
   const modal: any = getContext("simple-modal");
 
   beforeUpdate(() => {
+    if (typeof window !== "undefined" && !initialised) {
+      initialised = true;
+      const queryString = window.location.search;
+      const keyValuePairs = queryString.substring(1).split("&");
+      const query = keyValuePairs.reduce(
+        (parameters: Record<string, string>, pair) => {
+          const [key, value] = pair.split("=");
+          return {
+            ...parameters,
+            [decodeURIComponent(key)]: decodeURIComponent(value),
+          };
+        },
+        {}
+      );
+
+      sortField = query.sortField;
+      showLinkedRatings = query.showLinkedRatings === 'true' ? true : false;
+      nameFilter = query.nameFilter;
+    }
+
     showScoreHighlight =
       sortField && sortField !== "index" && sortField !== "total";
 
     displayScores = scores;
     filterRatings();
     sortRatings();
+
+    const newQueryString = Object.entries({
+      sortField,
+      showLinkedRatings,
+      nameFilter,
+    })
+      .filter(
+        ([, value]) => value !== "" && value !== undefined && value !== null
+      )
+      .map(([key, value]) => {
+        return `${encodeURIComponent(key)}=${encodeURIComponent(value)}`;
+      }, [])
+      .join("&");
+    const newUrl = window.location.href.split("?")[0] + `?${newQueryString}`;
+
+    window.history.pushState({ path: newUrl }, "", newUrl);
   });
 
   const showCard = (rating: Rating) => {
@@ -225,7 +262,7 @@
       on:select|preventDefault />
   </field>
 </form>
-<rulers bind:this={rulersGrid} style={`grid-template-columns: 1fr auto`}>
+<rulers style={`grid-template-columns: 1fr auto`}>
   {#each displayScores as rating}
     <ruler>
       <ruler-title
