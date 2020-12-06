@@ -14,7 +14,7 @@ const DATA_ENDPOINTS = [
 const to_cache = shell
   .concat(files)
   .concat(DATA_ENDPOINTS)
-  .concat('/')
+  .concat("/")
   .map((path) => `/rexplorer${path}`);
 
 const staticAssets = new Set(to_cache);
@@ -57,10 +57,7 @@ async function fetchAndCache(request: Request) {
   try {
     const response = await fetch(request);
 
-    if (
-      `${response.status}`.startsWith("2") ||
-      `${response.status}`.startsWith("3")
-    ) {
+    if (`${response.status}`.startsWith("2")) {
       cache.put(request, response.clone());
     }
     return response;
@@ -98,6 +95,10 @@ serviceWorker.onfetch = (event: FetchEvent) => {
 
         if (!cachedAsset) {
           return fetchAndCache(event.request);
+        }
+
+        if (cachedAsset.url !== event.request.url) {
+          return fetch(event.request);
         }
 
         fetchAndCache(event.request).catch((error) =>
