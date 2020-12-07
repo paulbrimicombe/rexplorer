@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { beforeUpdate, getContext } from "svelte";
+  import { getContext } from "svelte";
 
   import type Rating from "../types/Rating";
   import type RatedPerson from "../types/RatedPerson";
@@ -9,64 +9,12 @@
   import ScoreHighlightBar from "./ScoreHighlightBar.svelte";
 
   export let scores: RatedPerson[] = [];
-  export let linkedRatingName = "linked ratings";
-  export let linkSymbol = "⚭";
+  export let linkSymbol;
 
-  let sortField: string | null = null;
-  let showLinkedRatings = false;
-  let nameFilter: string | null = null;
-
-  let initialised = false;
-
-  let displayScores = scores;
-  let showScoreHighlight = false;
+  export let highlightField: string | null = null;
+  export let showLinkedRatings: boolean = false;
 
   const modal: any = getContext("simple-modal");
-
-  beforeUpdate(() => {
-    if (typeof window !== "undefined" && !initialised) {
-      initialised = true;
-      const queryString = window.location.search;
-      const keyValuePairs = queryString.substring(1).split("&");
-      const query = keyValuePairs.reduce(
-        (parameters: Record<string, string>, pair) => {
-          const [key, value] = pair.split("=");
-          return {
-            ...parameters,
-            [decodeURIComponent(key)]: decodeURIComponent(value),
-          };
-        },
-        {}
-      );
-
-      sortField = query.sortField;
-      showLinkedRatings = query.showLinkedRatings === 'true' ? true : false;
-      nameFilter = query.nameFilter;
-    }
-
-    showScoreHighlight =
-      sortField && sortField !== "index" && sortField !== "total";
-
-    displayScores = scores;
-    filterRatings();
-    sortRatings();
-
-    const newQueryString = Object.entries({
-      sortField,
-      showLinkedRatings,
-      nameFilter,
-    })
-      .filter(
-        ([, value]) => value !== "" && value !== undefined && value !== null
-      )
-      .map(([key, value]) => {
-        return `${encodeURIComponent(key)}=${encodeURIComponent(value)}`;
-      }, [])
-      .join("&");
-    const newUrl = window.location.href.split("?")[0] + `?${newQueryString}`;
-
-    window.history.pushState({ path: newUrl }, "", newUrl);
-  });
 
   const showCard = (rating: Rating) => {
     modal.open(
@@ -83,54 +31,9 @@
       }
     );
   };
-
-  const filterRatings = () => {
-    if (!nameFilter) {
-      displayScores = scores || [];
-      return;
-    }
-
-    const lowerCaseFilter = nameFilter.toLocaleLowerCase();
-    displayScores = scores.filter((score) =>
-      score.name.join(" ").toLocaleLowerCase().includes(lowerCaseFilter)
-    );
-  };
-
-  const sortRatings = () => {
-    if (!sortField) {
-      return;
-    }
-    displayScores = displayScores.sort((a, b) => {
-      if (a[sortField] === b[sortField]) {
-        return 0;
-      } else {
-        if (sortField === "index") {
-          return a[sortField] > b[sortField] ? 1 : -1;
-        }
-        return a[sortField] > b[sortField] ? -1 : 1;
-      }
-    });
-  };
 </script>
 
 <style>
-  form {
-    border-bottom: 1px solid darkslategray;
-    padding: 0.5em;
-    margin: 0 0 0.2em 0;
-    display: flex;
-    justify-content: start;
-  }
-
-  field {
-    padding: 0 0.5em;
-  }
-
-  #name-filter {
-    width: 100%;
-    max-width: 10em;
-  }
-
   ruler {
     display: contents;
   }
@@ -230,55 +133,22 @@
   }
 </style>
 
-<form>
-  <field>
-    <label for="sort-field">Sort</label>
-    <select id="sort-field" bind:value={sortField}>
-      <option value="index">Chronological</option>
-      <option value="total">Total score</option>
-      <option value="battleyness">Battleyness</option>
-      <option value="scandal">Scandal</option>
-      <option value="subjectivity">Subjectivity</option>
-      <option value="longevity">Longevity</option>
-      <option value="dynasty">Dynasty</option>
-    </select>
-  </field>
-  <field>
-    <label for="show-linked-ratings">
-      Show
-      {linkedRatingName}?
-      <input
-        type="checkbox"
-        id="show-linked-ratings"
-        bind:checked={showLinkedRatings} />
-    </label>
-  </field>
-  <field>
-    <label for="name-filter"> Filter by name </label>
-    <input
-      type="text"
-      id="name-filter"
-      bind:value={nameFilter}
-      on:select|preventDefault />
-  </field>
-</form>
 <rulers style={`grid-template-columns: 1fr auto`}>
-  {#each displayScores as rating}
+  {#each scores as rating}
     <ruler>
       <ruler-title
         style={`
-        --row-span: ${rating.linkedRatings.length};
-        --col-span: ${showLinkedRatings ? 1 : 2};`}>
+        --row-span: ${rating.linkedRatings.length};`}>
         <RulerTitle {rating} on:select={() => showCard(rating)}>
           <ruler-score-details>
             <ruler-bars
               style="
-            --display: {showScoreHighlight ? 'none' : 'flex'};">
+            --display: {highlightField ? 'none' : 'flex'};">
               <RatingBarChart {rating} />
             </ruler-bars>
-            {#if showScoreHighlight}
+            {#if highlightField}
               <score-summary>
-                <ScoreHighlightBar {rating} scoreHighlight={sortField} />
+                <ScoreHighlightBar {rating} scoreHighlight={highlightField} />
               </score-summary>
             {/if}
           </ruler-score-details>

@@ -1,7 +1,11 @@
 <script context="module" lang="ts">
   import Modal from "svelte-simple-modal";
+  import RatingsPage from "../components/RatingsPage.svelte";
+  import {
+    getFilterFromQuery,
+    setQueryFromFilter,
+  } from "../components/RatingsPage.svelte";
   import "./_common-styles.svelte";
-  import RatingsTable from "../components/RatingsTable.svelte";
   import type RatedPerson from "../types/RatedPerson";
 
   export async function preload() {
@@ -21,9 +25,22 @@
 
 <script lang="ts">
   import { fade } from "svelte/transition";
-  import Banner from "../components/Banner.svelte";
+  import { afterUpdate } from "svelte";
+
+  const queryBindings = getFilterFromQuery();
 
   export let scores: RatedPerson[] = [];
+  export let sortField: string | null = queryBindings.sortField;
+  export let showLinkedRatings: boolean = queryBindings.showLinkedRatings;
+  export let nameFilter: string | null = queryBindings.nameFilter;
+
+  afterUpdate(() =>
+    setQueryFromFilter({
+      sortField,
+      showLinkedRatings,
+      nameFilter,
+    })
+  );
 </script>
 
 <svelte:head>
@@ -35,11 +52,20 @@
 
 <Modal>
   <div in:fade={{ delay: 300, duration: 200 }} out:fade={{ duration: 200 }}>
-    <Banner
-      title="English Royal Teams"
-      imagePath="king-and-queen.jpg"
-      imageAlt="King and queen playing chess"
-      imageSize={64} />
-    <RatingsTable {scores} linkedRatingName="individual scores" linkSymbol="" />
+    <RatingsPage
+      ratingName="English royal teams"
+      linkedRatingName="individual scores"
+      ratingImageSrc="king-and-queen.jpg"
+      ratingImageAlt="King and queen playing chess"
+      linkSymbol=""
+      {scores}
+      {sortField}
+      {showLinkedRatings}
+      {nameFilter}
+      on:change={(event) => {
+        sortField = event.detail.sortField;
+        showLinkedRatings = event.detail.showLinkedRatings;
+        nameFilter = event.detail.nameFilter;
+      }} />
   </div>
 </Modal>
