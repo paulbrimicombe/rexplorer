@@ -29,9 +29,6 @@ serviceWorker.oninstall = (event: ExtendableEvent) => {
         await cache.addAll(to_cache);
         await cache.add("/rexplorer");
       })
-      .then(() => {
-        serviceWorker.skipWaiting();
-      })
   );
 };
 
