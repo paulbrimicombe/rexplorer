@@ -19,6 +19,7 @@
     font-family: uncial, Luminari, "Brush Script MT", "Bradley Hand";
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px inset;
     background-color: antiquewhite;
+    background: url('/vellum.png');
   }
 
   img {
