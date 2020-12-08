@@ -23,7 +23,7 @@
   <a href="monarchs">
     <Banner
       title="English monarchs"
-      imagePath="english-monarch-crown.jpg"
+      imagePath="monarch.jpg"
       imageAlt="English monarch crown"
       imageSize={64}
       hoverable={true}
@@ -32,7 +32,7 @@
   <a href="consorts">
     <Banner
       title="English consorts"
-      imagePath="english-consort-crown.jpg"
+      imagePath="consort.jpg"
       imageAlt="English consort crown"
       imageSize={64}
       hoverable={true}

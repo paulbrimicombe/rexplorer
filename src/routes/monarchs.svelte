@@ -56,8 +56,8 @@
     <RatingsPage
       ratingName="English monarchs"
       linkedRatingName="consorts"
-      ratingImageSrc="english-monarch-crown.jpg"
-      ratingImageAlt="English monarch crown"
+      ratingImageSrc="monarch.jpg"
+      ratingImageAlt="English monarch"
       {scores}
       {sortField}
       {showLinkedRatings}
