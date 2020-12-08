@@ -59,7 +59,6 @@
   import Banner from "./Banner.svelte";
   import RatingsTable from "./RatingsTable.svelte";
   import { beforeUpdate, createEventDispatcher } from "svelte";
-import type Rating from "../types/Rating";
 
   const dispatch = createEventDispatcher();
 
@@ -146,7 +145,7 @@ import type Rating from "../types/Rating";
   imageAlt={ratingImageAlt}
   imageSize={64} />
 
-<form>
+<form on:submit|preventDefault>
   <field>
     <label for="sort-field">Sort</label>
     <select
