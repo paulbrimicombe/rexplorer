@@ -20,6 +20,7 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+    position: relative;
   }
 
   scores {
@@ -36,8 +37,7 @@
     border-bottom-left-radius: 1rem;
     background: #c0c0c0;
     background: linear-gradient(to bottom, #c0c0c0 0%, #b1b1b1 100%);
-    border: 1px solid #a2a2a2;
-    box-shadow: inset 0 1px 0 #cfcfcf;
+    border-right: 1px solid #a2a2a2;
     font-size: 1.5rem;
     writing-mode: vertical-rl;
   }
@@ -67,10 +67,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #d4af37;
-    background: linear-gradient(to bottom, #d4af37 0%, #c5a028 100%);
-    border: 1px solid #b69119;
-    box-shadow: inset 0 1px 0 #e3be46;
+    background: radial-gradient(
+        ellipse farthest-corner at right bottom,
+        #ffe56f 0%,
+        #fddb98 8%,
+        #c59f4e 30%,
+        #b1985d 40%,
+        transparent 80%
+      ),
+      radial-gradient(
+        ellipse farthest-corner at left top,
+        #ffffff 0%,
+        #ffffac 15%,
+        #ddc687 35%,
+        #a08d61 62.5%,
+        #8b784a 100%
+      );
   }
 
   portrait {

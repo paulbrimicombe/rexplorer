@@ -36,10 +36,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #d4af37;
-    background: linear-gradient(to bottom, #d4af37 0%, #c5a028 100%);
-    border: 1px solid #b69119;
-    box-shadow: inset 0 1px 0 #e3be46;
+    background: radial-gradient(
+        ellipse farthest-corner at right bottom,
+        #ffe56f 0%,
+        #fddb98 8%,
+        #c59f4e 30%,
+        #b1985d 40%,
+        transparent 80%
+      ),
+      radial-gradient(
+        ellipse farthest-corner at left top,
+        #ffffff 0%,
+        #ffffac 15%,
+        #ddc687 35%,
+        #a08d61 62.5%,
+        #8b784a 100%
+      );
     margin-right: 0.5em;
   }
 
@@ -83,5 +95,5 @@
       {#if index !== rating.name.length - 1}<span> & </span>{/if}
     {/each}
   </name>
-  <slot></slot>
+  <slot />
 </button>
