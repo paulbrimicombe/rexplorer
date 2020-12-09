@@ -27,7 +27,8 @@
       imageAlt="English monarch crown"
       imageSize={64}
       hoverable={true}
-      style="grid-template-columns: auto 1fr; padding: 0.5em" />
+      alignment={'left'}
+      style="margin: 0.5em;" />
   </a>
   <a href="consorts">
     <Banner
@@ -36,7 +37,8 @@
       imageAlt="English consort crown"
       imageSize={64}
       hoverable={true}
-      style="grid-template-columns: auto 1fr; padding: 0.5em" />
+      alignment={'left'}
+      style="margin: 0.5em;" />
   </a>
   <a href="teams">
     <Banner
@@ -45,6 +47,7 @@
       imageAlt="King and Queen playing chess"
       imageSize={64}
       hoverable={true}
-      style="grid-template-columns: auto 1fr; padding: 0.5em" />
+      alignment={'left'}
+      style="margin: 0.5em;" />
   </a>
 </div>
