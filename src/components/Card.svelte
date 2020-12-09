@@ -93,6 +93,11 @@
     box-shadow: 0 0 0.5em 0.5em white inset;
   }
 
+  portraits {
+    flex: 1;
+    display: flex;
+  }
+
   score {
     margin: 0.1em 0;
     font-size: 1.5rem;
@@ -123,9 +128,11 @@
     </span>
   </name>
   <content>
-    {#each rating.name as name}
-      <portrait style="background-image: url('portraits/{name}.jpg')" />
-    {/each}
+    <portraits>
+      {#each rating.name as name}
+        <portrait style="background-image: url('portraits/{name}.jpg')" />
+      {/each}
+    </portraits>
     <total>{rating.total}</total>
     <scores>
       <score>

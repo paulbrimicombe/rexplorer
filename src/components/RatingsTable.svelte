@@ -7,6 +7,7 @@
   import RulerTitle from "./RulerTitle.svelte";
   import RatingBarChart from "./RatingBarChart.svelte";
   import ScoreHighlightBar from "./ScoreHighlightBar.svelte";
+  import { fly } from "svelte/transition";
 
   export let scores: RatedPerson[] = [];
   export let linkSymbol;
@@ -27,6 +28,17 @@
         },
         styleContent: {
           padding: 0,
+        },
+        transitionWindow: fly,
+        transitionWindowProps: {
+          x: -1000,
+          y: 100,
+          duration: 500,
+        },
+        styleCloseButton: {
+          cursor: 'pointer',
+          borderRadius: '30%',
+          boxShadow: "0 0 0 1px #00000033"
         },
       }
     );
