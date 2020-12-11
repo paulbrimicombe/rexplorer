@@ -38,7 +38,8 @@
         styleCloseButton: {
           cursor: 'pointer',
           borderRadius: '30%',
-          boxShadow: "0 0 0 1px #00000033"
+          boxShadow: "0 0 0 1px #00000033",
+          right: "2rem"
         },
       }
     );

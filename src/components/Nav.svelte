@@ -59,7 +59,7 @@
     display: none;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 750px) {
     #menu-button {
       display: block;
       border-left: 1px solid rgb(238, 238, 238);
@@ -138,6 +138,12 @@
         aria-current={segment === 'teams' ? 'page' : undefined}
         on:click={() => (showMenu = false)}
         href="teams">English Royal Teams</a>
+    </li>
+    <li>
+      <a
+        aria-current={segment === 'game' ? 'page' : undefined}
+        on:click={() => (showMenu = false)}
+        href="game">Play the game!</a>
     </li>
     <li>
       <a

@@ -1,10 +1,33 @@
 <script lang="ts">
   import type Rating from "../types/Rating";
-  export let rating: Rating;
+  import "../routes/_common-styles.svelte";
+  import { createEventDispatcher } from "svelte";
+
+  const dispatch = createEventDispatcher();
+
+  export let rating: Rating | null;
+  export let clickableCategories = false;
+
+  const selectCategory = (
+    category:
+      | "battleyness"
+      | "scandal"
+      | "subjectivity"
+      | "longevity"
+      | "dynasty"
+  ) => {
+    dispatch("select", category);
+  };
 </script>
 
 <style>
+  div {
+    height: 31em;
+    width: 21em;
+  }
+
   card {
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -13,6 +36,21 @@
     height: 30em;
     background: white;
     background-size: cover;
+    position: relative;
+  }
+
+  card::after {
+    content: "";
+    position: absolute;
+    border-radius: 1rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../card.jpg);
+    mix-blend-mode: multiply;
+    background-size: cover;
+    pointer-events: none;
   }
 
   content {
@@ -86,7 +124,6 @@
   }
 
   portrait {
-    width: 95%;
     flex: 1;
     background-size: cover;
     background-position: center top;
@@ -96,12 +133,17 @@
   portraits {
     flex: 1;
     display: flex;
+    margin: 0 0.2em;
   }
 
-  score {
+  button {
     margin: 0.1em 0;
     font-size: 1.5rem;
     background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    text-align: left;
+    padding: 0;
+    line-height: normal;
   }
 
   bar {
@@ -112,65 +154,119 @@
     transition: width 1s;
     white-space: nowrap;
     color: white;
+    border: 1px solid rgba(0, 0, 0, 0);
+  }
+
+  .clickableCategories {
+    cursor: pointer;
+  }
+
+  .card-back {
+    background: repeating-linear-gradient(
+        to top left,
+        beige 0,
+        beige 2em,
+        moccasin 2em,
+        moccasin 4em,
+        wheat 4em,
+        wheat 6em
+      ),
+      repeating-linear-gradient(
+        to left,
+        white 0,
+        white 2em,
+        wheat 2em,
+        wheat 4em,
+        beige 4em,
+        beige 6em
+      ),
+      white;
+
+    background-blend-mode: multiply;
   }
 </style>
 
-<card>
-  <name>
-    <span>
-      {#each rating.name as name, index}
-        {#if rating.rexFactor[index]}
-          <img src="crown.svg" alt="Rex Factor winner" />
-        {/if}
-        <span>{name}</span>
-        <span> & </span>
-      {/each}
-    </span>
-  </name>
-  <content>
-    <portraits>
-      {#each rating.name as name}
-        <portrait style="background-image: url('portraits/{name}.jpg')" />
-      {/each}
-    </portraits>
-    <total>{rating.total}</total>
-    <scores>
-      <score>
-        <bar
-          style={`width: ${(100 * rating.battleyness) / 20}%`}
-          class="battleyness">
-          &nbsp;Battleyness
-          {rating.battleyness}
-        </bar>
-      </score>
-      <score>
-        <bar style={`width: ${(100 * rating.scandal) / 20}%`} class="scandal">
-          &nbsp;Scandal
-          {rating.scandal}
-        </bar>
-      </score>
-      <score>
-        <bar
-          style={`width: ${(100 * rating.subjectivity) / 20}%`}
-          class="subjectivity">
-          &nbsp;Subjectivity
-          {rating.subjectivity}
-        </bar>
-      </score>
-      <score>
-        <bar
-          style={`width: ${(100 * rating.longevity) / 20}%`}
-          class="longevity">
-          &nbsp;Longevity
-          {rating.longevity}
-        </bar>
-      </score>
-      <score>
-        <bar style={`width: ${(100 * rating.dynasty) / 20}%`} class="dynasty">
-          &nbsp;Dynasty
-          {rating.dynasty}
-        </bar>
-      </score>
-    </scores>
-  </content>
-</card>
+<div>
+  {#if !rating}
+    <card class="card-back" />
+  {:else}
+    <card>
+      <name>
+        <span>
+          {#each rating.name as name, index}
+            {#if rating.rexFactor[index]}
+              <img src="crown.svg" alt="Rex Factor winner" />
+            {/if}
+            <span>{name}</span>
+            <span> & </span>
+          {/each}
+        </span>
+      </name>
+      <content>
+        <portraits>
+          {#each rating.name as name}
+            <portrait style="background-image: url('portraits/{name}.jpg')" />
+          {/each}
+        </portraits>
+        <total>{rating.total}</total>
+        <scores>
+          <button
+            on:click={() => selectCategory('battleyness')}
+            disabled={!clickableCategories}
+            class:clickableCategories>
+            <bar
+              style={`width: ${(100 * rating.battleyness) / 20}%`}
+              class="battleyness">
+              &nbsp;Battleyness
+              {rating.battleyness}
+            </bar>
+          </button>
+          <button
+            on:click={() => selectCategory('scandal')}
+            disabled={!clickableCategories}
+            class:clickableCategories>
+            <bar
+              style={`width: ${(100 * rating.scandal) / 20}%`}
+              class="scandal">
+              &nbsp;Scandal
+              {rating.scandal}
+            </bar>
+          </button>
+          <button
+            on:click={() => selectCategory('subjectivity')}
+            disabled={!clickableCategories}
+            class:clickableCategories>
+            <bar
+              style={`width: ${(100 * rating.subjectivity) / 20}%`}
+              class="subjectivity">
+              &nbsp;Subjectivity
+              {rating.subjectivity}
+            </bar>
+          </button>
+          <button
+            on:click={() => selectCategory('longevity')}
+            disabled={!clickableCategories}
+            class:clickableCategories>
+            <bar
+              style={`width: ${(100 * rating.longevity) / 20}%`}
+              class="longevity">
+              &nbsp;Longevity
+              {rating.longevity}
+            </bar>
+          </button>
+          <button
+            on:click={() => selectCategory('dynasty')}
+            disabled={!clickableCategories}
+            class:clickableCategories>
+            <bar
+              style={`width: ${(100 * rating.dynasty) / 20}%`}
+              class="dynasty">
+              &nbsp;Dynasty
+              {rating.dynasty}
+            </bar>
+          </button>
+        </scores>
+      </content>
+    </card>
+  {/if}
+</div>
