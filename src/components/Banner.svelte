@@ -6,8 +6,6 @@
   export let hoverable: boolean = false;
   export let style: string = "";
   export let alignment: "left" | "centre" = "centre";
-
-  import vellum from "../images/vellum.jpg";
 </script>
 
 <style>
@@ -17,6 +15,8 @@
     font-family: uncial, Luminari, "Brush Script MT", "Bradley Hand";
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px inset;
     background-color: antiquewhite;
+    background-image: url(../card.jpg);
+    background-blend-mode: multiply;
   }
 
   div {
@@ -46,7 +46,7 @@
   }
 </style>
 
-<h1 style="background: url({vellum}); {style}">
+<h1 {style}>
   <div
     class={hoverable ? 'hoverable' : ''}
     style="grid-template-columns: {alignment === 'left' ? 'auto 1fr' : 'auto auto'}">
