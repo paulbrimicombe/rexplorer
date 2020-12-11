@@ -23,24 +23,49 @@ const serviceWorker = (self as any) as ServiceWorkerGlobalScope;
 
 serviceWorker.oninstall = (event: ExtendableEvent) => {
   event.waitUntil(
-    caches
-      .open(STATIC_ASSETS_CACHE_KEY)
-      .then(async (cache) => {
-        await cache.addAll(to_cache);
-        await cache.add("/rexplorer");
-      })
+    caches.open(STATIC_ASSETS_CACHE_KEY).then(async (cache) => {
+      await cache.addAll(to_cache);
+      await cache.add("/rexplorer");
+      await serviceWorker.skipWaiting();
+    })
   );
 };
 
 serviceWorker.onactivate = (event: ExtendableEvent) => {
   event.waitUntil(
-    caches.keys().then(async (keys) => {
+    serviceWorker.clients.matchAll().then(async (clients) => {
+      // Hard-refresh clients
+      clients.map((client) => (client as any).navigate(client.url));
+
+      const cacheKeys = await caches.keys();
       // delete old caches
-      for (const key of keys) {
+      for (const key of cacheKeys) {
         if (key !== STATIC_ASSETS_CACHE_KEY && key !== OFFLINE_ASSETS_CACHE_KEY)
           await caches.delete(key);
       }
+      await serviceWorker.clients.claim();
     })
+  );
+};
+
+serviceWorker.onactivate = async (event: ExtendableEvent) => {
+  event.waitUntil(
+    Promise.all([
+      // Refresh all clients
+      (await serviceWorker.clients.matchAll()).map((client: any) =>
+        client.navigate(client.url)
+      ),
+      caches.keys().then(async (keys) => {
+        // delete old caches
+        for (const key of keys) {
+          if (
+            key !== STATIC_ASSETS_CACHE_KEY &&
+            key !== OFFLINE_ASSETS_CACHE_KEY
+          )
+            await caches.delete(key);
+        }
+      }),
+    ])
   );
 };
 
