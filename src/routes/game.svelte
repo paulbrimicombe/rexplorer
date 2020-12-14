@@ -8,6 +8,7 @@
 
   let scores: Rating[] = [];
   let ratingType: "monarchs" | "consorts" | "teams" = "monarchs";
+  let difficulty: "easy" | "hard" = "easy";
   let playerName = "Player";
 
   const fetchScores = async () => {
@@ -33,13 +34,20 @@
   }
 </style>
 
+<svelte:head>
+  <title>Rexplorer game</title>
+  <meta
+    name="Description"
+    content="A card game based on the ratings from the Rex Factor podcast" />
+</svelte:head>
+
 <Modal>
   <div in:fade={{ delay: 300, duration: 200 }} out:fade={{ duration: 200 }}>
     {#if scores.length === 0}
       <div in:fade={{ delay: 300, duration: 200 }} out:fade={{ duration: 200 }}>
         <Banner
           title="Rexplorer the Game"
-          imagePath="../king-and-queen-playing-chess.jpg"
+          imagePath="king-and-queen-playing-chess.jpg"
           imageAlt="King and Queen playing chess" />
         <p>
           In the Rexplorer game you will pit your wits against Dunstan the Fun
@@ -55,12 +63,17 @@
             <option value="consorts">English consorts</option>
             <option value="teams">English royal teams</option>
           </select>
+          <label for="difficulty">Difficulty</label>
+          <select bind:value={difficulty} id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="hard">Hard</option>
+          </select>
           <button type="sumbit">Play the game!</button>
         </form>
       </div>
     {:else}
       <div in:fade={{ delay: 300, duration: 200 }} out:fade={{ duration: 200 }}>
-        <Game {scores} {playerName} />
+        <Game {scores} {playerName} {difficulty} />
       </div>
     {/if}
   </div>

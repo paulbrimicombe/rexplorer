@@ -7,6 +7,7 @@
 
   export let scores: Rating[];
   export let playerName: string;
+  export let difficulty: "easy" | "hard" = "hard";
 
   const modal: any = getContext("simple-modal");
 
@@ -137,6 +138,30 @@
     }
   };
 
+  const chooseCategory = () => {
+    const categories = [
+      "battleyness",
+      "scandal",
+      "subjectivity",
+      "longevity",
+      "dynasty",
+    ];
+
+    if (difficulty === "hard") {
+      return categories.sort((a, b) => {
+        if (computerCard[a] > computerCard[b]) {
+          return -1;
+        } else if (computerCard[a] < computerCard[b]) {
+          return 1;
+        }
+        return 0;
+      })[0];
+    } else if (difficulty === "easy") {
+      const categoryIndex = Math.floor(Math.random() * (categories.length - 1));
+      return categories[categoryIndex];
+    }
+  };
+
   const selectCategory = async (event) => {
     formDisabled = true;
     const selectedCategory = event.category as
@@ -213,14 +238,7 @@
         "longevity",
         "dynasty",
       ];
-      const chosenCategory = categories.sort((a, b) => {
-        if (computerCard[a] > computerCard[b]) {
-          return -1;
-        } else if (computerCard[a] < computerCard[b]) {
-          return 1;
-        }
-        return 0;
-      })[0];
+      const chosenCategory = chooseCategory();
 
       await showMessage({
         message: `Dunstan choses ${chosenCategory}…`,
@@ -239,8 +257,10 @@
   game-board {
     position: fixed;
     left: 0;
+    top: 0;
     width: 100vw;
-    height: calc(100% - 4em);
+    height: 100vh;
+    padding-top: 1em;
     background-image: url(../baize.jpg);
     display: flex;
     flex-direction: column;
@@ -266,6 +286,12 @@
     background: rgba(0, 0, 0, 0.7);
     color: white;
     border-radius: 1em;
+  }
+
+  @media (max-width: 750px) {
+    card-area {
+      transform: scale(0.8);
+    }
   }
 </style>
 
