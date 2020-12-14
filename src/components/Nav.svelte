@@ -143,7 +143,7 @@
       <a
         aria-current={segment === 'game' ? 'page' : undefined}
         on:click={() => (showMenu = false)}
-        href="game">Play the game!</a>
+        href="game">Game!</a>
     </li>
     <li>
       <a

@@ -24,7 +24,7 @@
     <Banner
       title="English monarchs"
       imagePath="monarch.jpg"
-      imageAlt="English monarch crown"
+      imageAlt="English monarch"
       imageSize={64}
       hoverable={true}
       alignment={'left'}
@@ -34,7 +34,7 @@
     <Banner
       title="English consorts"
       imagePath="consort.jpg"
-      imageAlt="English consort crown"
+      imageAlt="English consort"
       imageSize={64}
       hoverable={true}
       alignment={'left'}
@@ -44,6 +44,16 @@
     <Banner
       title="English royal teams"
       imagePath="king-and-queen.jpg"
+      imageAlt="English King and Queen"
+      imageSize={64}
+      hoverable={true}
+      alignment={'left'}
+      style="margin: 0.5em;" />
+  </a>
+  <a href="game">
+    <Banner
+      title="Play the game"
+      imagePath="king-and-queen-playing-chess.jpg"
       imageAlt="King and Queen playing chess"
       imageSize={64}
       hoverable={true}

@@ -6,6 +6,7 @@
   import type Rating from "../../types/Rating";
 
   export let scores: Rating[];
+  export let playerName: string;
 
   const modal: any = getContext("simple-modal");
 
@@ -157,7 +158,7 @@
       currentPlayer = "player";
       await showMessage({
         message: "YOU WIN!!",
-        closeAfter: 2000,
+        closeAfter: 3000,
       });
     } else {
       computerPack.push(computerCard);
@@ -165,7 +166,7 @@
       currentPlayer = "computer";
       await showMessage({
         message: "YOU LOSE!!",
-        closeAfter: 2000,
+        closeAfter: 3000,
       });
     }
 
@@ -239,18 +240,17 @@
     position: fixed;
     left: 0;
     width: 100vw;
+    height: calc(100% - 4em);
     background-image: url(../baize.jpg);
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: scroll;
-    height: 100%;
-    padding-top: 1em;
+    overflow-y: auto;
+    overflow-x: hidden;
     box-shadow: 0 -0.2em 0.5em 0.5em #2f7b2f;
   }
 
   play-area {
-    /* box-sizing: border-box; */
     display: grid;
     grid-template-rows: auto 1fr;
     grid-template-columns: 1fr 1fr;
@@ -271,7 +271,7 @@
 
 <game-board>
   <play-area>
-    <div class="score">You: {playerCardsLeft}</div>
+    <div class="score">{playerName} {playerCardsLeft}</div>
     <div class="score">Dunstan the Fun Sponge: {computerCardsLeft}</div>
     <card-area>
       {#if dealingPlayerCard}
