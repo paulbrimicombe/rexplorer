@@ -48,27 +48,6 @@ serviceWorker.onactivate = (event: ExtendableEvent) => {
   );
 };
 
-serviceWorker.onactivate = async (event: ExtendableEvent) => {
-  event.waitUntil(
-    Promise.all([
-      // Refresh all clients
-      (await serviceWorker.clients.matchAll()).map((client: any) =>
-        client.navigate(client.url)
-      ),
-      caches.keys().then(async (keys) => {
-        // delete old caches
-        for (const key of keys) {
-          if (
-            key !== STATIC_ASSETS_CACHE_KEY &&
-            key !== OFFLINE_ASSETS_CACHE_KEY
-          )
-            await caches.delete(key);
-        }
-      }),
-    ])
-  );
-};
-
 /**
  * Fetch the asset from the network and store it in the cache.
  * Fall back to the cache if the user is offline.
