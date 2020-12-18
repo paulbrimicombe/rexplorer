@@ -21,28 +21,25 @@
 </script>
 
 <style>
-  div {
-    height: 31em;
-    width: 21em;
-  }
-
-  card {
+    card {
     box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    border-radius: 1rem;
+    border-radius: 1em;
     width: 20em;
     height: 30em;
     background: white;
     background-size: cover;
     position: relative;
+    margin-bottom: 1.5em;
+    margin-right: 0.5em;
   }
 
   card::after {
     content: "";
     position: absolute;
-    border-radius: 1rem;
+    border-radius: 1em;
     top: 0;
     left: 0;
     width: 100%;
@@ -71,12 +68,12 @@
   name {
     margin: 0;
     padding: 0;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
     background: #c0c0c0;
     background: linear-gradient(to bottom, #c0c0c0 0%, #b1b1b1 100%);
     border-right: 1px solid #a2a2a2;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     writing-mode: vertical-rl;
   }
 
@@ -100,7 +97,7 @@
     border-radius: 50%;
     width: 3em;
     height: 3em;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -138,7 +135,7 @@
 
   button {
     margin: 0.1em 0;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     background-color: rgba(0, 0, 0, 0.3);
     border: none;
     text-align: left;

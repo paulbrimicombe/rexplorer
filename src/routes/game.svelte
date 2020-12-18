@@ -32,6 +32,10 @@
     grid-column-gap: 1em;
     grid-row-gap: 1em;
   }
+
+  :global(nav) {
+    display: none;
+  }
 </style>
 
 <svelte:head>

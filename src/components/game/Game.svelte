@@ -231,13 +231,6 @@
     if (currentPlayer === "player") {
       formDisabled = false;
     } else {
-      const categories = [
-        "battleyness",
-        "scandal",
-        "subjectivity",
-        "longevity",
-        "dynasty",
-      ];
       const chosenCategory = chooseCategory();
 
       await showMessage({
@@ -268,6 +261,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     box-shadow: 0 -0.2em 0.5em 0.5em #2f7b2f;
+    font-size: min(2.6vh, 1rem);
   }
 
   play-area {
@@ -286,12 +280,8 @@
     background: rgba(0, 0, 0, 0.7);
     color: white;
     border-radius: 1em;
-  }
-
-  @media (max-width: 750px) {
-    card-area {
-      transform: scale(0.8);
-    }
+    text-align: center;
+    font-size: 1.4em;
   }
 </style>
 
@@ -301,7 +291,7 @@
     <div class="score">Dunstan the Fun Sponge: {computerCardsLeft}</div>
     <card-area>
       {#if dealingPlayerCard}
-        <div />
+        <div class="card-placeholder" />
       {:else if playerCard}
         <div transition:fly={{ x: -500, y: 50, duration: 300 }}>
           <Card
@@ -320,7 +310,7 @@
     </card-area>
     <card-area>
       {#if dealingComputerCard}
-        <div />
+        <div class="card-placeholder" />
       {:else if computerCard}
         <div transition:fly={{ x: 500, y: -50, duration: 600 }}>
           <Card rating={computerCard} clickableCategories={false} />
