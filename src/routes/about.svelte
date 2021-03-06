@@ -16,6 +16,15 @@
 
   <p>
     The Rexplorer is for fans of the
-    <a href="https://rexfactor.wordpress.com/" target="blank">Rex Factor podcast</a>
+    <a href="https://rexfactor.wordpress.com/" target="blank">Rex Factor podcast</a>.
+  </p>
+  <p>
+    The card images are all sourced from <a href="https://commons.wikimedia.org/" target="_blank">Wikimedia Commons</a>
+    apart from some of the early English monarch images which come from the <a href="https://www.bl.uk/collection-items/genealogical-chronicle-of-the-english-kings" target="_blank">
+    Genealogical Chronicle of the English Kings from the British Library</a>.
+  </p>
+  <p>
+    This site is open source and the source code can be viewed at <a href="https://github.com/paulbrimicombe/rexplorer" target="_blank">
+    https://github.com/paulbrimicombe/rexplorer</a>.
   </p>
 </div>
