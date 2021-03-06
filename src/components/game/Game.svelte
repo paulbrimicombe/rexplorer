@@ -321,7 +321,7 @@
   .orientation-warning {
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
-    z-index: 100000;
+    z-index: 100;
     height: 100vh;
     width: 100vw;
     display: flex;
