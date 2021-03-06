@@ -4,11 +4,15 @@
   import Card from "../Card.svelte";
   import GamePopup from "./GamePopup.svelte";
   import type Rating from "../../types/Rating";
+  import { createEventDispatcher } from "svelte";
 
   export let scores: Rating[];
   export let playerName: string;
   export let difficulty: "easy" | "hard" = "hard";
 
+  let closed = false;
+
+  const dispatch = createEventDispatcher();
   const modal: any = getContext("simple-modal");
 
   const pause = (millis) =>
@@ -71,6 +75,10 @@
   };
 
   const showMessage = async ({ message, closeAfter = 1000 }) => {
+    if (closed) {
+      return;
+    }
+
     const shouldReEnableForm = !formDisabled;
 
     formDisabled = true;
@@ -253,7 +261,6 @@
     top: 0;
     width: 100vw;
     height: 100vh;
-    padding-top: 1em;
     background-image: url(../baize.jpg);
     display: flex;
     flex-direction: column;
@@ -266,6 +273,7 @@
 
   play-area {
     display: grid;
+    margin-top: 1em;
     grid-template-rows: auto 1fr;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 1em;
@@ -276,16 +284,80 @@
   }
 
   .score {
-    padding: 1em;
+    padding: 0.2em 1em;
     background: rgba(0, 0, 0, 0.7);
     color: white;
-    border-radius: 1em;
+    border-radius: 0.5em;
     text-align: center;
     font-size: 1.4em;
+  }
+
+  .exit {
+    position: fixed;
+    z-index: 10000;
+    top: 1em;
+    left: 1em;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0.2em 1em;
+    border-radius: 0.5em;
+    text-align: center;
+    font-size: 1.4em;
+    border: 1px solid white;
+    cursor: pointer;
+    display: block;
+    box-sizing: border-box;
+    font-size: 1.4em;
+    margin: 0;
+    transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1),
+      background 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .exit:hover {
+    outline: none;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .orientation-warning {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    z-index: 100000;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    color: white;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 1em;
+    box-sizing: border-box;
+  }
+
+  .orientation-warning > div {
+    padding-bottom: 10em;
+  }
+
+  @media (orientation: landscape) {
+    .orientation-warning {
+      display: none;
+    }
   }
 </style>
 
 <game-board>
+  <button
+    class="exit"
+    on:click={() => {
+      modal.close();
+      closed = true;
+      dispatch("close");
+    }}>Exit</button
+  >
+  <div class="orientation-warning">
+    <div>Please use landscape mode for the best game experience!</div>
+  </div>
   <play-area>
     <div class="score">{playerName} {playerCardsLeft}</div>
     <div class="score">Dunstan the Fun Sponge: {computerCardsLeft}</div>
@@ -296,11 +368,13 @@
         <div transition:fly={{ x: -500, y: 50, duration: 300 }}>
           <Card
             rating={playerCard}
-            on:select={(event) => selectCategory({
-                player: 'player',
+            on:select={(event) =>
+              selectCategory({
+                player: "player",
                 category: event.detail,
               })}
-            clickableCategories={!formDisabled && currentPlayer === 'player'} />
+            clickableCategories={!formDisabled && currentPlayer === "player"}
+          />
         </div>
       {:else}
         <div transition:fly={{ x: -500, y: 50, duration: 300 }}>

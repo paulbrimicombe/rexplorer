@@ -32,10 +32,6 @@
     grid-column-gap: 1em;
     grid-row-gap: 1em;
   }
-
-  :global(nav) {
-    display: none;
-  }
 </style>
 
 <svelte:head>
@@ -77,7 +73,11 @@
       </div>
     {:else}
       <div in:fade={{ delay: 300, duration: 200 }} out:fade={{ duration: 200 }}>
-        <Game {scores} {playerName} {difficulty} />
+        <Game
+          {scores}
+          {playerName}
+          {difficulty}
+          on:close={() => (scores = [])} />
       </div>
     {/if}
   </div>
