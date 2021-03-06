@@ -3,7 +3,7 @@
   "theme_color": "#333333",
   "name": "Rexplorer",
   "short_name": "Rexplorer",
-  "display": "fullscreen",
+  "display": "standalone",
   "start_url": "/rexplorer/",
   "icons": [
     {
