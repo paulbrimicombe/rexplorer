@@ -16,7 +16,7 @@
 
   <p>
     The Rexplorer is for fans of the
-    <a href="https://rexfactor.wordpress.com/" target="blank">Rex Factor podcast</a>.
+    <a href="https://rexfactor.wordpress.com/" target="_blank">Rex Factor podcast</a>.
   </p>
   <p>
     The card images are all sourced from <a href="https://commons.wikimedia.org/" target="_blank">Wikimedia Commons</a>
