@@ -6,6 +6,15 @@
 </script>
 
 <style>
+  h1 {
+    margin: 0 0.77em;
+    font-size: 1.3em;
+  }
+
+  h1 > a {
+    text-decoration: underline;
+  }
+
   a {
     text-decoration: none;
     display: inline;
@@ -20,6 +29,9 @@
 </svelte:head>
 
 <div in:fade={{ delay: 300, duration: 200 }} out:fade={{ duration: 200 }}>
+  <h1>Explore some scores from the
+    <a href="https://rexfactor.wordpress.com/" target="_blank">Rex Factor podcast</a>!
+  </h1>
   <a href="monarchs">
     <Banner
       title="English monarchs"

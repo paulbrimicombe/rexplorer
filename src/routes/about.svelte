@@ -15,8 +15,9 @@
     imageSize={64} />
 
   <p>
-    The Rexplorer is for fans of the
-    <a href="https://rexfactor.wordpress.com/" target="_blank">Rex Factor podcast</a>.
+    The Rexplorer helps fans of the
+    <a href="https://rexfactor.wordpress.com/" target="_blank">Rex Factor podcast</a> explore the scores
+    awarded to the various Monarchs and Consorts.
   </p>
   <p>
     The card images are all sourced from <a href="https://commons.wikimedia.org/" target="_blank">Wikimedia Commons</a>
