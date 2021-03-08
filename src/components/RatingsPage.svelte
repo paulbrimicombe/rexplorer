@@ -113,6 +113,43 @@
     );
   };
 
+  const share = () => {
+    const dummy = document.createElement("input"),
+      text = window.location.href;
+
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+
+    modal.open(
+      HelpPopup,
+      {
+        messages: ["Rexploration URL copied to clipboard"],
+      },
+      {
+        styleBg: {
+          background: "none",
+          top: "1em",
+          left: 0,
+        },
+
+        styleWindow: {
+          background: "rgba(0,0,0,0.8)",
+          width: "fit-content",
+        },
+        styleContent: {},
+        transitionWindow: slide,
+        styleCloseButton: {
+          display: "none"
+        },
+      }
+    );
+
+    setTimeout(() => modal.close(), 1000);
+  };
+
   const filterRatings = () => {
     if (!nameFilter) {
       displayScores = scores || [];
@@ -150,47 +187,6 @@
   };
 </script>
 
-<style>
-  form {
-    border-bottom: 1px solid darkslategray;
-    padding: 0.5em;
-    margin: 0 0 0.2em 0;
-    display: flex;
-    justify-content: start;
-  }
-
-  field {
-    padding: 0 0.5em;
-  }
-
-  #name-filter {
-    width: 100%;
-    max-width: 10em;
-  }
-
-  button {
-    border-radius: 50%;
-    width: 1.8em;
-    height: 1.8em;
-    line-height: 0;
-    box-sizing: border-box;
-    text-align: center;
-    display: inline-block;
-    background-color: #5073a5;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 1px 1px;
-    border-color: transparent;
-    border-style: outset;
-    transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1) 0s, background 0.2s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
-  }
-
-  button:hover {
-    background-color: #1f4b88;
-  }
-</style>
-
 <Banner
   title={ratingName}
   imagePath={ratingImageSrc}
@@ -199,7 +195,10 @@
 />
 
 <form on:submit|preventDefault>
-  <button id="help" type="button" title="Help" on:click={showHelp}>?</button>
+  <field>
+    <button id="help" type="button" title="Help" on:click={showHelp}>?</button>
+    <button id="share" type="button" title="Share" on:click={share}>📋</button>
+  </field>
   <field>
     <label for="sort-field">Sort</label>
     <select
@@ -246,3 +245,51 @@
   {highlightField}
   {linkSymbol}
 />
+
+<style>
+  form {
+    border-bottom: 1px solid darkslategray;
+    padding: 0.5em;
+    margin: 0 0 0.2em 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  form :first-child {
+    padding: 0;
+  }
+
+  field {
+    padding: 0 0.5em;
+  }
+
+  #name-filter {
+    width: 100%;
+    max-width: 10em;
+  }
+
+  button {
+    border-radius: 50%;
+    padding: 0;
+    width: 1.8em;
+    height: 1.8em;
+    line-height: 0;
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    background-color: #5073a5;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 3px inset;
+    border-color: transparent;
+    border-style: none;
+    transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1) 0s,
+      background 0.2s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+  }
+
+  button:hover {
+    background-color: #1f4b88;
+  }
+</style>

@@ -13,9 +13,13 @@
 </style>
 
 <div class="popup">
-  <ul>
-    {#each messages as message}
-      <li>{message}</li>
-    {/each}
-  </ul>
+  {#if messages.length === 1}
+    {messages[0]}
+  {:else}
+    <ul>
+      {#each messages as message}
+        <li>{message}</li>
+      {/each}
+    </ul>
+  {/if}
 </div>
