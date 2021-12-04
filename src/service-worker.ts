@@ -36,16 +36,15 @@ serviceWorker.onactivate = (event: ExtendableEvent) => {
     serviceWorker.clients.matchAll({
       includeUncontrolled: true
     }).then(async (clients) => {
-      // Hard-refresh clients
-      clients.map((client) => (client as any).navigate(client.url));
-      await serviceWorker.clients.claim();
-
       const cacheKeys = await caches.keys();
       // delete old caches
       for (const key of cacheKeys) {
         if (key !== STATIC_ASSETS_CACHE_KEY && key !== OFFLINE_ASSETS_CACHE_KEY)
           await caches.delete(key);
       }
+      await serviceWorker.clients.claim();
+      // Hard-refresh clients
+      clients.map((client) => (client as any).navigate(client.url));
     })
   );
 };

@@ -61,6 +61,8 @@
   import { beforeUpdate, createEventDispatcher, getContext } from "svelte";
   import { slide } from "svelte/transition";
   import HelpPopup from "./HelpPopup.svelte";
+  import helpIcon from "./help.svg";
+  import shareIcon from "./share.svg";
 
   const dispatch = createEventDispatcher();
   const modal: any = getContext("simple-modal");
@@ -113,15 +115,19 @@
     );
   };
 
-  const share = () => {
-    const dummy = document.createElement("input"),
-      text = window.location.href;
-
-    document.body.appendChild(dummy);
-    dummy.value = text;
-    dummy.select();
-    document.execCommand("copy");
-    document.body.removeChild(dummy);
+  const share = async () => {
+    if (navigator.clipboard) {
+      navigator.clipboard
+        .writeText(window.location.href)
+        .catch((error) => console.error("Failed to copy to clipboard", error));
+    } else {
+      const dummy = document.createElement("input");
+      document.body.appendChild(dummy);
+      dummy.value = window.location.href;
+      dummy.select();
+      document.execCommand("copy");
+      document.body.removeChild(dummy);
+    }
 
     modal.open(
       HelpPopup,
@@ -142,7 +148,7 @@
         styleContent: {},
         transitionWindow: slide,
         styleCloseButton: {
-          display: "none"
+          display: "none",
         },
       }
     );
@@ -195,9 +201,13 @@
 />
 
 <form on:submit|preventDefault>
-  <field>
-    <button id="help" type="button" title="Help" on:click={showHelp}>?</button>
-    <button id="share" type="button" title="Share" on:click={share}>📋</button>
+  <field class="button-field">
+    <button id="help" type="button" title="Help" on:click={showHelp}
+      ><img src={helpIcon} alt="Help" /></button
+    >
+    <button id="share" type="button" title="Share" on:click={share}
+      ><img src={shareIcon} alt="Share" /></button
+    >
   </field>
   <field>
     <label for="sort-field">Sort</label>
@@ -256,12 +266,13 @@
     align-items: center;
   }
 
-  form :first-child {
-    padding: 0;
-  }
-
   field {
     padding: 0 0.5em;
+  }
+
+  .button-field {
+    padding: 0 0.5em 0 0;
+    border-right: 1px solid #ea604166;
   }
 
   #name-filter {
@@ -270,26 +281,17 @@
   }
 
   button {
-    border-radius: 50%;
     padding: 0;
-    width: 1.8em;
-    height: 1.8em;
+    font-size: 1.1em;
+    width: 1.5em;
+    height: 1.5em;
     line-height: 0;
-    box-sizing: border-box;
     text-align: center;
-    display: inline-block;
-    background-color: #5073a5;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 3px inset;
-    border-color: transparent;
-    border-style: none;
-    transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1) 0s,
-      background 0.2s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+    margin: 0.1em 0;
   }
 
-  button:hover {
-    background-color: #1f4b88;
+  button > img {
+    max-width: 0.9em;
+    max-height: 1em;
   }
 </style>
