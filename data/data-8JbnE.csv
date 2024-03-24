@@ -1,0 +1,155 @@
+﻿Ref,Monarch,Battleyness,Scandal,Subjectivity,Longevity,Dynasty,Total,RF?,Series
+S1.01,Alfred the Great,11.0,4.0,17.0,15.0,15.5,62.5,Yes,England
+S1.02,Edward the Elder,13.5,2.0,6.0,15.0,20.0,56.5,No,England
+S1.03,Athelstan,17.0,8.0,12.5,10.0,0.0,47.5,Yes,England
+S1.04,Edmund I,10.5,2.0,10.5,5.5,12.0,40.5,No,England
+S1.05,Eadred,8.5,7.0,4.0,7.0,0.0,26.5,No,England
+S1.06,Eadwig,1.0,10.5,3.0,3.5,0.0,18.0,No,England
+S1.07,Edgar the Peaceable,11.0,17.0,14.0,10.0,12.0,64.0,No,England
+S1.08,Edward the Martyr,0.0,1.0,0.0,2.5,0.0,3.5,No,England
+S1.09,Aethelred the Unready,0.0,11.0,1.5,16.0,18.0,46.5,No,England
+S1.10,Sweyn Forkbeard,16.0,6.0,0.0,0.5,12.0,34.5,No,England
+S1.11,Edmund Ironside,13.5,0.0,7.0,0.5,10.0,31.0,No,England
+S1.12,Cnut,13.5,8.0,14.0,11.5,15.0,62.0,Yes,England
+S1.13,Harold I,0.0,3.5,3.0,4.5,0.0,11.0,No,England
+S1.14,Harthacnut,4.0,5.5,2.0,2.5,0.0,14.0,No,England
+S1.15,Edward the Confessor,4.0,1.0,8.0,14.0,0.0,27.0,No,England
+S1.16,Harold II,17.0,2.0,7.0,1.0,16.5,43.5,No,England
+S1.17,William the Conqueror,18.5,10.0,4.0,12.5,16.0,61.0,Yes,England
+S1.18,William Rufus,10.0,14.0,7.5,8.5,0.0,40.0,No,England
+S1.19,Henry I,12.0,15.5,14.5,16.0,7.5,65.5,Yes,England
+S1.20,Stephen,6.0,2.0,5.0,11.5,10.0,34.5,No,England
+S1.21,Henry II,17.0,17.5,17.0,16.0,15.0,82.5,Yes,England
+S1.22,Richard the Lionheart,18.0,16.0,7.0,7.0,0.0,48.0,Yes,England
+S1.23,John,8.0,18.0,4.0,11.0,15.5,56.5,No,England
+S1.24,Henry III,6.0,5.0,6.0,18.0,15.0,50.0,No,England
+S1.25,Edward I,17.0,14.0,14.0,16.0,16.5,77.5,Yes,England
+S1.26,Edward II,4.0,17.5,0.0,12.0,15.0,48.5,No,England
+S1.27,Edward III,17.5,3.5,12.0,17.5,15.0,65.5,Yes,England
+S1.28,Richard II,7.0,9.0,9.0,13.5,0.0,38.5,No,England
+S1.29,Henry IV,12.5,17.0,8.5,9.0,15.5,62.5,No,England
+S1.30,Henry V,20.0,3.5,15.5,7.0,7.5,53.5,Yes,England
+S1.31,Henry VI,0.0,0.0,0.0,16.5,0.0,16.5,No,England
+S1.32,Edward IV,15.5,16.0,13.5,13.0,16.5,74.5,Yes,England
+S1.33,Edward V,0.0,0.0,0.0,0.5,0.0,0.5,No,England
+S1.34,Richard III,12.0,20.0,11.5,2.0,0.0,45.5,No,England
+S1.35,Henry VII,11.0,6.0,16.0,14.0,12.0,59.0,No,England
+S1.36,Henry VIII,8.0,20.0,7.5,16.0,12.0,63.5,Yes,England
+S1.37,Edward VI,4.0,0.0,5.0,5.5,0.0,14.5,No,England
+S1.38,Mary I,10.0,11.0,2.5,5.0,0.0,28.5,No,England
+S1.39,Elizabeth I,13.0,5.5,11.0,17.0,0.0,46.5,Yes,England
+S1.40,James I (VI),0.0,14.0,13.0,13.5,10.0,50.5,No,England
+S1.41,Charles I,0.0,2.0,2.0,14.5,16.0,34.5,No,England
+S1.42,Oliver Cromwell,19.5,20.0,5.0,4.5,15.5,64.5,N/A,England
+S1.43,Charles II,1.0,16.0,13.0,15.0,0.0,45.0,Yes,England
+S1.44,James II (VII),2.5,16.0,0.0,4.0,12.0,34.5,No,England
+S1.45,William III & Mary II,16.0,4.0,17.0,8.5,0.0,45.5,Yes,England
+S1.46,Anne,14.0,0.0,15.0,8.5,0.0,37.5,No,England
+S1.47,George I,6.0,11.0,9.0,8.5,10.0,44.5,No,England
+S1.48,George II,17.5,3.0,10.0,15.5,12.0,58.0,No,England
+S1.49,George III,15.0,0.0,15.0,18.5,19.0,67.5,No,England
+S1.50,George IV,7.0,15.0,10.0,7.5,0.0,39.5,No,England
+S1.51,William IV,8.0,10.0,16.0,6.0,0.0,40.0,Yes,England
+S1.52,Victoria,15.5,7.0,16.0,19.0,16.0,73.5,Yes,England
+S1.53,Edward VII,6.0,16.0,14.0,7.0,15.0,58.0,No,England
+S1.54,George V,13.5,2.0,14.0,15.0,15.5,60.0,Yes,England
+S1.55,Edward VIII,2.0,18.5,4.0,1.0,0.0,25.5,No,England
+S1.56,George VI,15.0,0.5,17.5,9.5,10.0,52.5,No,England
+S1.57,Elizabeth II,10.0,0.0,15.0,20.0,15.0,60.0,N/A,England
+S2.01,Kenneth MacAlpin,14.0,11.5,10.5,9.5,15.0,60.5,Yes,Scotland
+S2.02,Donald I,9.0,4.0,10.5,4.0,0.0,27.5,No,Scotland
+S2.03,Constantine I,6.5,9.0,4.5,9.5,7.5,37.0,No,Scotland
+S2.04,Aed,0.0,0.0,0.0,1.0,7.5,8.5,No,Scotland
+S2.05,Giric / Eochaid,6.0,12.5,5.5,7.5,0.0,31.5,No,Scotland
+S2.06,Donald II,8.0,1.0,6.0,7.5,7.5,30.0,No,Scotland
+S2.07,Constantine II,14.0,0.0,17.0,16.5,10.0,57.5,Yes,Scotland
+S2.08,Malcolm I,12.0,12.5,13.5,7.5,10.0,55.5,No,Scotland
+S2.09,Indulf,11.0,0.0,4.0,6.5,12.0,33.5,No,Scotland
+S2.10,Dub,5.0,4.0,1.0,5.0,7.5,22.5,No,Scotland
+S2.11,Cuilen,0.0,14.0,0.0,4.0,7.5,25.5,No,Scotland
+S2.12,Kenneth II,11.0,11.0,14.0,14.5,12.0,62.5,Yes,Scotland
+S2.13,Constantine III,0.0,9.0,0.0,1.5,0.0,10.5,No,Scotland
+S2.14,Kenneth III,5.0,2.0,0.0,6.5,12.0,25.5,No,Scotland
+S2.15,Malcolm II,13.0,12.0,5.0,15.5,12.0,57.5,Yes,Scotland
+S2.16,Duncan I,0.0,0.0,0.0,5.0,12.0,17.0,No,Scotland
+S2.17,Macbeth,8.0,9.0,12.5,10.5,0.0,40.0,No,Scotland
+S2.18,Lulach,0.0,2.0,0.0,0.5,10.0,12.5,No,Scotland
+S2.19,Malcolm III,9.5,9.0,15.0,16.0,18.5,68.0,Yes,Scotland
+S2.20,Donald III,3.0,5.5,0.5,3.5,7.5,20.0,No,Scotland
+S2.21,Duncan II,4.0,0.0,3.5,0.5,7.5,15.5,No,Scotland
+S2.22,Edgar,4.0,5.0,10.5,7.0,0.0,26.5,No,Scotland
+S2.23,Alexander I,4.0,0.0,5.0,11.0,0.0,20.0,No,Scotland
+S2.24,David I,16.0,6.0,18.0,15.0,0.0,55.0,Yes,Scotland
+S2.25,Malcolm IV,8.5,0.5,8.0,8.5,0.0,25.5,No,Scotland
+S2.26,William the Lion,7.0,12.0,12.0,17.5,15.0,63.5,No,Scotland
+S2.27,Alexander II,14.5,14.0,16.5,16.0,7.5,68.5,Yes,Scotland
+S2.28,Alexander III,11.5,11.0,16.0,16.0,0.0,54.5,Yes,Scotland
+S2.29,Margaret the Maid of Norway,0.0,0.0,0.0,4.0,0.0,4.0,No,Scotland
+S2.30,John Balliol,0.0,0.0,0.0,3.5,12.0,15.5,No,Scotland
+S2.31,William Wallace,13.5,5.5,6.5,1.0,0.0,26.5,Honourary,Scotland
+S2.32,Robert the Bruce,20.0,16.0,15.5,14.0,12.0,77.5,Yes,Scotland
+S2.33,David II,3.5,10.0,4.0,16.5,0.0,34.0,No,Scotland
+S2.34,Robert II,3.5,10.5,5.5,12.0,18.0,49.5,No,Scotland
+S2.35,Robert III,0.0,9.0,0.0,10.0,15.0,34.0,No,Scotland
+S2.36,James I,5.5,7.5,10.5,15.5,16.5,55.5,No,Scotland
+S2.37,James II,11.0,12.0,14.0,14.0,15.5,66.5,Yes,Scotland
+S2.38,James III,2.0,8.0,4.0,15.0,12.0,41.0,No,Scotland
+S2.39,James IV,12.5,17.0,19.0,15.0,10.0,73.5,Yes,Scotland
+S2.40,James V,2.5,12.0,9.5,15.0,7.5,46.5,No,Scotland
+S2.41,Mary Queen of Scots,7.5,5.0,6.0,14.5,7.5,40.5,Yes,Scotland
+S2.42,James VI,0.0,14.0,18.0,18.5,10.0,60.5,Yes,Scotland
+S3.01,Ealhswith,3.0,0.0,7.0,15.5,15.5,41.0,No,Consorts
+S3.02,"Æthelflæd Lady of the Mercians",18.0,0.0,11.0,15.5,7.5,52.0,Yes,Consorts
+S3.03,Ælfflæd,3.0,4.0,7.0,12.5,17.5,44.0,No,Consorts
+S3.04,Eadgifu of Kent,12.0,0.0,11.5,10.0,15.0,48.5,Yes,Consorts
+S3.05,Ælfgifu of Shaftesbury,0.0,0.0,3.5,5.0,10.0,18.5,No,Consorts
+S3.06,Æthelflæd of Damerham,0.5,0.0,0.0,2.0,0.0,2.5,No,Consorts
+S3.07,Ælfgifu,4.0,17.0,0.0,3.0,0.0,24.0,No,Consorts
+S3.08,Æthelflæd Eneda / Candida,0.0,0.0,0.0,1.0,7.5,8.5,No,Consorts
+S3.09,Wulfthryth of Wilton,7.0,10.0,4.0,1.0,7.5,29.5,No,Consorts
+S3.10,Ælfthryth,17.0,18.0,16.0,13.5,7.5,72.0,Yes,Consorts
+S3.11,Ælfgifu of York,0.0,0.0,0.0,10.5,18.5,29.0,No,Consorts
+S3.12,Sigrid the Haughty,14.0,17.5,0.0,0.5,12.0,44.0,No,Consorts
+S3.13,Ealdgyth,4.0,3.0,0.0,0.5,10.0,17.5,No,Consorts
+S3.14,Emma of Normandy,17.5,4.5,18.0,16.0,15.5,71.5,Yes,Consorts
+S3.15,Ælfgifu of Northampton,13.0,9.5,0.0,13.0,10.0,45.5,No,Consorts
+S3.16,Edith of Wessex,7.5,13.5,11.0,12.5,0.0,44.5,No,Consorts
+S3.17,Edith of Mercia,0.0,0.0,0.0,1.0,7.5,8.5,No,Consorts
+S3.18,Matilda of Flanders,12.5,13.0,15.0,10.5,18.0,69.0,No,Consorts
+S3.19,Matilda of Scotland,10.0,7.5,18.0,11.0,10.0,56.5,Yes,Consorts
+S3.20,Adeliza of Louvain,6.5,0.0,6.5,9.5,0.0,22.5,No,Consorts
+S3.21,Matilda of Boulogne,18.0,0.0,14.5,10.5,12.0,55.0,Yes,Consorts
+S3.22,Eleanor of Aquitaine,19.5,20.0,11.0,16.5,15.0,82.0,Yes,Consorts
+S3.23,Berengaria of Navarre,9.0,0.0,7.5,6.0,0.0,22.5,No,Consorts
+S3.24,Isabella of Angouleme,15.5,20.0,0.0,16.0,15.5,67.0,No,Consorts
+S3.25,Eleanor of Provence,16.0,0.0,9.0,17.0,15.0,57.0,No,Consorts
+S3.26,Eleanor of Castile,7.5,5.5,8.0,11.0,16.0,48.0,No,Consorts
+S3.27,Margaret of France,7.0,0.0,14.0,6.0,12.0,39.0,No,Consorts
+S3.28,Isabella of France,20.0,20.0,11.0,16.0,15.0,82.0,Yes,Consorts
+S3.29,Philippa of Hainault,6.0,0.0,15.0,16.5,15.5,53.0,No,Consorts
+S3.30,Anne of Bohemia,2.0,1.0,15.5,8.5,0.0,27.0,No,Consorts
+S3.31,Isabella of Valois,5.5,0.0,0.0,3.0,0.0,8.5,No,Consorts
+S3.32,Joan of Navarre,7.5,0.0,10.0,7.5,0.0,25.0,No,Consorts
+S3.33,Catherine of Valois,11.0,11.0,4.0,7.0,7.5,40.5,No,Consorts
+S3.34,Margaret of Anjou,19.5,10.0,8.0,10.5,0.0,48.0,Yes,Consorts
+S3.35,Elizabeth Woodville,15.0,11.0,10.0,11.5,16.5,64.0,Yes,Consorts
+S3.36,Anne Neville,4.0,4.0,5.0,2.0,0.0,15.0,No,Consorts
+S3.37,Elizabeth of York,2.0,6.0,15.0,10.5,15.0,48.5,No,Consorts
+S3.38,Katherine of Aragon,19.5,0.0,16.0,14.5,7.5,57.5,Yes,Consorts
+S3.39,Anne Boleyn,18.0,20.0,8.0,3.0,7.5,56.5,Yes,Consorts
+S3.40,Jane Seymour,5.5,4.0,11.5,1.5,7.5,30.0,No,Consorts
+S3.41,Anne of Cleves,0.0,0.0,6.0,0.5,0.0,6.5,No,Consorts
+S3.42,Katherine Howard,1.5,20.0,5.0,1.5,0.0,28.0,No,Consorts
+S3.43,Katherine Parr,14.0,11.5,18.0,3.5,0.0,47.0,Yes,Consorts
+S3.44,Philip II of Spain,11.0,5.0,12.0,4.0,0.0,32.0,No,Consorts
+S3.45,Anne of Denmark,14.0,7.5,13.0,10.0,10.0,54.5,No,Consorts
+S3.46,Henrietta Maria of France,19.0,13.0,1.0,15.0,16.0,64.0,Yes,Consorts
+S3.47,Elizabeth Cromwell,0.0,0.0,3.0,5.0,15.5,23.5,No,Consorts
+S3.48,Catherine of Braganza,6.0,0.0,11.0,13.5,0.0,30.5,No,Consorts
+S3.49,Mary of Modena,1.0,9.0,2.5,4.0,7.5,24.0,No,Consorts
+S3.50,Prince George of Denmark,4.0,0.0,10.0,5.5,0.0,19.5,No,Consorts
+S3.51,Sophia Dorothea of Celle,15.0,18.0,0.0,8.5,10.0,51.5,Yes,Consorts
+S3.52,Caroline of Ansbach,16.0,0.0,16.5,7.5,16.5,56.5,No,Consorts
+S3.53,Charlotte of Mecklenburg-Strelitz,6.5,0.0,15.0,18.5,20.0,60.0,Yes,Consorts
+S3.54,Caroline of Brunswick,16.0,20.0,0.0,1.5,0.0,37.5,No,Consorts
+S3.55,Adelaide of Saxe-Meiningen,0.0,0.0,11.5,6.0,0.0,17.5,No,Consorts

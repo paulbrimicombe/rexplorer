@@ -113,7 +113,7 @@
     on:click|preventDefault={() => (showMenu = !showMenu)}>
     MENU
   </a>
-  <blocker style={showMenu ? 'display: block': ''} on:click={() => showMenu = false}></blocker>
+  <blocker style={showMenu ? 'display: block': ''} on:click={() => showMenu = false} on:keypress={() => showMenu = false}></blocker>
   <ul style="--opacity: {showMenu ? 100 : 0}; --pointer-events: {showMenu ? 'all' : 'none'}">
     <li>
       <a

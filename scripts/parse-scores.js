@@ -1,51 +1,70 @@
 #! /usr/bin/env node
+// @ts-check
+
 "use strict";
 
 const fs = require("fs");
 const path = require("path");
-
-const REX_FACTOR_WINNERS = [
-  "Alfred the Great",
-  "Athelstan",
-  "Cnut",
-  "William the Conqueror",
-  "Henry I",
-  "Henry II",
-  "Richard the Lionheart",
-  "Edward I",
-  "Edward III",
-  "Henry V",
-  "Edward IV",
-  "Henry VIII",
-  "Elizabeth I",
-  "Charles II",
-  "William III & Mary II",
-  "William IV",
-  "Victoria",
-  "George V",
-];
 
 const CONSORT_MAPPING = {
   "Alfred the Great": ["Ealhswith"],
   "Edward the Elder": ["Ælfflæd", "Eadgifu of Kent"],
   "Edmund I": ["Ælfgifu of Shaftesbury", "Æthelflæd of Damerham"],
   Eadwig: ["Ælfgifu"],
-  "Edgar the Peaceable": ["Æthelflæd Eneda", "Wulfthryth", "Ælfthryth"],
+  "Edgar the Peaceable": [
+    "Æthelflæd Eneda / Candida",
+    "Wulfthryth of Wilton",
+    "Ælfthryth",
+  ],
   "Aethelred the Unready": ["Ælfgifu of York", "Emma of Normandy"],
   "Sweyn Forkbeard": ["Sigrid the Haughty"],
   "Edmund Ironside": ["Ealdgyth"],
   Cnut: ["Emma of Normandy", "Ælfgifu of Northampton"],
   "Edward the Confessor": ["Edith of Wessex"],
-  "Harold II": ["Ealdgyth of Mercia"],
+  "Harold II": ["Edith of Mercia"],
   "William the Conqueror": ["Matilda of Flanders"],
   "Henry I": ["Matilda of Scotland", "Adeliza of Louvain"],
   Stephen: ["Matilda of Boulogne"],
+  "Henry II": ["Eleanor of Aquitaine"],
+  "Richard the Lionheart": ["Berengaria of Navarre"],
+  John: ["Isabella of Angouleme"],
+  "Henry III": ["Eleanor of Provence"],
+  "Edward I": ["Eleanor of Castile", "Margaret of France"],
+  "Edward II": ["Isabella of France"],
+  "Edward III": ["Philippa of Hainault"],
+  "Richard II": ["Anne of Bohemia", "Isabella of Valois"],
+  "Henry IV": ["Joan of Navarre"],
+  "Henry V": ["Catherine of Valois"],
+  "Henry VI": ["Margaret of Anjou"],
+  "Edward IV": ["Elizabeth Woodville"],
+  "Richard III": ["Anne Neville"],
+  "Henry VII": ["Elizabeth of York"],
+  "Henry VIII": [
+    "Katherine of Aragon",
+    "Anne Boleyn",
+    "Jane Seymour",
+    "Anne of Cleves",
+    "Katherine Howard",
+    "Katherine Parr",
+  ],
+  "Mary I": ["Philip II of Spain"],
+  "James I (VI)": ["Anne of Denmark"],
+  "Charles I": ["Henrietta Maria of France"],
+  "Oliver Cromwell": ["Elizabeth Cromwell"],
+  "Charles II": ["Catherine of Braganza"],
+  "James II (VII)": ["Mary of Modena"],
+  Anne: ["Prince George of Denmark"],
+  "George I": ["Sophia Dorothea of Celle"],
+  "George II": ["Caroline of Ansbach"],
+  "George III": ["Charlotte of Mecklenburg-Strelitz"],
+  "George IV": ["Caroline of Brunswick"],
+  "William IV": ["Adelaide of Saxe-Meiningen"],
 };
 
 const extractFields = (lines) => {
   return lines
     .shift()
-    .split("\t")
+    .split(",")
     .map((field) => {
       if (field === "RF?") {
         return "rexFactor";
@@ -71,8 +90,10 @@ const parseValue = (rawValue) => {
     return numericValue;
   } else if (rawValue === "Yes") {
     return true;
-  } else if (rawValue === "No") {
+  } else if (rawValue === "No" || rawValue === "N/A") {
     return false;
+  } else if (rawValue?.startsWith('"') && rawValue?.endsWith('"')) {
+    return rawValue.substring(1, rawValue.length - 1);
   } else {
     return rawValue;
   }
@@ -80,33 +101,31 @@ const parseValue = (rawValue) => {
 
 const linesToJson = (fields, lines) => {
   return lines.map((line, index) => {
-    const lineValues = line.split("\t");
+    const lineValues = line.split(",");
     const entry = { index };
     lineValues.forEach((value, index) => {
       const key = fields[index];
       entry[key] = parseValue(value);
     });
 
-    if (entry.rexFactor === undefined) {
-      entry.rexFactor = REX_FACTOR_WINNERS.includes(entry.name);
-    }
-
     return entry;
   });
 };
 
-const readTSV = (filePath) => {
+const readCSV = (filePath) => {
   const lines = fs.readFileSync(filePath, "utf-8").trim().split("\n");
   const fields = extractFields(lines);
   return linesToJson(fields, lines);
 };
 
+const allData = readCSV("data/data-8JbnE.csv");
+
 const consortData = {
-  scores: readTSV("data/consort-scores.tsv"),
+  scores: allData.filter((entry) => entry.series === "Consorts"),
 };
 
 const monarchData = {
-  scores: readTSV("data/scores.tsv"),
+  scores: allData.filter((entry) => entry.series === "England"),
 };
 
 const monarchResult = {
@@ -115,6 +134,10 @@ const monarchResult = {
       const consort = consortData.scores.find((consort) => {
         return consort.name === name;
       });
+
+      if (!consort) {
+        console.error("Missing consort " + CONSORT_MAPPING[monarch.name]);
+      }
       return (
         {
           ...consort,
@@ -128,6 +151,9 @@ const monarchResult = {
       name: [monarch.name],
       rexFactor: [monarch.rexFactor],
       consorts,
+      index: monarchData.scores.findIndex(
+        (entry) => entry.name === monarch.name
+      ),
     };
   }),
 };
@@ -146,6 +172,11 @@ const consortResult = {
       const monarch = monarchData.scores.find((monarch) => {
         return monarch.name === name;
       });
+
+      if (!monarch) {
+        console.error("Missing monarch " + name);
+      }
+
       return (
         {
           ...monarch,
@@ -159,6 +190,9 @@ const consortResult = {
       name: [consort.name],
       rexFactor: [consort.rexFactor],
       monarchs,
+      index: consortData.scores.findIndex(
+        (entry) => entry.name === consort.name
+      ),
     };
   }),
 };

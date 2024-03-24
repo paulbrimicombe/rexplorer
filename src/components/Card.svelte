@@ -203,7 +203,7 @@
       <content>
         <portraits>
           {#each rating.name as name}
-            <portrait style="background-image: url('portraits/{name}.jpg')" />
+            <portrait style="background-image: url('portraits/{name.replace('/', '').replace('  ', ' ')}.jpg')" />
           {/each}
         </portraits>
         <total>{rating.total}</total>
