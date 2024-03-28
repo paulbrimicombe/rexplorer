@@ -9,7 +9,8 @@
     "build": "sapper build --legacy",
     "preexport": "rm -rf __sapper__/export",
     "export": "sapper export --basepath=rexplorer --legacy",
-    "postexport": "touch __sapper__/export/rexplorer/.nojekyll",
+    "copydata": "for f in src/routes/data/_*.json; do cp \"$f\" \"__sapper__/export/rexplorer/data/${f#src/routes/data/_}\"; done",
+    "postexport": "npm run copydata && touch __sapper__/export/rexplorer/.nojekyll",
     "deploy": "npm run export && gh-pages -d __sapper__/export/rexplorer/ -t",
     "start": "node __sapper__/build",
     "validate": "svelte-check --ignore src/node_modules/@sapper"
