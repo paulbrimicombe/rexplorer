@@ -1812,7 +1812,7 @@
       "dynasty": 10,
       "total": 51.5,
       "rexFactor": [
-        true
+        false
       ],
       "series": "Consorts",
       "monarchs": [
@@ -1848,7 +1848,7 @@
       "dynasty": 16.5,
       "total": 56.5,
       "rexFactor": [
-        false
+        true
       ],
       "series": "Consorts",
       "monarchs": [
@@ -1884,7 +1884,7 @@
       "dynasty": 20,
       "total": 60,
       "rexFactor": [
-        true
+        false
       ],
       "series": "Consorts",
       "monarchs": [
@@ -1920,7 +1920,7 @@
       "dynasty": 0,
       "total": 37.5,
       "rexFactor": [
-        false
+        true
       ],
       "series": "Consorts",
       "monarchs": [
