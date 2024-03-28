@@ -1,5 +1,5 @@
 import type { ServerResponse } from "http";
-import { scores } from "./_consorts.json";
+import { scores } from "./_teams.json";
 
 export async function get(_, res: ServerResponse) {
   res.writeHead(200, {
