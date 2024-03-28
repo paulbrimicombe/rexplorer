@@ -2663,7 +2663,7 @@
       "total": 48,
       "rexFactor": [
         false,
-        true
+        false
       ],
       "index": 50,
       "linkedRatings": [
@@ -2697,7 +2697,7 @@
           "dynasty": 10,
           "total": 51.5,
           "rexFactor": [
-            true
+            false
           ],
           "series": "Consorts"
         }
@@ -2716,7 +2716,7 @@
       "total": 57.25,
       "rexFactor": [
         false,
-        false
+        true
       ],
       "index": 51,
       "linkedRatings": [
@@ -2750,7 +2750,7 @@
           "dynasty": 16.5,
           "total": 56.5,
           "rexFactor": [
-            false
+            true
           ],
           "series": "Consorts"
         }
@@ -2769,7 +2769,7 @@
       "total": 63.75,
       "rexFactor": [
         false,
-        true
+        false
       ],
       "index": 52,
       "linkedRatings": [
@@ -2803,7 +2803,7 @@
           "dynasty": 20,
           "total": 60,
           "rexFactor": [
-            true
+            false
           ],
           "series": "Consorts"
         }
@@ -2822,7 +2822,7 @@
       "total": 38.5,
       "rexFactor": [
         false,
-        false
+        true
       ],
       "index": 53,
       "linkedRatings": [
@@ -2856,7 +2856,7 @@
           "dynasty": 0,
           "total": 37.5,
           "rexFactor": [
-            false
+            true
           ],
           "series": "Consorts"
         }
