@@ -56,7 +56,7 @@
         <p>Choose your name and card category to play the game.</p>
         <form on:submit|preventDefault|stopPropagation={fetchScores}>
           <label for="name">Player name</label>
-          <input type="text" bind:value={playerName} />
+          <input type="text" id="name" bind:value={playerName} />
           <label for="rating-type">Card category</label>
           <select bind:value={ratingType} id="rating-type">
             <option value="monarchs">English monarchs</option>
@@ -68,7 +68,7 @@
             <option value="easy">Easy</option>
             <option value="hard">Hard</option>
           </select>
-          <button type="sumbit">Play the game!</button>
+          <button type="submit">Play the game!</button>
         </form>
       </div>
     {:else}
